@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Stackly Pharmacy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sign Up -->
+    <main class="auth-standalone">
+        <div class="container">
+            <section class="auth-card" data-animate="fade-up">
+                <div class="auth-media">
+                    <div>
+                        <img src="images/logo.png" class="brand-logo" alt="Stackly Pharmacy" loading="lazy">
+                        <span class="auth-media-tag"><i class="bi bi-gift"></i> Welcome Offer</span>
+                        <h3>Join the Stackly<br>family today.</h3>
+                        <p class="auth-media-desc">Create your free account and enjoy verified medicines, pharmacist guidance, and doorstep delivery — starting with an exclusive welcome discount.</p>
+                        <ul class="auth-features">
+                            <li><i class="bi bi-percent"></i> Up to 20% off your first order</li>
+                            <li><i class="bi bi-truck"></i> Track deliveries in real time</li>
+                            <li><i class="bi bi-bell"></i> Medicine refill &amp; health reminders</li>
+                        </ul>
+                    </div>
+                    <div class="auth-media-trust">
+                        <span>
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </span>
+                        <em>Free &amp; easy — takes less than a minute</em>
+                    </div>
+                </div>
+
+                <div class="auth-body">
+                    <h2 class="auth-title">Create Account</h2>
+                    <p class="auth-sub">Fill in your details to get started.</p>
+
+                    <form class="auth-form" novalidate>
+                        <div class="auth-field">
+                            <label class="form-label" for="suName">Full Name</label>
+                            <input type="text" class="form-control" id="suName" name="fullName" placeholder="Your full name" autocomplete="name" required>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="auth-field">
+                                    <label class="form-label" for="suEmail">Email Address</label>
+                                    <input type="email" class="form-control" id="suEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="auth-field">
+                                    <label class="form-label" for="suPhone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="suPhone" name="phone" placeholder="+1 555 000 1234" autocomplete="tel">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="auth-field">
+                            <label class="form-label" for="suRole">I am creating an account as</label>
+                            <div class="role-selector" id="suRole" role="radiogroup" aria-label="Account type">
+                                <input type="radio" class="role-radio" name="authRole" id="roleSignupAdmin" value="admin">
+                                <label class="role-option" for="roleSignupAdmin">
+                                    <i class="bi bi-shield-lock role-ic"></i>
+                                    <span><b>Admin</b><small>Staff &amp; pharmacy manager</small></span>
+                                    <i class="bi bi-check-circle-fill role-check"></i>
+                                </label>
+                                <input type="radio" class="role-radio" name="authRole" id="roleSignupCustomer" value="customer" checked>
+                                <label class="role-option" for="roleSignupCustomer">
+                                    <i class="bi bi-person role-ic"></i>
+                                    <span><b>Customer</b><small>Personal shopping account</small></span>
+                                    <i class="bi bi-check-circle-fill role-check"></i>
+                                </label>
+                            </div>
+                            <span class="role-error-msg">Please select an account type.</span>
+                        </div>
+
+                        <div class="auth-field">
+                            <label class="form-label" for="suPassword">Password</label>
+                            <div class="input-wrap">
+                                <input type="password" class="form-control" id="suPassword" name="password" placeholder="Create a strong password" data-password data-strength="#suMeter" autocomplete="new-password" required>
+                                <button type="button" class="password-toggle" data-password-toggle="#suPassword" aria-label="Show password" aria-pressed="false">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-meter" id="suMeter">
+                                <span class="password-level">Strength: Enter a password</span>
+                                <div class="password-bar"><span class="password-fill"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="auth-field">
+                            <label class="form-label" for="suConfirm">Confirm Password</label>
+                            <div class="input-wrap">
+                                <input type="password" class="form-control" id="suConfirm" name="confirm" placeholder="Re-enter your password" data-password autocomplete="new-password" required>
+                                <button type="button" class="password-toggle" data-password-toggle="#suConfirm" aria-label="Show password" aria-pressed="false">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="auth-note">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Your data stays private &amp; secure. Passwords are encrypted, and we never share your details.</span>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="termsAgree" required>
+                            <label class="form-check-label" for="termsAgree" style="font-size: 0.85rem;">
+                                I agree to the <a class="auth-link" href="#">Terms of Service</a> and <a class="auth-link" href="#">Privacy Policy</a>.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-brand btn-lg w-100 btn-submit" aria-label="Create account">
+                            <span class="submit-spinner">
+                                <span class="spinner-border spinner-border-sm me-1" aria-hidden="true"></span> Creating account...
+                            </span>
+                            <span class="submit-label"><i class="bi bi-person-plus me-1"></i> Create Account</span>
+                        </button>
+                    </form>
+
+                    <div class="auth-divider my-4">or sign up with</div>
+
+                    <div class="auth-socials">
+                        <a href="404.html" class="auth-social"><i class="bi bi-google"></i> Google</a>
+                        <a href="404.html" class="auth-social"><i class="bi bi-apple"></i> Apple</a>
+                        <a href="404.html" class="auth-social"><i class="bi bi-facebook"></i> Facebook</a>
+                    </div>
+
+                    <p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+                </div>
+            </section>
+
+            <p class="auth-standalone-back">
+                <a href="index.html"><i class="bi bi-arrow-left"></i> Back to Home</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

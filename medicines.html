@@ -1,0 +1,754 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicines | Stackly Pharmacy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-xl navbar-light sticky-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
+                    <img src="images/logo.png" class="brand-logo" alt="Stackly Pharmacy" loading="eager">
+                </a>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="cart.html" class="cart-badge-btn text-decoration-none d-xl-none" aria-label="Cart">
+                        <i class="bi bi-cart3"></i>
+                        <span class="badge-count">2</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="medicines.html">Medicines</a></li>
+                        <li class="nav-item"><a class="nav-link" href="health-wellness.html">Health & Wellness</a></li>
+                        <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-cta d-flex gap-2 align-items-center">
+                        <a href="cart.html" class="cart-badge-btn text-decoration-none d-none d-xl-flex" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge-count">2</span>
+                        </a>
+                        <a href="login.html" class="btn btn-primary-brand btn-sm"><i class="bi bi-person me-1"></i> Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+<section class="page-hero page-hero-media page-hero-bg-2">
+        <div class="container">
+            <div class="page-hero-content text-center" data-animate="fade-up">
+                <span class="section-tag">Our Store</span>
+                <h1>Shop <span class="text-gradient-orange">Medicines</span></h1>
+                <p class="page-hero-sub">Genuine medicines from licensed pharmacies, verified by our pharmacists and delivered fast.</p>
+                <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Medicines</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+<!-- Products Section -->
+    <section id="medicine-products" class="products-section section-padding">
+        <div class="container">
+            <!-- Product Filter -->
+            <div class="product-filter text-center mb-4" data-animate="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pain">Pain Relief</button>
+                <button class="filter-btn" data-filter="cold">Cold & Flu</button>
+                <button class="filter-btn" data-filter="vitamins">Vitamins</button>
+                <button class="filter-btn" data-filter="devices">Devices</button>
+                <button class="filter-btn" data-filter="care">Personal Care</button>
+            </div>
+
+            <div class="row g-4">
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="vitamins">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">38% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-vitamin-d3.webp" alt="Vitamin D3" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Vitamins</span>
+                            <h3 class="product-name">Vitamin D3 1000IU (Strip of 10)</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.7</span><em>(892)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$1</span><span class="price-old">$1.50</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+<div class="col-md-6 col-lg-4 product-item" data-category="pain">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">35% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-pain-gel.webp" alt="Pain Relief Gel" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Pain Relief</span>
+                            <h3 class="product-name">Cool Relief Pain Gel (50g)</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                                <span>4.5</span><em>(165)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$1.38</span><span class="price-old">$2.12</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="cold">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">38% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-cold-flu.webp" alt="Multi-Symptom Cold & Flu Relief Capsules" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Cold & Flu</span>
+                            <h3 class="product-name">Cold & Flu Multi-Symptom Relief</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.6</span><em>(124)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$0.31</span><span class="price-old">$0.50</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="devices">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">29% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-thermometer.webp" alt="Digital Thermometer" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Medical Devices</span>
+                            <h3 class="product-name">Digital Thermometer Pro</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.7</span><em>(523)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$3.12</span><span class="price-old">$4.38</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="care">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">34% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-face-cream.webp" alt="Moisturizing Face Cream" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Skin Care</span>
+                            <h3 class="product-name">Moisturizing Face Cream (50g)</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.6</span><em>(88)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$3.74</span><span class="price-old">$5.62</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+<div class="col-md-6 col-lg-4 product-item" data-category="vitamins">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-multivitamin.webp" alt="Multivitamin Daily" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Vitamins</span>
+                            <h3 class="product-name">Multivitamin Daily Care</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <span>5.0</span><em>(340)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$4</span><span class="price-old">$5.62</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="devices">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-hot">Hot</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-smart-thermometer.webp" alt="Infrared Smart Forehead Thermometer" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Medical Devices</span>
+                            <h3 class="product-name">Smart Digital Thermometer</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.6</span><em>(156)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$3.12</span><span class="price-old">$4.38</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="care">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-new">New</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-baby-kit.webp" alt="Complete Baby Care Hygiene Kit" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Baby Care</span>
+                            <h3 class="product-name">Baby Hygiene Care Kit</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                                <span>4.2</span><em>(54)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$2.75</span><span class="price-old">$3.50</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+<div class="col-md-6 col-lg-4 product-item" data-category="pain">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-cetirizine.webp" alt="Cetirizine Allergy Relief" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Allergy Relief</span>
+                            <h3 class="product-name">Cetirizine 10mg Allergy Relief</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.3</span><em>(78)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$0.44</span><span class="price-old">$0.55</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+<div class="col-md-6 col-lg-4 product-item" data-category="cold">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">38% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-paracetamol.webp" alt="Paracetamol Fever Relief" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Cold & Flu</span>
+                            <h3 class="product-name">Paracetamol 500mg Fever Relief</h3>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                                <span>4.1</span><em>(43)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$0.31</span><span class="price-old">$0.50</span></div>
+<button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="pain">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">29% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-ibuprofen-200mg.webp" alt="Ibuprofen 200mg" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Pain Relief</span>
+                            <h3 class="product-name">Ibuprofen 200mg (10 Tablets)</h3>
+                            <p class="product-desc">Fast relief from headaches, muscle and joint pain.</p>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.6</span><em>(214)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$1.50</span><span class="price-old">$2.10</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="pain">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">25% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-aspirin-75mg.webp" alt="Aspirin 75mg" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Pain Relief</span>
+                            <h3 class="product-name">Aspirin 75mg (10 Tablets)</h3>
+                            <p class="product-desc">Low-dose aspirin for everyday heart health support.</p>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.7</span><em>(188)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$1.20</span><span class="price-old">$1.60</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="pain">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">29% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-diclofenac-gel-30g.webp" alt="Diclofenac Gel" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Pain Relief</span>
+                            <h3 class="product-name">Diclofenac Gel 1% (30g)</h3>
+                            <p class="product-desc">Targeted topical relief for sprains, strains and aches.</p>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.5</span><em>(96)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$2.80</span><span class="price-old">$3.95</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="pain">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">29% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/p5.webp" alt="Naproxen 250mg" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Pain Relief</span>
+                            <h3 class="product-name">Naproxen 250mg (10 Tablets)</h3>
+                            <p class="product-desc">Long-lasting relief for joint and lower back pain.</p>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                                <span>4.4</span><em>(73)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$2.10</span><span class="price-old">$2.95</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="cold">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge badge-off">28% OFF</span>
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/p1.webp" alt="Cough Syrup" loading="lazy">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Cold &amp; Flu</span>
+                            <h3 class="product-name">Dextromethorphan Cough Syrup (100ml)</h3>
+                            <p class="product-desc">Soothes dry and chesty coughs, day and night.</p>
+                            <div class="product-rating">
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span>4.5</span><em>(142)</em>
+                            </div>
+                            <div class="product-price"><span class="price-current">$3.45</span><span class="price-old">$4.80</span></div>
+                            <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-md-6 col-lg-4 product-item" data-category="cold">
+</div>
+
+            <div class="text-center mt-5" data-animate="fade-up">
+                <a href="404.html" class="btn btn-primary-brand btn-lg">View More <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Condition -->
+    <section class="condition-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Find What You Need</span>
+                <h2 class="section-title">Shop by <span class="text-gradient-orange">Health Condition</span></h2>
+                <p class="section-subtitle">Quick links to the medicines that matter most for common health needs.</p>
+            </div>
+            <div class="row g-3 g-md-4 mt-2">
+                <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.05">
+                    <a href="404.html" class="condition-card text-decoration-none">
+                        <span class="condition-icon"><i class="bi bi-droplet-half"></i></span>
+                        <h3>Diabetes Care</h3>
+                        <span>Glucose & insulin support</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.1">
+                    <a href="404.html" class="condition-card text-decoration-none">
+                        <span class="condition-icon"><i class="bi bi-activity"></i></span>
+                        <h3>Blood Pressure</h3>
+                        <span>Monitors & medication</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.15">
+                    <a href="404.html" class="condition-card text-decoration-none">
+                        <span class="condition-icon"><i class="bi bi-thermometer-half"></i></span>
+                        <h3>Fever & Pain</h3>
+                        <span>Relief & inflammation care</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.2">
+                    <a href="404.html" class="condition-card text-decoration-none">
+                        <span class="condition-icon"><i class="bi bi-virus2"></i></span>
+                        <h3>Cold & Flu</h3>
+                        <span>Cough, sinus & throat care</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.25">
+                    <a href="404.html" class="condition-card text-decoration-none">
+                        <span class="condition-icon"><i class="bi bi-flower1"></i></span>
+                        <h3>Allergy Relief</h3>
+                        <span>Antihistamines & nasal care</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.3">
+                    <a href="404.html" class="condition-card text-decoration-none">
+                        <span class="condition-icon"><i class="bi bi-heart-pulse"></i></span>
+                        <h3>Heart Care</h3>
+                        <span>Cholesterol & cardiac support</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.35">
+                    <a href="404.html" class="condition-card text-decoration-none">
+                        <span class="condition-icon"><i class="bi bi-shield-plus"></i></span>
+                        <h3>Immunity Boost</h3>
+                        <span>Vitamins & daily defense</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.4">
+                    <a href="404.html" class="condition-card text-decoration-none">
+                        <span class="condition-icon"><i class="bi bi-flower2"></i></span>
+                        <h3>Women's Health</h3>
+                        <span>Monthly & wellness care</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Prescriptions Work -->
+    <section class="rx-how-section">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-5" data-animate="fade-right">
+                    <span class="section-tag">Prescription Orders</span>
+                    <h2 class="section-title">How Prescriptions <span class="text-gradient-orange">Work</span></h2>
+                    <p class="section-subtitle mt-2">Ordering prescription medicines is easy, secure and reviewed by licensed pharmacists at every step.</p>
+                    <a href="404.html" class="btn btn-primary-brand btn-lg mt-3"><i class="bi bi-file-earmark-medical me-2"></i>Upload Prescription <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+                <div class="col-lg-7" data-animate="fade-left">
+                    <div class="rx-how">
+                        <div class="rx-how-item">
+                            <span class="rx-how-num">1</span>
+                            <p><strong>Upload</strong> your prescription securely on our contact page.</p>
+                        </div>
+                        <div class="rx-how-item">
+                            <span class="rx-how-num">2</span>
+                            <p><strong>Our pharmacist</strong> verifies the medicines and dosage before dispatching.</p>
+                        </div>
+                        <div class="rx-how-item">
+                            <span class="rx-how-num">3</span>
+                            <p><strong>Fast delivery</strong> to your doorstep with secure, tamper-proof packaging.</p>
+                        </div>
+                        <div class="rx-how-item">
+                            <span class="rx-how-num">4</span>
+                            <p><strong>Auto-refill</strong> reminders so you never miss a dose.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality & Safety Trust -->
+    <section class="cert-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">The Stackly Promise</span>
+                <h2 class="section-title">Quality & <span class="text-gradient-orange">Safety Guarantee</span></h2>
+                <p class="section-subtitle">Every single order is protected by rigorous checks â€” from warehouse to your doorstep.</p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.05">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="bi bi-shield-fill-check"></i></div>
+                        <h3>100% Genuine Medicines</h3>
+                        <p>Sourced directly from licensed manufacturers and trusted distributors only.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.1">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="bi bi-snow"></i></div>
+                        <h3>Cold-Chain Storage</h3>
+                        <p>Temperature-controlled warehousing protects temperature-sensitive medicines.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.15">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="bi bi-patch-check-fill"></i></div>
+                        <h3>Licensed Pharmacists</h3>
+                        <p>Every prescription and purchase is reviewed by certified pharmacy staff.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.2">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="bi bi-clipboard2-check"></i></div>
+                        <h3>Batch Verified</h3>
+                        <p>Batch numbers and expiry dates are checked twice before dispatch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Simple Ordering</span>
+                <h2 class="section-title">How It <span class="text-gradient-orange">Works</span></h2>
+                <p class="section-subtitle">Order in minutes with a smooth, four-step process.</p>
+            </div>
+            <div class="row g-4 mt-4">
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.05">
+                    <div class="how-card">
+                        <span class="how-step">1</span>
+                        <div class="how-icon"><i class="bi bi-search-heart"></i></div>
+                        <h3>Browse & Order</h3>
+                        <p>Search thousands of medicines and add them to your cart in seconds.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.1">
+                    <div class="how-card">
+                        <span class="how-step">2</span>
+                        <div class="how-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                        <h3>Pharmacist Review</h3>
+                        <p>Our pharmacists check your order, dosage and interactions for safety.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.15">
+                    <div class="how-card">
+                        <span class="how-step">3</span>
+                        <div class="how-icon"><i class="bi bi-box-seam"></i></div>
+                        <h3>Safely Packed</h3>
+                        <p>Medicines are sealed in tamper-proof, cold-chain-ready packaging.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.2">
+                    <div class="how-card">
+                        <span class="how-step">4</span>
+                        <div class="how-icon"><i class="bi bi-truck"></i></div>
+                        <h3>Delivered Fast</h3>
+                        <p>Track your order live â€” delivered in 30 minutes in metro areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Info Band -->
+    <section class="dp-strip-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Delivery & Payments</span>
+                <h2 class="section-title">Fast, Flexible & <span class="text-gradient-orange">Secure</span></h2>
+                <p class="section-subtitle">Convenience baked into every step of your order.</p>
+            </div>
+            <div class="dp-strip mt-5" data-animate="fade-up">
+                <div class="dp-item"><i class="bi bi-clock-history"></i> 30-min express delivery</div>
+                <div class="dp-item"><i class="bi bi-truck"></i> Nationwide shipping</div>
+                <div class="dp-item"><i class="bi bi-box-seam"></i> Free delivery over $50</div>
+                <div class="dp-item"><i class="bi bi-credit-card-2-front"></i> Secure payments</div>
+                <div class="dp-item"><i class="bi bi-cash-coin"></i> Cash on delivery</div>
+                <div class="dp-item"><i class="bi bi-arrow-repeat"></i> 24-hr easy returns</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prescription CTA -->
+    <section class="rx-banner">
+        <div class="container">
+            <div class="rx-banner-inner" data-animate="fade-up">
+                <div class="rx-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                <div class="rx-content">
+                    <h3>Need a Prescription Filled?</h3>
+                    <p>Upload your prescription and our pharmacists will verify and deliver your medicines within minutes.</p>
+                </div>
+                <a href="404.html" class="btn btn-pink btn-lg">Upload Prescription</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-newsletter">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-5">
+                        <h4><i class="bi bi-envelope-heart"></i> Subscribe to our newsletter</h4>
+                        <p>Health tips, medicine reminders & exclusive offers â€” no spam.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <div class="newsletter-input-wrap">
+                                    <i class="bi bi-envelope"></i>
+                                    <input type="email" placeholder="Enter your email address" aria-label="Email">
+                                </div>
+                                <button type="submit" class="btn btn-newsletter">Subscribe</button>
+                            </div>
+                            <small>By subscribing you agree to our Privacy Policy.</small>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 footer-main">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about">
+                        <a class="footer-brand d-flex align-items-center mb-3" href="index.html">
+                            <img src="images/logo.png" class="brand-logo footer-logo" alt="Stackly Pharmacy" loading="lazy">
+                        </a>
+                        <p>Your trusted online pharmacy, delivering genuine medicines and wellness products across the country, backed by licensed pharmacists and 24/7 support.</p>
+                        <div class="footer-certifications">
+                            <span><i class="bi bi-patch-check-fill"></i> Licensed Pharmacy</span>
+                            <span><i class="bi bi-shield-check"></i> ISO Certified</span>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="medicines.html">Medicines</a></li>
+                        <li><a href="health-wellness.html">Health & Wellness</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+<h5 class="footer-title">Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Medicines</a></li>
+                        <li><a href="404.html">Vitamins</a></li>
+                        <li><a href="404.html">Personal Care</a></li>
+                        <li><a href="404.html">Baby Care</a></li>
+                        <li><a href="404.html">Medical Devices</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Help Center</a></li>
+                        <li><a href="404.html">Track Order</a></li>
+                        <li><a href="404.html">Returns & Refunds</a></li>
+                        <li><a href="404.html">Contact Us</a></li>
+                        <li><a href="404.html">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms of Service</a></li>
+                        <li><a href="404.html">Cookie Policy</a></li>
+                        <li><a href="404.html">Refund Policy</a></li>
+                        <li><a href="404.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="row gy-3 align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2026 Stackly Pharmacy. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+<div class="social-links">
+                            <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="404.html" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="404.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,782 @@
+[
+  {
+    "file": "about.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v\"> <div class=\"container\"> <a class=\"navbar-brand d-flex align-items-center me-0\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo\" alt=\"Stackly Pharmacy\" loading=\"eager\"> </a> <div class=\"d-flex align-ite"
+  },
+  {
+    "file": "about.html",
+    "src": "images/about-story.webp",
+    "alt": "Stackly pharmacy team",
+    "snippet": "ade-right\"> <div class=\"story-image img-zoom-wrap rounded-4 overflow-hidden shadow-lg position-relative\"> <img src=\"images/about-story.webp\" alt=\"Stackly pharmacy team\" loading=\"lazy\"> <div class=\"story-badge\"> "
+  },
+  {
+    "file": "about.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v class=\"footer-about\"> <a class=\"footer-brand d-flex align-items-center mb-3\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo footer-logo\" alt=\"Stackly Pharmacy\" loading=\"lazy\"> </a> <p"
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": " <!-- ======= Sidebar ======= --> <aside class=\"dash-sidebar\" id=\"dashSidebar\"> <a class=\"dash-brand\" href=\"index.html\"> <img src=\"images/logo.png\" alt=\"Stackly Pharmacy\"> <span class=\"dash-brand-text\"><b>Stackly</b> <span>Admin Panel</span></span> </a>"
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-paracetamol.webp",
+    "alt": "Paracetamol",
+    "snippet": "<td><input type=\"checkbox\" class=\"form-check-input row-check\"></td> <td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-paracetamol.webp\" alt=\"Paracetamol\"></span> Paracetamol 500mg <small>SKU: MED-001</small></div></td> "
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-vitamin-d3.webp",
+    "alt": "Vitamin D3",
+    "snippet": "<td><input type=\"checkbox\" class=\"form-check-input row-check\"></td> <td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-vitamin-d3.webp\" alt=\"Vitamin D3\"></span> Vitamin D3 2000 IU <small>SKU: VIT-102</small></div></td> "
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-multivitamin.webp",
+    "alt": "Multivitamin",
+    "snippet": "<td><input type=\"checkbox\" class=\"form-check-input row-check\"></td> <td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-multivitamin.webp\" alt=\"Multivitamin\"></span> Daily Multivitamin <small>SKU: VIT-090</small></div></td> "
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-cetirizine.webp",
+    "alt": "Cetirizine",
+    "snippet": "<td><input type=\"checkbox\" class=\"form-check-input row-check\"></td> <td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-cetirizine.webp\" alt=\"Cetirizine\"></span> Cetirizine 10mg <small>SKU: MED-014</small></div></td> "
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-pain-gel.webp",
+    "alt": "Pain Relief Gel",
+    "snippet": "<td><input type=\"checkbox\" class=\"form-check-input row-check\"></td> <td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-pain-gel.webp\" alt=\"Pain Relief Gel\"></span> Pain Relief Gel 100g <small>SKU: OTC-203</small></div></td> "
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Face Cream",
+    "snippet": "<td><input type=\"checkbox\" class=\"form-check-input row-check\"></td> <td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-face-cream.webp\" alt=\"Face Cream\"></span> Hydrating Face Cream <small>SKU: SKN-311</small></div></td> "
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-multivitamin.webp",
+    "alt": "Multivitamin",
+    "snippet": "tatus</th></tr></thead> <tbody> <tr><td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-multivitamin.webp\" alt=\"Multivitamin\"></span> Daily Multivitamin</div></td><td>34</td><td class=\"muted-txt\">100</td><td><span c"
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-cetirizine.webp",
+    "alt": "Cetirizine",
+    "snippet": "/td><td><span class=\"status-badge warning\">Low</span></td></tr> <tr><td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-cetirizine.webp\" alt=\"Cetirizine\"></span> Cetirizine 10mg</div></td><td>0</td><td class=\"muted-txt\">120</td><td><span class=\"st"
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-thermometer.webp",
+    "alt": "Thermometer",
+    "snippet": "</td><td><span class=\"status-badge danger\">Out</span></td></tr> <tr><td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-thermometer.webp\" alt=\"Thermometer\"></span> Digital Thermometer</div></td><td>12</td><td class=\"muted-txt\">40</td><td><span cla"
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-baby-lotion.webp",
+    "alt": "Baby Lotion",
+    "snippet": "<td><span class=\"status-badge danger\">Critical</span></td></tr> <tr><td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-baby-lotion.webp\" alt=\"Baby Lotion\"></span> Baby Lotion 250ml</div></td><td>88</td><td class=\"muted-txt\">150</td><td><span clas"
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-paracetamol.webp",
+    "alt": "Paracetamol",
+    "snippet": "ad> <tbody> <tr><td class=\"muted-txt\">1</td><td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-paracetamol.webp\" alt=\"Paracetamol\"></span> Paracetamol 500mg</div></td><td class=\"muted-txt\">Medicines</td><td>1,240</td><td>$"
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-vitamin-d3.webp",
+    "alt": "Vitamin D3",
+    "snippet": "</td><td>1,240</td><td>$6,190</td></tr> <tr><td class=\"muted-txt\">2</td><td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-vitamin-d3.webp\" alt=\"Vitamin D3\"></span> Vitamin D3 2000 IU</div></td><td class=\"muted-txt\">Vitamins</td><td>860</td><td>$10,7"
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-multivitamin.webp",
+    "alt": "Multivitamin",
+    "snippet": "s</td><td>860</td><td>$10,750</td></tr> <tr><td class=\"muted-txt\">3</td><td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-multivitamin.webp\" alt=\"Multivitamin\"></span> Daily Multivitamin</div></td><td class=\"muted-txt\">Vitamins</td><td>512</td><td>$"
+  },
+  {
+    "file": "admin-dashboard.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Face Cream",
+    "snippet": "ns</td><td>512</td><td>$9,600</td></tr> <tr><td class=\"muted-txt\">4</td><td><div class=\"t-prod\"><span class=\"t-thumb\"><img src=\"images/product-face-cream.webp\" alt=\"Face Cream\"></span> Hydrating Face Cream</div></td><td class=\"muted-txt\">Skin Care</td><td>288</td><td>$4"
+  },
+  {
+    "file": "cart.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v\"> <div class=\"container\"> <a class=\"navbar-brand d-flex align-items-center me-0\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo\" alt=\"Stackly Pharmacy\" loading=\"eager\"> </a> <div class=\"d-flex align-ite"
+  },
+  {
+    "file": "cart.html",
+    "src": "images/product-vitamin-d3.webp",
+    "alt": "Vitamin D3 2000 IU",
+    "snippet": "\"> <div class=\"cart-item-dash\" data-id=\"vitd3\" data-price=\"12.50\"> <span class=\"t-thumb\"><img src=\"images/product-vitamin-d3.webp\" alt=\"Vitamin D3 2000 IU\"></span> <div class=\"cart-main\"> "
+  },
+  {
+    "file": "cart.html",
+    "src": "images/product-paracetamol.webp",
+    "alt": "Paracetamol 500mg",
+    "snippet": " <div class=\"cart-item-dash\" data-id=\"paracetamol\" data-price=\"4.99\"> <span class=\"t-thumb\"><img src=\"images/product-paracetamol.webp\" alt=\"Paracetamol 500mg\"></span> <div class=\"cart-main\"> "
+  },
+  {
+    "file": "cart.html",
+    "src": "images/product-cetirizine.webp",
+    "alt": "Cetirizine 10mg",
+    "snippet": " <div class=\"cart-item-dash\" data-id=\"cetirizine\" data-price=\"6.25\"> <span class=\"t-thumb\"><img src=\"images/product-cetirizine.webp\" alt=\"Cetirizine 10mg\"></span> <div class=\"cart-main\"> "
+  },
+  {
+    "file": "cart.html",
+    "src": "images/product-baby-lotion.webp",
+    "alt": "Gentle Baby Lotion",
+    "snippet": " <div class=\"cart-item-dash\" data-id=\"baby-lotion\" data-price=\"8.40\"> <span class=\"t-thumb\"><img src=\"images/product-baby-lotion.webp\" alt=\"Gentle Baby Lotion\"></span> <div class=\"cart-main\"> "
+  },
+  {
+    "file": "cart.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v class=\"footer-about\"> <a class=\"footer-brand d-flex align-items-center mb-3\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo footer-logo\" alt=\"Stackly Pharmacy\" loading=\"lazy\"> </a> <p"
+  },
+  {
+    "file": "contact.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v\"> <div class=\"container\"> <a class=\"navbar-brand d-flex align-items-center me-0\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo\" alt=\"Stackly Pharmacy\" loading=\"eager\"> </a> <div class=\"d-flex align-ite"
+  },
+  {
+    "file": "contact.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v class=\"footer-about\"> <a class=\"footer-brand d-flex align-items-center mb-3\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo footer-logo\" alt=\"Stackly Pharmacy\" loading=\"lazy\"> </a> <p"
+  },
+  {
+    "file": "customer-dashboard.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": " <!-- ======= Sidebar ======= --> <aside class=\"dash-sidebar\" id=\"dashSidebar\"> <a class=\"dash-brand\" href=\"index.html\"> <img src=\"images/logo.png\" alt=\"Stackly Pharmacy\"> <span class=\"dash-brand-text\"><b>Stackly</b> <span>My Account</span></span> </a> "
+  },
+  {
+    "file": "customer-dashboard.html",
+    "src": "images/product-vitamin-d3.webp",
+    "alt": "Vitamin D3 2000 IU",
+    "snippet": " <button class=\"wishlist-btn active\" aria-label=\"Remove from wishlist\"><i class=\"bi bi-heart-fill\"></i></button> <img src=\"images/product-vitamin-d3.webp\" alt=\"Vitamin D3 2000 IU\" loading=\"lazy\"> <div class=\"product-actions\"> "
+  },
+  {
+    "file": "customer-dashboard.html",
+    "src": "images/product-multivitamin.webp",
+    "alt": "Daily Multivitamin",
+    "snippet": " <button class=\"wishlist-btn active\" aria-label=\"Remove from wishlist\"><i class=\"bi bi-heart-fill\"></i></button> <img src=\"images/product-multivitamin.webp\" alt=\"Daily Multivitamin\" loading=\"lazy\"> <div class=\"product-actions\"> "
+  },
+  {
+    "file": "customer-dashboard.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Hydrating Face Cream",
+    "snippet": " <button class=\"wishlist-btn active\" aria-label=\"Remove from wishlist\"><i class=\"bi bi-heart-fill\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Hydrating Face Cream\" loading=\"lazy\"> <div class=\"product-actions\"> "
+  },
+  {
+    "file": "customer-dashboard.html",
+    "src": "images/product-thermometer.webp",
+    "alt": "Digital Thermometer",
+    "snippet": " <button class=\"wishlist-btn active\" aria-label=\"Remove from wishlist\"><i class=\"bi bi-heart-fill\"></i></button> <img src=\"images/product-thermometer.webp\" alt=\"Digital Thermometer\" loading=\"lazy\"> <div class=\"product-actions\"> "
+  },
+  {
+    "file": "customer-dashboard.html",
+    "src": "images/product-vitamin-d3.webp",
+    "alt": "Vitamin D3",
+    "snippet": " <div class=\"card-dash-body\"> <div class=\"cart-item-dash\"> <span class=\"t-thumb\"><img src=\"images/product-vitamin-d3.webp\" alt=\"Vitamin D3\"></span> <div class=\"cart-main\"> "
+  },
+  {
+    "file": "customer-dashboard.html",
+    "src": "images/product-paracetamol.webp",
+    "alt": "Paracetamol",
+    "snippet": "/a> </div> <div class=\"cart-item-dash\"> <span class=\"t-thumb\"><img src=\"images/product-paracetamol.webp\" alt=\"Paracetamol\"></span> <div class=\"cart-main\"> "
+  },
+  {
+    "file": "customer-dashboard.html",
+    "src": "images/product-cetirizine.webp",
+    "alt": "Cetirizine",
+    "snippet": "/a> </div> <div class=\"cart-item-dash\"> <span class=\"t-thumb\"><img src=\"images/product-cetirizine.webp\" alt=\"Cetirizine\"></span> <div class=\"cart-main\"> "
+  },
+  {
+    "file": "customer-dashboard.html",
+    "src": "images/product-baby-lotion.webp",
+    "alt": "Baby Lotion",
+    "snippet": "/a> </div> <div class=\"cart-item-dash\"> <span class=\"t-thumb\"><img src=\"images/product-baby-lotion.webp\" alt=\"Baby Lotion\"></span> <div class=\"cart-main\"> "
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v\"> <div class=\"container\"> <a class=\"navbar-brand d-flex align-items-center me-0\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo\" alt=\"Stackly Pharmacy\" loading=\"eager\"> </a> <div class=\"d-flex align-ite"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-vitamin-d3.webp",
+    "alt": "Vitamin D3",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-vitamin-d3.webp\" alt=\"Vitamin D3\" loading=\"lazy\"> </div> <div class=\"product-bo"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-multivitamin.webp",
+    "alt": "Multivitamins",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-multivitamin.webp\" alt=\"Multivitamins\" loading=\"lazy\"> </div> <div class=\"produ"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-pain-gel.webp",
+    "alt": "Pain Gel",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-pain-gel.webp\" alt=\"Pain Gel\" loading=\"lazy\"> </div> <div class=\"product-body\">"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-paracetamol.webp",
+    "alt": "Vitamin C",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-paracetamol.webp\" alt=\"Vitamin C\" loading=\"lazy\"> </div> <div class=\"product-bo"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Zinc + Elderberry",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Zinc + Elderberry\" loading=\"lazy\"> </div> <div class=\"pro"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-baby-lotion.webp",
+    "alt": "Baby Care",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-baby-lotion.webp\" alt=\"Baby Care\" loading=\"lazy\"> </div> <div class=\"product-bo"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-wellness.webp",
+    "alt": "Fitness Powder",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-wellness.webp\" alt=\"Fitness Powder\" loading=\"lazy\"> </div> <div class=\"product-body"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-multivitamin.webp",
+    "alt": "Protein Bar",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-multivitamin.webp\" alt=\"Protein Bar\" loading=\"lazy\"> </div> <div class=\"product"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-vitamin-d3.webp",
+    "alt": "Green Tea",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-vitamin-d3.webp\" alt=\"Green Tea\" loading=\"lazy\"> </div> <div class=\"product-bod"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-hair-care.webp",
+    "alt": "Biotin",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-hair-care.webp\" alt=\"Biotin\" loading=\"lazy\"> </div> <div class=\"product-body\"> "
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Collagen",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Collagen\" loading=\"lazy\"> </div> <div class=\"product-body"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-skin-care.webp",
+    "alt": "Sunscreen",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-skin-care.webp\" alt=\"Sunscreen\" loading=\"lazy\"> </div> <div class=\"product-body\"> "
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-skin-care.webp",
+    "alt": "Sunscreen",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-skin-care.webp\" alt=\"Sunscreen\" loading=\"lazy\"> </div> <div class=\"product-body\"> "
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Face cleanser",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Face cleanser\" loading=\"lazy\"> </div> <div class=\"product"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Moisturizer",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Moisturizer\" loading=\"lazy\"> </div> <div class=\"product-b"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-personal-care.webp",
+    "alt": "Electric toothbrush",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-personal-care.webp\" alt=\"Electric toothbrush\" loading=\"lazy\"> </div> <div class=\"pr"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-personal-care.webp",
+    "alt": "Whitening toothpaste",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-personal-care.webp\" alt=\"Whitening toothpaste\" loading=\"lazy\"> </div> <div class=\"p"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-personal-care.webp",
+    "alt": "Mouthwash",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-personal-care.webp\" alt=\"Mouthwash\" loading=\"lazy\"> </div> <div class=\"product-body"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-personal-care.webp",
+    "alt": "Hair oil",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-personal-care.webp\" alt=\"Hair oil\" loading=\"lazy\"> </div> <div class=\"product-body\""
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-personal-care.webp",
+    "alt": "Shampoo",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-personal-care.webp\" alt=\"Shampoo\" loading=\"lazy\"> </div> <div class=\"product-body\">"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-personal-care.webp",
+    "alt": "Hair serum",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-personal-care.webp\" alt=\"Hair serum\" loading=\"lazy\"> </div> <div class=\"product-bod"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Hand sanitizer",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Hand sanitizer\" loading=\"lazy\"> </div> <div class=\"produc"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Body wash",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Body wash\" loading=\"lazy\"> </div> <div class=\"product-bod"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Sanitizer kit",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Sanitizer kit\" loading=\"lazy\"> </div> <div class=\"product"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-baby-care.webp",
+    "alt": "Baby wipes",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-baby-care.webp\" alt=\"Baby wipes\" loading=\"lazy\"> </div> <div class=\"product-body\"> "
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/product-baby-lotion.webp",
+    "alt": "Baby lotion",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-baby-lotion.webp\" alt=\"Baby lotion\" loading=\"lazy\"> </div> <div class=\"product-"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-baby-care.webp",
+    "alt": "Baby powder",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-baby-care.webp\" alt=\"Baby powder\" loading=\"lazy\"> </div> <div class=\"product-body\">"
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-baby-care.webp",
+    "alt": "Baby shampoo",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-baby-care.webp\" alt=\"Baby shampoo\" loading=\"lazy\"> </div> <div class=\"product-body\""
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-baby-care.webp",
+    "alt": "Baby oil",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-baby-care.webp\" alt=\"Baby oil\" loading=\"lazy\"> </div> <div class=\"product-body\"> "
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/cat-baby-care.webp",
+    "alt": "Baby cream",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/cat-baby-care.webp\" alt=\"Baby cream\" loading=\"lazy\"> </div> <div class=\"product-body\"> "
+  },
+  {
+    "file": "health-wellness.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v class=\"footer-about\"> <a class=\"footer-brand d-flex align-items-center mb-3\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo footer-logo\" alt=\"Stackly Pharmacy\" loading=\"lazy\"> </a> <p"
+  },
+  {
+    "file": "index.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v\"> <div class=\"container\"> <a class=\"navbar-brand d-flex align-items-center me-0\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo\" alt=\"Stackly Pharmacy\" loading=\"eager\"> </a> <div class=\"d-flex align-ite"
+  },
+  {
+    "file": "index.html",
+    "src": "images/pharmacist.webp",
+    "alt": "Stackly Pharmacist",
+    "snippet": "div class=\"col-lg-6\"> <div class=\"hero-visual\"> <div class=\"hero-image-wrap\"> <img src=\"images/pharmacist.webp\" alt=\"Stackly Pharmacist\" class=\"hero-doctor\" loading=\"eager\"> <div class=\"hero-float-img "
+  },
+  {
+    "file": "index.html",
+    "src": "images/pharmacist.webp",
+    "alt": "Licensed pharmacist",
+    "snippet": "macist\" class=\"hero-doctor\" loading=\"eager\"> <div class=\"hero-float-img pharmacist-img\"> <img src=\"images/pharmacist.webp\" alt=\"Licensed pharmacist\"> </div> <div class=\"hero-float-card "
+  },
+  {
+    "file": "index.html",
+    "src": "images/cat-medicines.webp",
+    "alt": "Medicines",
+    "snippet": " <a href=\"medicines.html\" class=\"category-card\"> <div class=\"category-media\"> <img src=\"images/cat-medicines.webp\" alt=\"Medicines\"> <span class=\"category-media-overlay\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/cat-personal-care.webp",
+    "alt": "Personal Care",
+    "snippet": " <a href=\"health-wellness.html#pc-skin-care\" class=\"category-card\"> <div class=\"category-media\"> <img src=\"images/cat-personal-care.webp\" alt=\"Personal Care\"> <span class=\"category-media-overlay\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/cat-skin-care.webp",
+    "alt": "Skin Care",
+    "snippet": " <a href=\"health-wellness.html#pc-skin-care\" class=\"category-card\"> <div class=\"category-media\"> <img src=\"images/cat-skin-care.webp\" alt=\"Skin Care\"> <span class=\"category-media-overlay\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/cat-baby-care.webp",
+    "alt": "Baby Care",
+    "snippet": " <a href=\"health-wellness.html#baby-care\" class=\"category-card\"> <div class=\"category-media\"> <img src=\"images/cat-baby-care.webp\" alt=\"Baby Care\"> <span class=\"category-media-overlay\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/cat-vitamins.webp",
+    "alt": "Vitamins",
+    "snippet": " <a href=\"health-wellness.html\" class=\"category-card\"> <div class=\"category-media\"> <img src=\"images/cat-vitamins.webp\" alt=\"Vitamins\"> <span class=\"category-media-overlay\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/cat-wellness.webp",
+    "alt": "Wellness",
+    "snippet": " <a href=\"health-wellness.html\" class=\"category-card\"> <div class=\"category-media\"> <img src=\"images/cat-wellness.webp\" alt=\"Wellness\"> <span class=\"category-media-overlay\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/cat-devices.webp",
+    "alt": "Medical Devices",
+    "snippet": " <a href=\"medicines.html\" class=\"category-card\"> <div class=\"category-media\"> <img src=\"images/cat-devices.webp\" alt=\"Medical Devices\"> <span class=\"category-media-overlay\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/about-story.webp",
+    "alt": "Inside Stackly Pharmacy",
+    "snippet": "enter g-5\"> <div class=\"col-lg-6\" data-animate=\"fade-up\"> <div class=\"about-intro-media\"> <img src=\"images/about-story.webp\" alt=\"Inside Stackly Pharmacy\" loading=\"lazy\"> <div class=\"about-intro-badge\"> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/product-vitamin-d3.webp",
+    "alt": "Vitamin D3 Complex",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-vitamin-d3.webp\" alt=\"Vitamin D3 Complex\" loading=\"lazy\"> <span class=\"product-shine\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/product-pain-gel.webp",
+    "alt": "Pain Relief Gel",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-pain-gel.webp\" alt=\"Pain Relief Gel\" loading=\"lazy\"> <span class=\"product-shine\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Moisturizing Face Cream",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Moisturizing Face Cream\" loading=\"lazy\"> <span class=\"product-shine\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/product-thermometer.webp",
+    "alt": "Digital Thermometer",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-thermometer.webp\" alt=\"Digital Thermometer\" loading=\"lazy\"> <span class=\"product-shine\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/product-multivitamin.webp",
+    "alt": "Multivitamin Tablets",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-multivitamin.webp\" alt=\"Multivitamin Tablets\" loading=\"lazy\"> <span class=\"product-shine\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/product-paracetamol.webp",
+    "alt": "Paracetamol 500mg",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-paracetamol.webp\" alt=\"Paracetamol 500mg\" loading=\"lazy\"> <span class=\"product-shine\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/product-cetirizine.webp",
+    "alt": "Cetirizine Allergy Relief",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-cetirizine.webp\" alt=\"Cetirizine Allergy Relief\" loading=\"lazy\"> <span class=\"product-shine\"></span"
+  },
+  {
+    "file": "index.html",
+    "src": "images/product-baby-lotion.webp",
+    "alt": "Gentle Baby Lotion",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-baby-lotion.webp\" alt=\"Gentle Baby Lotion\" loading=\"lazy\"> <span class=\"product-shine\"></span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/pharmacist.webp",
+    "alt": "Pharmacist",
+    "snippet": "repeat me-1\"></i> Reorder Medicines</a> </div> <div class=\"rx-note mt-4\"> <img src=\"images/pharmacist.webp\" alt=\"Pharmacist\" class=\"rx-avatar\" loading=\"lazy\"> <p><strong>Need a refill reminder?</str"
+  },
+  {
+    "file": "index.html",
+    "src": "images/pharmacist.webp",
+    "alt": "Sarah Johnson",
+    "snippet": "ne and on time. The 30-minute delivery is incredible.\"</p> <div class=\"t-author\"> <img src=\"images/pharmacist.webp\" alt=\"Sarah Johnson\" class=\"t-avatar\" loading=\"lazy\"> <div> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/pharmacist.webp",
+    "alt": "Michael Chen",
+    "snippet": "in seconds. This is what healthcare should feel like.\"</p> <div class=\"t-author\"> <img src=\"images/pharmacist.webp\" alt=\"Michael Chen\" class=\"t-avatar\" loading=\"lazy\"> <div> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/pharmacist.webp",
+    "alt": "Amanda Reyes",
+    "snippet": " monthly supplements automatically. Truly five stars.\"</p> <div class=\"t-author\"> <img src=\"images/pharmacist.webp\" alt=\"Amanda Reyes\" class=\"t-avatar\" loading=\"lazy\"> <div> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/product-multivitamin.webp",
+    "alt": "Immunity boosting habits",
+    "snippet": " <a href=\"health-wellness.html#immunity\" class=\"tip-card\"> <div class=\"tip-media\"> <img src=\"images/product-multivitamin.webp\" alt=\"Immunity boosting habits\" loading=\"lazy\"> <span class=\"tip-tag\">Immunity</"
+  },
+  {
+    "file": "index.html",
+    "src": "images/cat-vitamins.webp",
+    "alt": "Vitamins guide",
+    "snippet": "> <a href=\"health-wellness.html\" class=\"tip-card\"> <div class=\"tip-media\"> <img src=\"images/cat-vitamins.webp\" alt=\"Vitamins guide\" loading=\"lazy\"> <span class=\"tip-tag\">Nutrition</span> "
+  },
+  {
+    "file": "index.html",
+    "src": "images/pharmacist.webp",
+    "alt": "Prescription label guide",
+    "snippet": "\"0.15\"> <a href=\"medicines.html\" class=\"tip-card\"> <div class=\"tip-media\"> <img src=\"images/pharmacist.webp\" alt=\"Prescription label guide\" loading=\"lazy\"> <span class=\"tip-tag\">Medication Safety</s"
+  },
+  {
+    "file": "index.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v class=\"footer-about\"> <a class=\"footer-brand d-flex align-items-center mb-3\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo footer-logo\" alt=\"Stackly Pharmacy\" loading=\"lazy\"> </a> <p"
+  },
+  {
+    "file": "login.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": " <section class=\"auth-card\" data-animate=\"fade-up\"> <div class=\"auth-media\"> <div> <img src=\"images/logo.png\" class=\"brand-logo\" alt=\"Stackly Pharmacy\" loading=\"lazy\"> <span class=\"auth-media-tag\"><i class=\"bi b"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v\"> <div class=\"container\"> <a class=\"navbar-brand d-flex align-items-center me-0\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo\" alt=\"Stackly Pharmacy\" loading=\"eager\"> </a> <div class=\"d-flex align-ite"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-vitamin-d3.webp",
+    "alt": "Vitamin D3",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-vitamin-d3.webp\" alt=\"Vitamin D3\" loading=\"lazy\"> </div> <div class=\"product-bo"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-pain-gel.webp",
+    "alt": "Pain Relief Gel",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-pain-gel.webp\" alt=\"Pain Relief Gel\" loading=\"lazy\"> </div> <div class=\"product"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-paracetamol.webp",
+    "alt": "Cold & Flu Relief",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-paracetamol.webp\" alt=\"Cold & Flu Relief\" loading=\"lazy\"> </div> <div class=\"pr"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-thermometer.webp",
+    "alt": "Digital Thermometer",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-thermometer.webp\" alt=\"Digital Thermometer\" loading=\"lazy\"> </div> <div class=\""
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-face-cream.webp",
+    "alt": "Moisturizing Face Cream",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-face-cream.webp\" alt=\"Moisturizing Face Cream\" loading=\"lazy\"> </div> <div clas"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-multivitamin.webp",
+    "alt": "Multivitamin Daily",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-multivitamin.webp\" alt=\"Multivitamin Daily\" loading=\"lazy\"> </div> <div class=\""
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-thermometer.webp",
+    "alt": "Smart Thermometer",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-thermometer.webp\" alt=\"Smart Thermometer\" loading=\"lazy\"> </div> <div class=\"pr"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-baby-lotion.webp",
+    "alt": "Baby Care Kit",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-baby-lotion.webp\" alt=\"Baby Care Kit\" loading=\"lazy\"> </div> <div class=\"produc"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-cetirizine.webp",
+    "alt": "Cetirizine Allergy Relief",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-cetirizine.webp\" alt=\"Cetirizine Allergy Relief\" loading=\"lazy\"> </div> <div cl"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-paracetamol.webp",
+    "alt": "Paracetamol Fever Relief",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-paracetamol.webp\" alt=\"Paracetamol Fever Relief\" loading=\"lazy\"> </div> <div cl"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-ibuprofen-200mg.webp",
+    "alt": "Ibuprofen 200mg",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-ibuprofen-200mg.webp\" alt=\"Ibuprofen 200mg\" loading=\"lazy\"> </div> <div class"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-aspirin-75mg.webp",
+    "alt": "Aspirin 75mg",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-aspirin-75mg.webp\" alt=\"Aspirin 75mg\" loading=\"lazy\"> </div> <div class=\"prod"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-diclofenac-gel-30g.webp",
+    "alt": "Diclofenac Gel",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-diclofenac-gel-30g.webp\" alt=\"Diclofenac Gel\" loading=\"lazy\"> </div> <div cla"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-naproxen-250mg.webp",
+    "alt": "Naproxen 250mg",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-naproxen-250mg.webp\" alt=\"Naproxen 250mg\" loading=\"lazy\"> </div> <div class=\""
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-cough-syrup-100ml.webp",
+    "alt": "Cough Syrup",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-cough-syrup-100ml.webp\" alt=\"Cough Syrup\" loading=\"lazy\"> </div> <div class=\""
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-nasal-decongestant.webp",
+    "alt": "Nasal Decongestant",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-nasal-decongestant.webp\" alt=\"Nasal Decongestant\" loading=\"lazy\"> </div> <div"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-cough-lozenges-12.webp",
+    "alt": "Menthol Cough Lozenges",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-cough-lozenges-12.webp\" alt=\"Menthol Cough Lozenges\" loading=\"lazy\"> </div> <"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-cold-relief-10.webp",
+    "alt": "Multi-Symptom Cold Relief",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-cold-relief-10.webp\" alt=\"Multi-Symptom Cold Relief\" loading=\"lazy\"> </div> <"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-vitamin-c-500mg.webp",
+    "alt": "Vitamin C 500mg",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-vitamin-c-500mg.webp\" alt=\"Vitamin C 500mg\" loading=\"lazy\"> </div> <div class"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-vitamin-b-complex.webp",
+    "alt": "Vitamin B-Complex",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-vitamin-b-complex.webp\" alt=\"Vitamin B-Complex\" loading=\"lazy\"> </div> <div c"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-omega3-fish-oil-30.webp",
+    "alt": "Omega-3 Fish Oil",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-omega3-fish-oil-30.webp\" alt=\"Omega-3 Fish Oil\" loading=\"lazy\"> </div> <div c"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-iron-folic-acid.webp",
+    "alt": "Iron and Folic Acid",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-iron-folic-acid.webp\" alt=\"Iron and Folic Acid\" loading=\"lazy\"> </div> <div c"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-calcium-d3.webp",
+    "alt": "Calcium and Vitamin D3",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-calcium-d3.webp\" alt=\"Calcium and Vitamin D3\" loading=\"lazy\"> </div> <div cla"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-digital-bp-monitor.webp",
+    "alt": "Digital Blood Pressure Monitor",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-digital-bp-monitor.webp\" alt=\"Digital Blood Pressure Monitor\" loading=\"lazy\"> </div> "
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-pulse-oximeter.webp",
+    "alt": "Fingertip Pulse Oximeter",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-pulse-oximeter.webp\" alt=\"Fingertip Pulse Oximeter\" loading=\"lazy\"> </div> <d"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-weighing-scale.webp",
+    "alt": "Digital Weighing Scale",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-weighing-scale.webp\" alt=\"Digital Weighing Scale\" loading=\"lazy\"> </div> <div"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-thermometer-ir.webp",
+    "alt": "Infrared Forehead Thermometer",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-thermometer-ir.webp\" alt=\"Infrared Forehead Thermometer\" loading=\"lazy\"> </div> "
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-hand-sanitizer-500ml.webp",
+    "alt": "Hand Sanitizer Gel",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-hand-sanitizer-500ml.webp\" alt=\"Hand Sanitizer Gel\" loading=\"lazy\"> </div> <d"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-sunscreen-spf50.webp",
+    "alt": "Sunscreen SPF 50",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-sunscreen-spf50.webp\" alt=\"Sunscreen SPF 50\" loading=\"lazy\"> </div> <div clas"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/product-antiseptic-cream-25g.webp",
+    "alt": "Antiseptic Cream",
+    "snippet": " <button class=\"wishlist-btn\" aria-label=\"Add to wishlist\"><i class=\"bi bi-heart\"></i></button> <img src=\"images/product-antiseptic-cream-25g.webp\" alt=\"Antiseptic Cream\" loading=\"lazy\"> </div> <div"
+  },
+  {
+    "file": "medicines.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v class=\"footer-about\"> <a class=\"footer-brand d-flex align-items-center mb-3\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo footer-logo\" alt=\"Stackly Pharmacy\" loading=\"lazy\"> </a> <p"
+  },
+  {
+    "file": "offers.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v\"> <div class=\"container\"> <a class=\"navbar-brand d-flex align-items-center me-0\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo\" alt=\"Stackly Pharmacy\" loading=\"eager\"> </a> <div class=\"d-flex align-ite"
+  },
+  {
+    "file": "offers.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": "v class=\"footer-about\"> <a class=\"footer-brand d-flex align-items-center mb-3\" href=\"index.html\"> <img src=\"images/logo.png\" class=\"brand-logo footer-logo\" alt=\"Stackly Pharmacy\" loading=\"lazy\"> </a> <p"
+  },
+  {
+    "file": "signup.html",
+    "src": "images/logo.png",
+    "alt": "Stackly Pharmacy",
+    "snippet": " <section class=\"auth-card\" data-animate=\"fade-up\"> <div class=\"auth-media\"> <div> <img src=\"images/logo.png\" class=\"brand-logo\" alt=\"Stackly Pharmacy\" loading=\"lazy\"> <span class=\"auth-media-tag\"><i class=\"bi b"
+  }
+]

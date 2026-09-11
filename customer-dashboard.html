@@ -1,0 +1,802 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | Stackly Pharmacy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="dash-body">
+
+    <div class="dash-overlay"></div>
+
+    <!-- ======= Sidebar ======= -->
+    <aside class="dash-sidebar" id="dashSidebar">
+        <a class="dash-brand" href="index.html">
+            <img src="images/logo.png" alt="Stackly Pharmacy">
+        </a>
+
+        <nav class="dash-nav">
+            <div class="dash-nav-label">Dashboard</div>
+            <a class="dash-link active" data-panel="overview"><i class="bi bi-grid-1x2"></i> My Account</a>
+
+            <div class="dash-nav-label">Shopping</div>
+            <a class="dash-link" data-panel="orders"><i class="bi bi-bag-check"></i> My Orders</a>
+            <a class="dash-link" data-panel="order-tracking"><i class="bi bi-truck"></i> Order Tracking</a>
+            <a class="dash-link" data-panel="wishlist"><i class="bi bi-heart"></i> Wishlist</a>
+            <a class="dash-link" data-panel="cart"><i class="bi bi-cart3"></i> Cart <span class="dash-link-badge">4</span></a>
+
+            <div class="dash-nav-label">Account</div>
+            <a class="dash-link" data-panel="profile"><i class="bi bi-person"></i> Profile</a>
+            <a class="dash-link" data-panel="addresses"><i class="bi bi-geo-alt"></i> Saved Addresses</a>
+            <a class="dash-link" data-panel="payments"><i class="bi bi-credit-card"></i> Payment Details</a>
+            <a class="dash-link" data-panel="order-history"><i class="bi bi-clock-history"></i> Order History</a>
+
+            <div class="dash-nav-label">Preferences</div>
+            <a class="dash-link" data-panel="notifications"><i class="bi bi-bell"></i> Notifications <span class="dash-link-badge">3</span></a>
+            <a class="dash-link" data-panel="settings"><i class="bi bi-gear"></i> Account Settings</a>
+        </nav>
+
+        <a href="index.html" class="dash-home"><i class="bi bi-house-door"></i> Go to Home</a>
+
+        <div class="dash-sidebar-footer">
+            <div class="dash-user-mini">
+                <span class="dash-avatar" data-user-avatar></span>
+                <div><b data-user-name></b><small data-user-email></small></div>
+            </div>
+            <a href="login.html" class="dash-logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
+        </div>
+    </aside>
+
+    <!-- ======= Main ======= -->
+    <div class="dash-main">
+        <header class="dash-topbar">
+            <button class="dash-burger" aria-label="Toggle sidebar"><i class="bi bi-list"></i></button>
+            <div class="dash-topbar-actions">
+                <div class="dash-user-chip">
+                    <span class="dash-avatar" data-user-avatar></span>
+                    <div><strong data-user-name></strong><small>Member since 2023</small></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="dash-content">
+
+            <!-- ===== Overview ===== -->
+            <section class="dash-panel active" id="panel-overview">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>Hi, <span data-user-greet></span>! Welcome back</h2>
+                        <p>Manage your orders, health records and perks from one place.</p>
+                    </div>
+                    <a href="medicines.html" class="btn btn-primary-brand btn-sm"><i class="bi bi-bag-plus me-1"></i> Shop Now</a>
+                </div>
+
+                <div class="dash-grid-4 mb-4">
+                    <div class="stat-card">
+                        <span class="stat-icon soft-purple"><i class="bi bi-bag-check"></i></span>
+                        <div>
+                            <div class="st-val">14</div>
+                            <span class="st-label">Total Orders</span>
+                            <span class="st-trend up"><i class="bi bi-arrow-up-right me-1"></i>2 new this month</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-black">
+                        <span class="stat-icon soft-dark"><i class="bi bi-wallet2"></i></span>
+                        <div>
+                            <div class="st-val">$128.40</div>
+                            <span class="st-label">Wallet Balance</span>
+                            <span class="st-trend up">From refunds &amp; rewards</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon soft-amber"><i class="bi bi-star"></i></span>
+                        <div>
+                            <div class="st-val">1,240</div>
+                            <span class="st-label">Loyalty Points</span>
+                            <span class="st-trend up">≈ $12.40 off</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-black">
+                        <span class="stat-icon soft-blue"><i class="bi bi-heart"></i></span>
+                        <div>
+                            <div class="st-val">6</div>
+                            <span class="st-label">Wishlist Items</span>
+                            <span class="st-trend up">1 on sale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-grid-2">
+                    <div class="card-dash">
+                        <div class="card-dash-head">
+                            <h5>Recent orders</h5>
+                            <a href="#orders" class="btn btn-outline-dash btn-sm js-switch-panel" data-panel="orders">View all</a>
+                        </div>
+                        <div class="table-wrap">
+                            <table class="table-dash">
+                                <thead><tr><th>Order</th><th>Date</th><th>Total</th><th>Status</th><th style="text-align:right">Action</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="muted-txt">#HP-10482</td><td class="muted-txt">Sep 10</td><td>$86.40</td><td><span class="status-badge success">Delivered</span></td><td><div class="table-row-actions" style="justify-content:flex-end;width:100%"><a href="#" class="btn-row"><i class="bi bi-arrow-repeat"></i></a></div></td></tr>
+                                    <tr><td class="muted-txt">#HP-10478</td><td class="muted-txt">Sep 08</td><td>$77.60</td><td><span class="status-badge neutral">Pending</span></td><td><div class="table-row-actions" style="justify-content:flex-end;width:100%"><a href="#" class="btn-row"><i class="bi bi-truck"></i></a></div></td></tr>
+                                    <tr><td class="muted-txt">#HP-10470</td><td class="muted-txt">Sep 02</td><td>$34.20</td><td><span class="status-badge info">In transit</span></td><td><div class="table-row-actions" style="justify-content:flex-end;width:100%"><a href="#" class="btn-row"><i class="bi bi-truck"></i></a></div></td></tr>
+                                    <tr><td class="muted-txt">#HP-10461</td><td class="muted-txt">Aug 28</td><td>$123.15</td><td><span class="status-badge success">Delivered</span></td><td><div class="table-row-actions" style="justify-content:flex-end;width:100%"><a href="#" class="btn-row"><i class="bi bi-arrow-repeat"></i></a></div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card-dash">
+                        <div class="card-dash-head"><h5>Quick actions</h5></div>
+                        <div class="card-dash-body">
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <a href="#orders" class="btn btn-outline-dash w-100 py-3 js-switch-panel" data-panel="orders"><i class="bi bi-plus-circle d-block fs-4 mb-1"></i> Refill Prescription</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="medicines.html" class="btn btn-outline-dash w-100 py-3"><i class="bi bi-tag d-block fs-4 mb-1"></i> Browse Offers</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#order-tracking" class="btn btn-outline-dash w-100 py-3 js-switch-panel" data-panel="order-tracking"><i class="bi bi-truck d-block fs-4 mb-1"></i> Track Order</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#payments" class="btn btn-outline-dash w-100 py-3 js-switch-panel" data-panel="payments"><i class="bi bi-credit-card d-block fs-4 mb-1"></i> Add Payment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="dash-grid-2">
+                    <div class="card-dash">
+                        <div class="card-dash-head">
+                            <h5>My Orders Overview <span class="sub">Last 6 months</span></h5>
+                        </div>
+                        <div class="card-dash-body">
+                            <div class="chart-box"><canvas id="custOrdersChart" aria-label="My orders monthly bar chart" role="img"></canvas></div>
+                        </div>
+                    </div>
+                    <div class="card-dash">
+                        <div class="card-dash-head">
+                            <h5>Spending Overview <span class="sub">Monthly spend</span></h5>
+                        </div>
+                        <div class="card-dash-body">
+                            <div class="chart-box"><canvas id="custSpendingChart" aria-label="Monthly spending line chart" role="img"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-grid-2">
+                    <div class="card-dash">
+                        <div class="card-dash-head">
+                            <h5>Order Status <span class="sub">All-time</span></h5>
+                        </div>
+                        <div class="card-dash-body">
+                            <div class="chart-box"><canvas id="custStatusChart" aria-label="Order status doughnut chart" role="img"></canvas></div>
+                        </div>
+                    </div>
+                    <div class="card-dash">
+                        <div class="card-dash-head">
+                            <h5>Purchase Categories <span class="sub">What you buy most</span></h5>
+                        </div>
+                        <div class="card-dash-body">
+                            <div class="chart-box"><canvas id="custCategoriesChart" aria-label="Purchase categories doughnut chart" role="img"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Profile ===== -->
+            <section class="dash-panel" id="panel-profile">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>My profile</h2>
+                        <p>Keep your details and health information up to date.</p>
+                    </div>
+                    <button class="btn btn-primary-brand btn-sm"><i class="bi bi-check2 me-1"></i> Save Changes</button>
+                </div>
+
+                <div class="dash-grid-3">
+                    <div class="card-dash">
+                        <div class="card-dash-head"><h5>Profile photo</h5></div>
+                        <div class="card-dash-body text-center">
+                            <span class="dash-avatar" style="width:88px;height:88px;font-size:1.7rem;margin:0 auto 16px;display:flex" data-user-avatar></span>
+                            <h5 class="mb-1" data-user-name></h5>
+                            <p class="muted-txt mb-3" style="font-size:.86rem">Gold Member &bull; Since Mar 2023</p>
+                            <button class="btn btn-outline-dash btn-sm"><i class="bi bi-camera me-1"></i> Change Photo</button>
+                            <button class="btn btn-danger-dash btn-sm ms-2"><i class="bi bi-trash me-1"></i> Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="card-dash" style="grid-column: span 2">
+                        <div class="card-dash-head"><h5>Personal information</h5></div>
+                        <div class="card-dash-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="custName">Full name</label>
+                                    <input type="text" class="form-control" id="custName" data-user-name>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="custPhone">Phone number</label>
+                                    <input type="tel" class="form-control" id="custPhone" value="+1 (555) 014-8821">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="custEmail">Email address</label>
+                                    <input type="email" class="form-control" id="custEmail" data-user-email>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" for="custDob">Date of birth</label>
+                                    <input type="date" class="form-control" id="custDob" value="1991-04-12">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" for="custGender">Gender</label>
+                                    <select class="form-select" id="custGender"><option>Female</option><option>Male</option><option>Prefer not to say</option></select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="custBlood">Blood group</label>
+                                    <select class="form-select" id="custBlood"><option>O+</option><option>A+</option><option>B+</option><option>AB+</option><option>O-</option><option>A-</option></select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="custAllergies">Allergies / medical notes</label>
+                                    <textarea class="form-control" id="custAllergies" rows="3" placeholder="Share anything our pharmacists should know (optional)">Allergic to penicillin. Prefer sugar-free syrups.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== My Orders ===== -->
+            <section class="dash-panel" id="panel-orders">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>My orders</h2>
+                        <p>Everything you've ordered, right here.</p>
+                    </div>
+                    <button class="btn btn-outline-dash btn-sm"><i class="bi bi-bag-plus me-1"></i> Refill a Prescription</button>
+                </div>
+
+                <div class="card-dash">
+                    <div class="card-dash-head">
+                        <div class="dash-toolbar">
+                            <select class="form-select form-select-sm"><option>All orders</option><option>Active</option><option>Delivered</option><option>Cancelled</option></select>
+                            <select class="form-select form-select-sm"><option>Last 6 months</option><option>Last 30 days</option><option>This year</option></select>
+                        </div>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="table-dash">
+                            <thead><tr><th>Order</th><th>Date</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th><th style="text-align:right">Actions</th></tr></thead>
+                            <tbody>
+                                <tr><td class="muted-txt">#HP-10482</td><td class="muted-txt">Sep 10, 2026</td><td>4 items</td><td>$86.40</td><td class="muted-txt">Card •••• 4421</td><td><span class="status-badge success">Delivered</span></td><td><div class="table-row-actions" style="justify-content:flex-end;width:100%"><a href="#" class="btn-row"><i class="bi bi-eye"></i></a><a href="#" class="btn-row"><i class="bi bi-arrow-repeat"></i></a></div></td></tr>
+                                <tr><td class="muted-txt">#HP-10478</td><td class="muted-txt">Sep 08, 2026</td><td>3 items</td><td>$77.60</td><td class="muted-txt">Card •••• 4421</td><td><span class="status-badge neutral">Pending</span></td><td><div class="table-row-actions" style="justify-content:flex-end;width:100%"><a href="#order-tracking" class="btn-row js-switch-panel" data-panel="order-tracking"><i class="bi bi-truck"></i></a><a href="#" class="btn-row"><i class="bi bi-eye"></i></a></div></td></tr>
+                                <tr><td class="muted-txt">#HP-10470</td><td class="muted-txt">Sep 02, 2026</td><td>2 items</td><td>$34.20</td><td class="muted-txt">PayPal</td><td><span class="status-badge info">In transit</span></td><td><div class="table-row-actions" style="justify-content:flex-end;width:100%"><a href="#order-tracking" class="btn-row js-switch-panel" data-panel="order-tracking"><i class="bi bi-truck"></i></a><a href="#" class="btn-row"><i class="bi bi-eye"></i></a></div></td></tr>
+                                <tr><td class="muted-txt">#HP-10461</td><td class="muted-txt">Aug 28, 2026</td><td>6 items</td><td>$123.15</td><td class="muted-txt">Visa •••• 8817</td><td><span class="status-badge success">Delivered</span></td><td><div class="table-row-actions" style="justify-content:flex-end;width:100%"><a href="#" class="btn-row"><i class="bi bi-eye"></i></a><a href="#" class="btn-row"><i class="bi bi-arrow-repeat"></i></a></div></td></tr>
+                                <tr><td class="muted-txt">#HP-10455</td><td class="muted-txt">Aug 19, 2026</td><td>1 item</td><td>$18.75</td><td class="muted-txt">Refunded</td><td><span class="status-badge danger">Cancelled</span></td><td><div class="table-row-actions" style="justify-content:flex-end;width:100%"><a href="#" class="btn-row"><i class="bi bi-eye"></i></a><a href="#" class="btn-row"><i class="bi bi-arrow-repeat"></i></a></div></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Order Tracking ===== -->
+            <section class="dash-panel" id="panel-order-tracking">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>Track your order</h2>
+                        <p>Live status for #HP-10478 &mdash; order placed Sep 8, 2026.</p>
+                    </div>
+                    <button class="btn btn-outline-dash btn-sm"><i class="bi bi-life-preserver me-1"></i> Need Help?</button>
+                </div>
+
+                <div class="dash-grid-2">
+                    <div class="card-dash">
+                        <div class="card-dash-head">
+                            <h5>Delivery progress</h5>
+                            <span class="status-badge info">Arriving tomorrow</span>
+                        </div>
+                        <div class="card-dash-body">
+                            <div class="tracking">
+                                <div class="tracking-step done">
+                                    <span class="tracking-dot"><i class="bi bi-check2"></i></span>
+                                    <div class="tracking-info">
+                                        <h5>Order placed</h5>
+                                        <p>Your order was confirmed and paid.</p>
+                                        <span class="t-time">Sep 8, 7:24 PM</span>
+                                    </div>
+                                </div>
+                                <div class="tracking-step done">
+                                    <span class="tracking-dot"><i class="bi bi-check2"></i></span>
+                                    <div class="tracking-info">
+                                        <h5>Packed at pharmacy</h5>
+                                        <p>Pharmacist verified and packed your items.</p>
+                                        <span class="t-time">Sep 9, 9:10 AM</span>
+                                    </div>
+                                </div>
+                                <div class="tracking-step done">
+                                    <span class="tracking-dot"><i class="bi bi-check2"></i></span>
+                                    <div class="tracking-info">
+                                        <h5>Shipped</h5>
+                                        <p>Handed over to GreenCourier for delivery.</p>
+                                        <span class="t-time">Sep 9, 2:45 PM</span>
+                                    </div>
+                                </div>
+                                <div class="tracking-step current">
+                                    <span class="tracking-dot"><i class="bi bi-truck"></i></span>
+                                    <div class="tracking-info">
+                                        <h5>Out for delivery</h5>
+                                        <p>Driver Malik is on the way to your address.</p>
+                                        <span class="t-time">Live &bull; ETA 10:30 AM tomorrow</span>
+                                    </div>
+                                </div>
+                                <div class="tracking-step">
+                                    <span class="tracking-dot"><i class="bi bi-house-door"></i></span>
+                                    <div class="tracking-info">
+                                        <h5>Delivered</h5>
+                                        <p>Signature will be requested upon delivery.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="card-dash">
+                            <div class="card-dash-head"><h5>Delivery details</h5></div>
+                            <div class="card-dash-body">
+                                <div class="msg-item" style="border:1px solid var(--gray-200);border-radius:var(--radius-md)">
+                                    <span class="msg-avatar alt"><i class="bi bi-house-door"></i></span>
+                                    <div class="msg-body">
+                                        <div class="msg-title">Delivering to</div>
+                                        <div class="msg-sub"><span data-user-name></span><br>128 Maple Street, Apt 4B<br>Brooklyn, NY 11211<br>(555) 014-8821</div>
+                                    </div>
+                                </div>
+                                <div class="msg-item" style="border:1px solid var(--gray-200);border-radius:var(--radius-md)">
+                                    <span class="msg-avatar"><i class="bi bi-truck"></i></span>
+                                    <div class="msg-body">
+                                        <div class="msg-title">Courier &mdash; GreenCourier</div>
+                                        <div class="msg-sub">Driver: Malik Johnson &bull; Van #G-0214</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2 mt-3">
+                                    <button class="btn btn-primary-brand btn-sm flex-fill"><i class="bi bi-chat-dots me-1"></i> Message Driver</button>
+                                    <button class="btn btn-outline-dash btn-sm flex-fill"><i class="bi bi-telephone me-1"></i> Call Support</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Wishlist ===== -->
+            <section class="dash-panel" id="panel-wishlist">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>My wishlist</h2>
+                        <p>Products you saved for later.</p>
+                    </div>
+                    <button class="btn btn-outline-dash btn-sm"><i class="bi bi-bag me-1"></i> Add All to Cart</button>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <span class="product-badge badge-off">25% OFF</span>
+                                <button class="wishlist-btn active" aria-label="Remove from wishlist"><i class="bi bi-heart-fill"></i></button>
+                                <img src="images/product-vitamin-d3.webp" alt="Vitamin D3 2000 IU" loading="lazy">
+                                <div class="product-actions">
+                                    <button class="action-btn" type="button"><i class="bi bi-eye"></i> Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <span class="product-category">Vitamins &amp; Supplements</span>
+                                <h3 class="product-name">Vitamin D3 2000 IU (60 Capsules)</h3>
+                                <div class="product-rating"><div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div><span>4.8</span><em>(612)</em></div>
+                                <div class="product-price"><span class="price-current">$12.50</span><span class="price-old">$16.70</span></div>
+                                <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <button class="wishlist-btn active" aria-label="Remove from wishlist"><i class="bi bi-heart-fill"></i></button>
+                                <img src="images/product-multivitamin.webp" alt="Daily Multivitamin" loading="lazy">
+                                <div class="product-actions">
+                                    <button class="action-btn" type="button"><i class="bi bi-eye"></i> Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <span class="product-category">Vitamins &amp; Supplements</span>
+                                <h3 class="product-name">Daily Multivitamin (90 Tablets)</h3>
+                                <div class="product-rating"><div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div><span>4.6</span><em>(428)</em></div>
+                                <div class="product-price"><span class="price-current">$18.75</span></div>
+                                <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <span class="product-badge badge-off">30% OFF</span>
+                                <button class="wishlist-btn active" aria-label="Remove from wishlist"><i class="bi bi-heart-fill"></i></button>
+                                <img src="images/product-face-cream.webp" alt="Hydrating Face Cream" loading="lazy">
+                                <div class="product-actions">
+                                    <button class="action-btn" type="button"><i class="bi bi-eye"></i> Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <span class="product-category">Skin Care</span>
+                                <h3 class="product-name">Hydrating Face Cream 50ml</h3>
+                                <div class="product-rating"><div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><span>4.9</span><em>(204)</em></div>
+                                <div class="product-price"><span class="price-current">$14.99</span><span class="price-old">$21.40</span></div>
+                                <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <button class="wishlist-btn active" aria-label="Remove from wishlist"><i class="bi bi-heart-fill"></i></button>
+                                <img src="images/product-thermometer.webp" alt="Digital Thermometer" loading="lazy">
+                                <div class="product-actions">
+                                    <button class="action-btn" type="button"><i class="bi bi-eye"></i> Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <span class="product-category">Medical Devices</span>
+                                <h3 class="product-name">Digital Thermometer</h3>
+                                <div class="product-rating"><div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div><span>4.7</span><em>(159)</em></div>
+                                <div class="product-price"><span class="price-current">$9.90</span></div>
+                                <button class="btn btn-add-cart"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Cart ===== -->
+            <section class="dash-panel" id="panel-cart">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>Your cart</h2>
+                        <p>Review the items in your basket before checkout.</p>
+                    </div>
+                    <a href="medicines.html" class="btn btn-outline-dash btn-sm"><i class="bi bi-arrow-left me-1"></i> Continue Shopping</a>
+                </div>
+
+                <div class="dash-grid-2">
+                    <div class="card-dash">
+                        <div class="card-dash-head"><h5>Cart items <span class="sub">4 products</span></h5></div>
+                        <div class="card-dash-body">
+                            <div class="cart-item-dash">
+                                <span class="t-thumb"><img src="images/product-vitamin-d3.webp" alt="Vitamin D3"></span>
+                                <div class="cart-main">
+                                    <h5>Vitamin D3 2000 IU (60 Capsules)</h5>
+                                    <p>60 ct &bull; $12.50 each</p>
+                                </div>
+                                <div class="qty-control"><button type="button" data-qty="minus" aria-label="Decrease"><i class="bi bi-dash"></i></button><span class="qty-val">1</span><button type="button" data-qty="plus" aria-label="Increase"><i class="bi bi-plus"></i></button></div>
+                                <span class="cart-price">$12.50</span>
+                                <a href="#" class="btn-row danger" aria-label="Remove"><i class="bi bi-trash"></i></a>
+                            </div>
+                            <div class="cart-item-dash">
+                                <span class="t-thumb"><img src="images/product-paracetamol.webp" alt="Paracetamol"></span>
+                                <div class="cart-main">
+                                    <h5>Paracetamol 500mg (20 Tablets)</h5>
+                                    <p>20 ct &bull; $4.99 each</p>
+                                </div>
+                                <div class="qty-control"><button type="button" data-qty="minus" aria-label="Decrease"><i class="bi bi-dash"></i></button><span class="qty-val">2</span><button type="button" data-qty="plus" aria-label="Increase"><i class="bi bi-plus"></i></button></div>
+                                <span class="cart-price">$9.98</span>
+                                <a href="#" class="btn-row danger" aria-label="Remove"><i class="bi bi-trash"></i></a>
+                            </div>
+                            <div class="cart-item-dash">
+                                <span class="t-thumb"><img src="images/product-cetirizine.webp" alt="Cetirizine"></span>
+                                <div class="cart-main">
+                                    <h5>Cetirizine 10mg (30 Tablets)</h5>
+                                    <p>30 ct &bull; $6.25 each</p>
+                                </div>
+                                <div class="qty-control"><button type="button" data-qty="minus" aria-label="Decrease"><i class="bi bi-dash"></i></button><span class="qty-val">1</span><button type="button" data-qty="plus" aria-label="Increase"><i class="bi bi-plus"></i></button></div>
+                                <span class="cart-price">$6.25</span>
+                                <a href="#" class="btn-row danger" aria-label="Remove"><i class="bi bi-trash"></i></a>
+                            </div>
+                            <div class="cart-item-dash">
+                                <span class="t-thumb"><img src="images/product-baby-lotion.webp" alt="Baby Lotion"></span>
+                                <div class="cart-main">
+                                    <h5>Gentle Baby Lotion 250ml</h5>
+                                    <p>250 ml &bull; $8.40 each</p>
+                                </div>
+                                <div class="qty-control"><button type="button" data-qty="minus" aria-label="Decrease"><i class="bi bi-dash"></i></button><span class="qty-val">1</span><button type="button" data-qty="plus" aria-label="Increase"><i class="bi bi-plus"></i></button></div>
+                                <span class="cart-price">$8.40</span>
+                                <a href="#" class="btn-row danger" aria-label="Remove"><i class="bi bi-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-dash">
+                        <div class="card-dash-head"><h5>Order summary</h5></div>
+                        <div class="card-dash-body">
+                            <div class="summary-line"><span>Subtotal</span><strong>$37.13</strong></div>
+                            <div class="summary-line"><span>Delivery</span><strong>Free</strong></div>
+                            <div class="summary-line"><span>Discount (FIRST30)</span><strong style="color:var(--orange-dark)">-$11.14</strong></div>
+                            <div class="summary-line total"><span>Total</span><span>$26.00</span></div>
+                            <button class="btn btn-primary-brand w-100 btn-lg mt-3"><i class="bi bi-lock-fill me-1"></i> Proceed to Checkout</button>
+                            <div class="d-flex justify-content-center gap-3 mt-3 muted-txt" style="font-size:.76rem">
+                                <span><i class="bi bi-shield-check me-1"></i>Secure payment</span>
+                                <span><i class="bi bi-arrow-clockwise me-1"></i>Flexible returns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Saved Addresses ===== -->
+            <section class="dash-panel" id="panel-addresses">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>Saved addresses</h2>
+                        <p>Your delivery locations, ready for one-tap checkout.</p>
+                    </div>
+                    <button class="btn btn-primary-brand btn-sm"><i class="bi bi-plus-lg me-1"></i> Add New Address</button>
+                </div>
+
+                <div class="dash-grid-3">
+                    <div class="addr-card">
+                        <span class="addr-tag">Home &bull; Default</span>
+                        <h5>128 Maple Street, Apt 4B</h5>
+                        <p>Brooklyn, NY 11211<br>United States<br>Phone: (555) 014-8821</p>
+                        <div class="addr-actions"><a href="#">Edit</a><a href="#" class="remove">Remove</a></div>
+                    </div>
+                    <div class="addr-card">
+                        <span class="addr-tag">Work</span>
+                        <h5>9th Floor, Liberty Plaza</h5>
+                        <p>350 5th Avenue<br>New York, NY 10118<br>Phone: (555) 214-9033</p>
+                        <div class="addr-actions"><a href="#">Edit</a><a href="#" class="remove">Remove</a></div>
+                    </div>
+                    <div class="addr-card">
+                        <span class="addr-tag">Pharmacy Pickup</span>
+                        <h5>Stackly Downtown</h5>
+                        <p>42 Pearl Street<br>Brooklyn, NY 11201<br>Pickup ID: HP-PK4082</p>
+                        <div class="addr-actions"><a href="#">Set Default</a><a href="#" class="remove">Remove</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Payment Details ===== -->
+            <section class="dash-panel" id="panel-payments">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>Payment details</h2>
+                        <p>Your checkout methods, stored securely.</p>
+                    </div>
+                    <button class="btn btn-primary-brand btn-sm"><i class="bi bi-plus-lg me-1"></i> Add Payment Method</button>
+                </div>
+
+                <div class="dash-grid-3">
+                    <div class="pay-method">
+                        <i class="bi bi-credit-card-2-front"></i>
+                        <div>
+                            <span class="cm-num">•••• •••• •••• 4421</span>
+                            <small>Visa &bull; Expires 08/28</small>
+                            <span class="status-badge success" style="position:absolute;top:12px;right:14px">Default</span>
+                        </div>
+                    </div>
+                    <div class="pay-method">
+                        <i class="bi bi-paypal"></i>
+                        <div>
+                            <strong>PayPal</strong>
+                            <small class="d-block" data-user-email></small>
+                        </div>
+                    </div>
+                    <div class="pay-method">
+                        <i class="bi bi-wallet2"></i>
+                        <div>
+                            <span class="cm-num">$128.40</span>
+                            <small class="d-block">Stackly Wallet</small>
+                            <span class="status-badge warning" style="position:absolute;top:12px;right:14px">Top up</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-dash mt-4">
+                    <div class="card-dash-head"><h5>Recent transactions</h5></div>
+                    <div class="table-wrap">
+                        <table class="table-dash">
+                            <thead><tr><th>Transaction</th><th>Method</th><th>Amount</th><th>Date</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr><td class="muted-txt">#TX-209881</td><td class="muted-txt">Visa •••• 4421</td><td>$86.40</td><td class="muted-txt">Sep 10</td><td><span class="status-badge success">Charged</span></td></tr>
+                                <tr><td class="muted-txt">#TX-209440</td><td class="muted-txt">PayPal</td><td>$34.20</td><td class="muted-txt">Sep 02</td><td><span class="status-badge success">Charged</span></td></tr>
+                                <tr><td class="muted-txt">#TX-209102</td><td class="muted-txt">Visa •••• 8817</td><td>$123.15</td><td class="muted-txt">Aug 28</td><td><span class="status-badge success">Charged</span></td></tr>
+                                <tr><td class="muted-txt">#TX-208553</td><td class="muted-txt">Visa •••• 4421</td><td>-$18.75</td><td class="muted-txt">Aug 20</td><td><span class="status-badge info">Refunded</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Order History ===== -->
+            <section class="dash-panel" id="panel-order-history">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>Order history</h2>
+                        <p>A complete archive of everything you've ordered.</p>
+                    </div>
+                    <button class="btn btn-outline-dash btn-sm"><i class="bi bi-download me-1"></i> Download (CSV)</button>
+                </div>
+
+                <div class="card-dash">
+                    <div class="card-dash-head">
+                        <div class="dash-toolbar">
+                            <select class="form-select form-select-sm"><option>All years</option><option>2026</option><option>2025</option><option>2024</option></select>
+                            <select class="form-select form-select-sm"><option>All status</option><option>Delivered</option><option>Cancelled</option></select>
+                        </div>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="table-dash">
+                            <thead><tr><th>Order</th><th>Date</th><th>Items</th><th>Total</th><th>Delivery</th><th>Status</th><th style="text-align:right">Invoice</th></tr></thead>
+                            <tbody>
+                                <tr><td class="muted-txt">#HP-10482</td><td class="muted-txt">Sep 10, 2026</td><td>4</td><td>$86.40</td><td class="muted-txt">Home</td><td><span class="status-badge success">Delivered</span></td><td style="text-align:right"><a href="#" class="btn-row"><i class="bi bi-file-earmark-text"></i></a></td></tr>
+                                <tr><td class="muted-txt">#HP-10478</td><td class="muted-txt">Sep 08, 2026</td><td>3</td><td>$77.60</td><td class="muted-txt">Home</td><td><span class="status-badge neutral">Pending</span></td><td style="text-align:right"><a href="#" class="btn-row"><i class="bi bi-file-earmark-text"></i></a></td></tr>
+                                <tr><td class="muted-txt">#HP-10470</td><td class="muted-txt">Sep 02, 2026</td><td>2</td><td>$34.20</td><td class="muted-txt">Work</td><td><span class="status-badge info">In transit</span></td><td style="text-align:right"><a href="#" class="btn-row"><i class="bi bi-file-earmark-text"></i></a></td></tr>
+                                <tr><td class="muted-txt">#HP-10461</td><td class="muted-txt">Aug 28, 2026</td><td>6</td><td>$123.15</td><td class="muted-txt">Home</td><td><span class="status-badge success">Delivered</span></td><td style="text-align:right"><a href="#" class="btn-row"><i class="bi bi-file-earmark-text"></i></a></td></tr>
+                                <tr><td class="muted-txt">#HP-10455</td><td class="muted-txt">Aug 19, 2026</td><td>1</td><td>$18.75</td><td class="muted-txt">Home</td><td><span class="status-badge danger">Cancelled</span></td><td style="text-align:right"><a href="#" class="btn-row"><i class="bi bi-file-earmark-text"></i></a></td></tr>
+                                <tr><td class="muted-txt">#HP-10441</td><td class="muted-txt">Aug 05, 2026</td><td>5</td><td>$64.80</td><td class="muted-txt">Home</td><td><span class="status-badge success">Delivered</span></td><td style="text-align:right"><a href="#" class="btn-row"><i class="bi bi-file-earmark-text"></i></a></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Notifications ===== -->
+            <section class="dash-panel" id="panel-notifications">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>Notifications</h2>
+                        <p>Order updates, offers and important health reminders.</p>
+                    </div>
+                    <button class="btn btn-outline-dash btn-sm"><i class="bi bi-check2-all me-1"></i> Mark All Read</button>
+                </div>
+
+                <div class="card-dash">
+                    <div class="card-dash-head"><h5>Inbox <span class="sub">3 unread</span></h5></div>
+                    <div>
+                        <div class="msg-item unread">
+                            <span class="msg-avatar"><i class="bi bi-truck"></i></span>
+                            <div class="msg-body"><div class="msg-title">Your order is out for delivery</div><div class="msg-sub">#HP-10478 is on its way — ETA tomorrow 10:30 AM.</div></div>
+                            <span class="msg-dot"></span><span class="msg-meta">2 hr</span>
+                        </div>
+                        <div class="msg-item unread">
+                            <span class="msg-avatar alt"><i class="bi bi-tag"></i></span>
+                            <div class="msg-body"><div class="msg-title">30% off your next order</div><div class="msg-sub">Use code FIRST30 before the week ends. Vitamins on sale too!</div></div>
+                            <span class="msg-dot"></span><span class="msg-meta">1 day</span>
+                        </div>
+                        <div class="msg-item unread">
+                            <span class="msg-avatar"><i class="bi bi-capsule"></i></span>
+                            <div class="msg-body"><div class="msg-title">Refill reminder</div><div class="msg-sub">Your Paracetamol prescription is due for a refill soon.</div></div>
+                            <span class="msg-dot"></span><span class="msg-meta">3 days</span>
+                        </div>
+                        <div class="msg-item">
+                            <span class="msg-avatar alt"><i class="bi bi-star"></i></span>
+                            <div class="msg-body"><div class="msg-title">You earned 60 points</div><div class="msg-sub">Thank you for your order #HP-10482. Points added to your wallet.</div></div>
+                            <span class="msg-meta">Sep 10</span>
+                        </div>
+                        <div class="msg-item">
+                            <span class="msg-avatar"><i class="bi bi-check-circle"></i></span>
+                            <div class="msg-body"><div class="msg-title">Order confirmed</div><div class="msg-sub">#HP-10478 was confirmed and is being packed with care.</div></div>
+                            <span class="msg-meta">Sep 09</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Account Settings ===== -->
+            <section class="dash-panel" id="panel-settings">
+                <div class="dash-title-bar">
+                    <div>
+                        <h2>Account settings</h2>
+                        <p>Customize your experience and secure your account.</p>
+                    </div>
+                    <button class="btn btn-primary-brand btn-sm"><i class="bi bi-check2 me-1"></i> Save Changes</button>
+                </div>
+
+                <div class="dash-grid-2">
+                    <div class="card-dash">
+                        <div class="card-dash-head"><h5>Contact details</h5></div>
+                        <div class="card-dash-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="setName">Full name</label>
+                                    <input type="text" class="form-control" id="setName" data-user-name>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="setEmail">Email address</label>
+                                    <input type="email" class="form-control" id="setEmail" data-user-email>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="setPhone">Phone number</label>
+                                    <input type="tel" class="form-control" id="setPhone" value="+1 (555) 014-8821">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="setPref">Preferred pharmacy</label>
+                                    <select class="form-select" id="setPref"><option>Stackly Downtown</option><option>Stackly Westside</option><option>Deliver to home</option></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-dash">
+                        <div class="card-dash-head"><h5>Change password</h5></div>
+                        <div class="card-dash-body">
+                            <div class="mb-3">
+                                <label class="form-label" for="setCurPass">Current password</label>
+                                <input type="password" class="form-control" id="setCurPass" placeholder="Enter current password">
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="setNewPass">New password</label>
+                                    <input type="password" class="form-control" id="setNewPass" placeholder="8+ characters">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="setConfPass">Confirm new password</label>
+                                    <input type="password" class="form-control" id="setConfPass" placeholder="Repeat new password">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-dash">
+                        <div class="card-dash-head"><h5>Preferences</h5></div>
+                        <div class="card-dash-body">
+                            <div class="settings-row">
+                                <div><b>Email newsletters</b><small>Health tips, product news and seasonal offers</small></div>
+                                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+                            </div>
+                            <div class="settings-row">
+                                <div><b>SMS order alerts</b><small>Text me status changes for my orders</small></div>
+                                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+                            </div>
+                            <div class="settings-row">
+                                <div><b>Offer &amp; flash-sale alerts</b><small>Early access to discounts and limited deals</small></div>
+                                <div class="form-check form-switch"><input class="form-check-input" type="checkbox"></div>
+                            </div>
+                            <div class="settings-row">
+                                <div><b>Prescription refill reminders</b><small>Gentle nudges when your meds are running low</small></div>
+                                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-dash">
+                        <div class="card-dash-head"><h5>Danger zone</h5></div>
+                        <div class="card-dash-body">
+                            <div class="settings-row">
+                                <div><b>Deactivate account</b><small>Pause your account without losing your data</small></div>
+                                <button class="btn btn-outline-dash btn-sm"><i class="bi bi-pause-circle me-1"></i> Deactivate</button>
+                            </div>
+                            <div class="settings-row">
+                                <div><b>Delete account</b><small>Permanently erase your profile, orders and wallet</small></div>
+                                <button class="btn btn-danger-dash btn-sm"><i class="bi bi-trash me-1"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

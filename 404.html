@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found | Stackly Pharmacy</title>
+    <meta name="description" content="The page you are looking for could not be found. Return to Stackly Pharmacy and continue browsing medicines, wellness products and offers.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Page-specific: p1.webp full-page photo background + soft overlay + glass content card -->
+    <style>
+        body.error-standalone {
+            background-color: #000000;
+            background-image: url('images/p1.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 56px 16px;
+            overflow: hidden;
+        }
+        .error-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(10, 4, 22, 0.55) 0%, rgba(18, 8, 40, 0.38) 50%, rgba(8, 3, 20, 0.58) 100%);
+            pointer-events: none;
+        }
+        .error-section > .container { position: relative; z-index: 2; }
+        .error-brand {
+            display: inline-block;
+            margin-bottom: 32px;
+            transition: 0.35s ease;
+        }
+        .error-brand:hover { transform: translateY(-2px); opacity: 0.92; }
+        .error-brand img { height: 52px; width: auto; }
+        .error-card {
+            position: relative;
+            z-index: 2;
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 44px 44px 40px;
+            background: rgba(10, 4, 22, 0.30);
+            -webkit-backdrop-filter: blur(16px) saturate(150%);
+            backdrop-filter: blur(16px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 26px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+        }
+        .error-media {
+            width: 104px;
+            height: 104px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            background: #7C3AED;
+            box-shadow: 0 10px 28px rgba(124, 58, 237, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-media i { font-size: 2.8rem; color: #FFFFFF; }
+        .error-code {
+            font-size: clamp(5rem, 16vw, 8.5rem);
+            font-weight: 800;
+            line-height: 1;
+            color: #FFFFFF;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .error-code span { color: #A78BFA; }
+        .error-title {
+            font-size: clamp(1.35rem, 3vw, 1.9rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 14px;
+        }
+        .error-sub {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        .error-actions {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .error-actions .btn {
+            min-width: 180px;
+            padding: 0.72rem 1.5rem;
+            font-weight: 700;
+            border-radius: 12px;
+        }
+        .error-actions .btn-primary-brand { background: #7C3AED; }
+        .error-actions .btn-primary-brand:hover { background: #5B21B6; box-shadow: none; }
+        .error-actions .btn-primary-brand::after,
+        .error-actions .btn-primary-brand:hover::after { display: none; }
+        .error-actions .btn-outline-dash {
+            background: rgba(255, 255, 255, 0.14);
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+            color: #FFFFFF;
+        }
+        .error-actions .btn-outline-dash:hover {
+            background: #FFFFFF;
+            border-color: #FFFFFF;
+            color: #3B0764;
+        }
+        @media (max-width: 575.98px) {
+            body.error-standalone { align-items: flex-start; }
+            .error-section { min-height: 100dvh; padding: 48px 14px 40px; }
+            .error-brand img { height: 46px; }
+            .error-card { padding: 32px 22px 30px; border-radius: 22px; }
+            .error-actions { width: 100%; }
+            .error-actions .btn { min-width: 100%; }
+        }
+    </style>
+</head>
+<body class="error-standalone">
+
+    <section class="error-section">
+
+        <div class="container">
+            <a href="index.html" class="error-brand" aria-label="Stackly Pharmacy - back to home">
+                <img src="images/logo.png" alt="Stackly Pharmacy" loading="eager">
+            </a>
+
+            <div class="error-card" data-animate="fade-up">
+                <div class="error-media" data-animate="zoom-in">
+                    <i class="bi bi-prescription2"></i>
+                </div>
+
+                <div class="error-code" data-animate="fade-up">
+                    4<span>0</span>4
+                </div>
+
+                <h1 class="error-title" data-animate="fade-up">Page Not Found</h1>
+
+                <p class="error-sub" data-animate="fade-up">The page you are looking for may have been moved or never existed. Don't worry — let's get you back to healthy browsing.</p>
+
+                <div class="error-actions" data-animate="fade-up">
+                    <a href="index.html" class="btn btn-primary-brand btn-lg">
+                        <i class="bi bi-house-door me-2"></i> Go to Home
+                    </a>
+                    <button type="button" id="goBackBtn" class="btn btn-outline-dash btn-lg">
+                        <i class="bi bi-arrow-left me-2"></i> Go Back
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <!-- Go Back (browser history, fallback to Home) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var goBackBtn = document.getElementById('goBackBtn');
+            if (!goBackBtn) { return; }
+            goBackBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                var hasReferrer = document.referrer && document.referrer.indexOf(window.location.hostname) !== -1;
+                if (hasReferrer || window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

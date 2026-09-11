@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Stackly Pharmacy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-xl navbar-light sticky-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
+                    <img src="images/logo.png" class="brand-logo" alt="Stackly Pharmacy" loading="eager">
+                </a>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="cart.html" class="cart-badge-btn text-decoration-none d-xl-none" aria-label="Cart">
+                        <i class="bi bi-cart3"></i>
+                        <span class="badge-count">2</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="medicines.html">Medicines</a></li>
+                        <li class="nav-item"><a class="nav-link" href="health-wellness.html">Health & Wellness</a></li>
+                        <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-cta d-flex gap-2 align-items-center">
+                        <a href="cart.html" class="cart-badge-btn text-decoration-none d-none d-xl-flex" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge-count">2</span>
+                        </a>
+                        <a href="login.html" class="btn btn-primary-brand btn-sm"><i class="bi bi-person me-1"></i> Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+<section class="page-hero page-hero-media page-hero-bg-5">
+        <div class="container">
+            <div class="page-hero-content text-center" data-animate="fade-up">
+                <span class="section-tag">We're Here to Help</span>
+                <h1>Contact <span class="text-gradient-orange">Us</span></h1>
+                <p class="page-hero-sub">Questions, prescriptions or feedback — our team is available 24/7 to assist you.</p>
+                <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Contact Us</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-cards-section section-padding">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.05">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="bi bi-telephone"></i></div>
+<h4>Call Us</h4>
+                        <p><a href="tel:+18005550149">+1 800 555 0149</a></p>
+                        <p><a href="tel:+12125550134">+1 212 555 0134</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.1">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="bi bi-envelope"></i></div>
+                        <h4>Email Us</h4>
+                        <p><a href="mailto:support@stackly.com">support@stackly.com</a></p>
+                        <p><a href="mailto:care@stackly.com">care@stackly.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.15">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="bi bi-geo-alt"></i></div>
+                        <h4>Visit Us</h4>
+                        <p>24 Wellness Avenue,<br>New York, NY 10001</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.2">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="bi bi-clock"></i></div>
+                        <h4>Working Hours</h4>
+                        <p>Mon – Sat: 7am – 11pm<br>Sunday: 9am – 9pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form + Prescription Upload -->
+    <section class="contact-form-section section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6" data-animate="fade-right">
+                    <div class="contact-form-card">
+                        <span class="section-tag">Send a Message</span>
+                        <h2 class="section-title">Get in <span class="text-gradient-orange">Touch</span></h2>
+                        <form class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="cfName">Full Name</label>
+                                    <input type="text" class="form-control" id="cfName" placeholder="Enter your name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="cfEmail">Email Address</label>
+                                    <input type="email" class="form-control" id="cfEmail" placeholder="Enter your email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="cfPhone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="cfPhone" placeholder="Enter your phone number">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="cfSubject">Subject</label>
+                                    <select class="form-select" id="cfSubject">
+                                        <option selected>General Inquiry</option>
+                                        <option>Order & Delivery</option>
+                                        <option>Prescription Upload</option>
+                                        <option>Returns & Refunds</option>
+                                        <option>Feedback</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="cfMessage">Message</label>
+                                    <textarea class="form-control" id="cfMessage" rows="5" placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary-brand btn-lg w-100">Send Message <i class="bi bi-send"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-animate="fade-left">
+                    <div class="rx-upload-card">
+                        <span class="section-tag">Prescriptions</span>
+                        <h2 class="section-title">Upload Your <span class="text-gradient-orange">Prescription</span></h2>
+                        <p class="contact-sub-text">Don't want to type your medicine list? Simply upload a photo of your prescription and we'll handle the rest.</p>
+
+                        <div class="upload-dropzone" id="uploadDropzone">
+                            <i class="bi bi-cloud-arrow-up"></i>
+                            <h4>Drag & drop your prescription here</h4>
+                            <p>or</p>
+                            <a href="404.html" class="btn btn-pink">Browse Files</a>
+                            <input type="file" id="rxFile" accept="image/*,.pdf" hidden>
+                            <small>Supported formats: JPG, PNG, PDF — Max 10MB</small>
+                        </div>
+
+                        <div class="rx-how">
+                            <div class="rx-how-item">
+                                <span class="rx-how-num">1</span>
+                                <p><strong>Upload</strong> your prescription securely</p>
+                            </div>
+                            <div class="rx-how-item">
+                                <span class="rx-how-num">2</span>
+                                <p><strong>Our pharmacist</strong> verifies your order</p>
+                            </div>
+                            <div class="rx-how-item">
+                                <span class="rx-how-num">3</span>
+                                <p><strong>Fast delivery</strong> to your doorstep</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map / Location Section -->
+    <section class="map-section section-padding">
+        <div class="container">
+            <div class="map-embed" data-animate="fade-up">
+                <iframe src="https://www.google.com/maps?q=24+Wellness+Avenue%2C+New+York%2C+NY+10001&z=15&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Stackly Pharmacy Location" style="border:0" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+</section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Got Questions?</span>
+                <h2 class="section-title">Contact <span class="text-gradient-orange">FAQs</span></h2>
+                <p class="section-subtitle">Fast answers to the questions we hear most often.</p>
+            </div>
+            <div class="faq-accordion accordion mt-4" id="contactFaq">
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.05">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cf1" aria-expanded="true" aria-controls="cf1">
+                            How do I track my order?
+                        </button>
+                    </h3>
+                    <div id="cf1" class="accordion-collapse collapse show" data-bs-parent="#contactFaq">
+                        <div class="accordion-body">Use the tracking link in your delivery SMS or email. Express metro orders show live rider location; standard orders update every morning until delivered.</div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.1">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf2" aria-expanded="false" aria-controls="cf2">
+                            How do I upload a prescription?
+                        </button>
+                    </h3>
+                    <div id="cf2" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                        <div class="accordion-body">Use the upload box on this page to attach a clear photo or PDF (max 10MB). Our pharmacists verify it, prepare your order and confirm delivery within minutes.</div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.15">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf3" aria-expanded="false" aria-controls="cf3">
+                            What is your return &amp; refund policy?
+                        </button>
+                    </h3>
+                    <div id="cf3" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                        <div class="accordion-body">Sealed, unopened items can be returned within 24 hours for a full refund. Damaged or incorrect deliveries are replaced free — just email us a photo within 48 hours.</div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.2">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf4" aria-expanded="false" aria-controls="cf4">
+                            Are you open on weekends and holidays?
+                        </button>
+                    </h3>
+                    <div id="cf4" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                        <div class="accordion-body">Yes. Our store is open Monday–Saturday 7am–11pm and Sunday 9am–9pm. Our pharmacist helpline and online ordering run 24/7, every day of the year.</div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.25">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf5" aria-expanded="false" aria-controls="cf5">
+                            Can I speak to a pharmacist directly?
+                        </button>
+                    </h3>
+                    <div id="cf5" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                        <div class="accordion-body">Absolutely. Call +1 800 555 0149 any time, or use live chat on this page to reach a licensed pharmacist for dosing and medication guidance.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Contacts -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Talk to the Right Team</span>
+                <h2 class="section-title">Department <span class="text-gradient-orange">Contacts</span></h2>
+                <p class="section-subtitle">Reach the exact team you need — faster answers, no runaround.</p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.05">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="bi bi-capsule"></i></div>
+                        <h4>Pharmacy Team</h4>
+                        <p><a href="mailto:pharmacist@stackly.com">pharmacist@stackly.com</a></p>
+                        <p><a href="tel:+18005550149">+1 800 555 0149</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.1">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="bi bi-truck"></i></div>
+                        <h4>Orders &amp; Delivery</h4>
+                        <p><a href="mailto:orders@stackly.com">orders@stackly.com</a></p>
+                        <p><a href="tel:+12125550134">+1 212 555 0134</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.15">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="bi bi-credit-card"></i></div>
+                        <h4>Billing &amp; Payments</h4>
+                        <p><a href="mailto:billing@stackly.com">billing@stackly.com</a></p>
+                        <p>Refunds processed in 3–5 days</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.2">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="bi bi-building"></i></div>
+                        <h4>Partnerships</h4>
+                        <p><a href="mailto:partners@stackly.com">partners@stackly.com</a></p>
+                        <p>Clinics, hospitals &amp; brands</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Channels -->
+    <section class="feature-banner">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-animate="fade-up">
+                <span class="section-tag">Reach Us Instantly</span>
+                <h2 class="section-title">Quick Contact <span class="text-gradient-orange">Channels</span></h2>
+                <p class="section-subtitle">Choose the way that suits you best.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-animate="fade-up" data-delay="0.05">
+                    <div class="feature-item">
+                        <i class="bi bi-chat-dots"></i>
+                        <h4>Live Chat</h4>
+                        <p>Instant answers from our support team, available 24/7.</p>
+                        <a href="404.html" class="channel-btn">Start Chat</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fade-up" data-delay="0.1">
+                    <div class="feature-item">
+                        <i class="bi bi-whatsapp"></i>
+                        <h4>WhatsApp Business</h4>
+                        <p>Send us a message, photo or prescription on WhatsApp.</p>
+                        <a href="404.html" class="channel-btn">Message Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fade-up" data-delay="0.15">
+                    <div class="feature-item">
+                        <i class="bi bi-telephone-outbound"></i>
+                        <h4>Request a Callback</h4>
+                        <p>Leave your number and a pharmacist will call you back.</p>
+                        <a href="404.html" class="channel-btn">Request Callback</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Reviews -->
+    <section class="wellness-reviews section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">What Customers Say</span>
+                <h2 class="section-title">Support That <span class="text-gradient-orange">Cares</span></h2>
+                <p class="section-subtitle">Real experiences with our support and pharmacy teams.</p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.05">
+                    <div class="t-card">
+                        <span class="t-quote-mark">“</span>
+                        <div class="t-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="t-quote">I uploaded my prescription at 9pm and a pharmacist called within 15 minutes to verify it. Deliveries arrived by 8am.</p>
+                        <div class="t-author">
+                            <div class="review-avatar">RB</div>
+                            <div>
+                                <strong>Rachel Bennett</strong>
+                                <span>Prescription help</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.1">
+                    <div class="t-card">
+                        <span class="t-quote-mark">“</span>
+                        <div class="t-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                        <p class="t-quote">Support refunded a duplicate order the moment I messaged on WhatsApp. Zero fuss, zero waiting games.</p>
+                        <div class="t-author">
+                            <div class="review-avatar">JT</div>
+                            <div>
+                                <strong>Jason Tran</strong>
+                                <span>Billing help</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.15">
+                    <div class="t-card">
+                        <span class="t-quote-mark">“</span>
+                        <div class="t-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="t-quote">The pharmacist carefully checked my supplements against my medication and flagged an interaction nobody else caught.</p>
+                        <div class="t-author">
+                            <div class="review-avatar">LH</div>
+                            <div>
+                                <strong>Linda Harris</strong>
+                                <span>Pharmacist advice</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Coverage Strip -->
+    <section class="coverage-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Where We Deliver</span>
+                <h2 class="section-title">Coverage Across <span class="text-gradient-orange">the Country</span></h2>
+                <p class="section-subtitle">Same-day and next-day delivery in these metro areas — and counting.</p>
+            </div>
+            <div class="partners-strip mt-5" data-animate="fade-up">
+                <div class="partner-item"><i class="bi bi-geo-alt"></i> New York</div>
+                <div class="partner-item"><i class="bi bi-geo-alt"></i> Los Angeles</div>
+                <div class="partner-item"><i class="bi bi-geo-alt"></i> Chicago</div>
+                <div class="partner-item"><i class="bi bi-geo-alt"></i> Houston</div>
+                <div class="partner-item"><i class="bi bi-geo-alt"></i> Miami</div>
+                <div class="partner-item"><i class="bi bi-geo-alt"></i> Boston</div>
+                <div class="partner-item"><i class="bi bi-geo-alt"></i> San Francisco</div>
+                <div class="partner-item"><i class="bi bi-geo-alt"></i> Seattle</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-newsletter">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-5">
+                        <h4><i class="bi bi-envelope-heart"></i> Subscribe to our newsletter</h4>
+                        <p>Health tips, medicine reminders & exclusive offers — no spam.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <div class="newsletter-input-wrap">
+                                    <i class="bi bi-envelope"></i>
+                                    <input type="email" placeholder="Enter your email address" aria-label="Email">
+                                </div>
+                                <button type="submit" class="btn btn-newsletter">Subscribe</button>
+                            </div>
+                            <small>By subscribing you agree to our Privacy Policy.</small>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 footer-main">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about">
+                        <a class="footer-brand d-flex align-items-center mb-3" href="index.html">
+                            <img src="images/logo.png" class="brand-logo footer-logo" alt="Stackly Pharmacy" loading="lazy">
+                        </a>
+                        <p>Your trusted online pharmacy, delivering genuine medicines and wellness products across the country, backed by licensed pharmacists and 24/7 support.</p>
+                        <div class="footer-certifications">
+                            <span><i class="bi bi-patch-check-fill"></i> Licensed Pharmacy</span>
+                            <span><i class="bi bi-shield-check"></i> ISO Certified</span>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="medicines.html">Medicines</a></li>
+                        <li><a href="health-wellness.html">Health & Wellness</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+<h5 class="footer-title">Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Medicines</a></li>
+                        <li><a href="404.html">Vitamins</a></li>
+                        <li><a href="404.html">Personal Care</a></li>
+                        <li><a href="404.html">Baby Care</a></li>
+                        <li><a href="404.html">Medical Devices</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Help Center</a></li>
+                        <li><a href="404.html">Track Order</a></li>
+                        <li><a href="404.html">Returns & Refunds</a></li>
+                        <li><a href="404.html">Contact Us</a></li>
+                        <li><a href="404.html">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms of Service</a></li>
+                        <li><a href="404.html">Cookie Policy</a></li>
+                        <li><a href="404.html">Refund Policy</a></li>
+                        <li><a href="404.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="row gy-3 align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2026 Stackly Pharmacy. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+<div class="social-links">
+                            <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="404.html" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="404.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

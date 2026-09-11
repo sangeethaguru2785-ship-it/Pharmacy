@@ -1,0 +1,594 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers | Stackly Pharmacy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-xl navbar-light sticky-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
+                    <img src="images/logo.png" class="brand-logo" alt="Stackly Pharmacy" loading="eager">
+                </a>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="cart.html" class="cart-badge-btn text-decoration-none d-xl-none" aria-label="Cart">
+                        <i class="bi bi-cart3"></i>
+                        <span class="badge-count">2</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="medicines.html">Medicines</a></li>
+                        <li class="nav-item"><a class="nav-link" href="health-wellness.html">Health & Wellness</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="offers.html">Offers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-cta d-flex gap-2 align-items-center">
+                        <a href="cart.html" class="cart-badge-btn text-decoration-none d-none d-xl-flex" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge-count">2</span>
+                        </a>
+                        <a href="login.html" class="btn btn-primary-brand btn-sm"><i class="bi bi-person me-1"></i> Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+<section class="page-hero page-hero-media page-hero-bg-4">
+        <div class="container">
+            <div class="page-hero-content text-center" data-animate="fade-up">
+                <span class="section-tag">Limited Time</span>
+                <h1>Exclusive <span class="text-gradient-orange">Offers</span></h1>
+                <p class="page-hero-sub">Save big on medicines, wellness bundles and daily essentials. Grab them before they're gone!</p>
+                <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Offers</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Deal Banner -->
+    <section class="big-deal-banner">
+        <div class="container">
+            <div class="big-deal-inner" data-animate="fade-up">
+                <div class="big-deal-text">
+                    <span class="section-tag">Deal of the Day</span>
+                    <h2>Flat <span class="deal-highlight">30% OFF</span><br>on Your First Order</h2>
+                    <p>Use code at checkout on medicines & wellness products. No minimum order!</p>
+                    <div class="deal-code"><i class="bi bi-ticket-perforated"></i> FIRST30</div>
+                    <a href="medicines.html" class="btn btn-white-soft btn-lg mt-3">Shop the Sale <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Cards -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.05">
+                    <div class="offer-card">
+                        <div class="offer-card-icon"><i class="bi bi-capsule"></i></div>
+                        <span class="offer-card-tag">Medicines</span>
+                        <h3>Up to 25% Off</h3>
+                        <p>On all prescription & OTC medicines across thousands of products.</p>
+                        <a href="404.html" class="offer-card-link">Shop Medicines <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.1">
+                    <div class="offer-card offer-card-black offer-card-gradient">
+                        <div class="offer-card-icon"><i class="bi bi-basket2"></i></div>
+                        <span class="offer-card-tag">Wellness</span>
+                        <h3>Buy 2 Get 1 Free</h3>
+                        <p>On vitamins, supplements and immunity boosters from top brands.</p>
+                        <a href="404.html" class="offer-card-link">Shop Wellness <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.15">
+                    <div class="offer-card offer-card-black offer-card-dark">
+                        <div class="offer-card-icon"><i class="bi bi-tag"></i></div>
+                        <span class="offer-card-tag">Personal Care</span>
+                        <h3>50% Off Skincare</h3>
+                        <p>On selected skin & personal care kits. While stocks last.</p>
+                        <a href="404.html" class="offer-card-link">Shop Skincare <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.05">
+                    <div class="offer-card offer-card-red">
+                        <div class="offer-card-icon"><i class="bi bi-truck"></i></div>
+                        <span class="offer-card-tag">Delivery</span>
+                        <h3>Free Express Delivery</h3>
+                        <p>On orders above $49. Same-day delivery in metro cities.</p>
+                        <a href="404.html" class="offer-card-link">Shop Now <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.1">
+                    <div class="offer-card offer-card-blue">
+                        <div class="offer-card-icon"><i class="bi bi-cake2"></i></div>
+                        <span class="offer-card-tag">New Users</span>
+                        <h3>Extra 10% Cashback</h3>
+                        <p>On your first three orders when you pay with Stackly Wallet.</p>
+                        <a href="404.html" class="offer-card-link">Get Started <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.15">
+                    <div class="offer-card offer-card-purple">
+                        <div class="offer-card-icon"><i class="bi bi-box2-heart"></i></div>
+                        <span class="offer-card-tag">Baby Care</span>
+                        <h3>Baby Care Combo Deals</h3>
+                        <p>Bundle your baby essentials and save up to 35% on the total.</p>
+                        <a href="404.html" class="offer-card-link">Shop Baby Care <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Redeem -->
+    <section class="redeem-section section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-4" data-animate="fade-up">
+                <span class="section-tag">Easy Peasy</span>
+                <h2 class="section-title">How to <span class="text-gradient-orange">Redeem Offers</span></h2>
+            </div>
+            <div class="row g-4 mt-2">
+                <div class="col-md-4" data-animate="fade-up" data-delay="0.05">
+                    <div class="redeem-step">
+                        <span class="step-num">1</span>
+                        <div class="step-icon"><i class="bi bi-cart-plus"></i></div>
+                        <h4>Add Items to Cart</h4>
+                        <p>Browse medicines & wellness products and add your favourites to the cart.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fade-up" data-delay="0.1">
+                    <div class="redeem-step">
+                        <span class="step-num">2</span>
+                        <div class="step-icon"><i class="bi bi-ticket-perforated"></i></div>
+                        <h4>Apply Offer Code</h4>
+                        <p>Enter the promo code shown on each offer at the checkout step.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fade-up" data-delay="0.15">
+                    <div class="redeem-step">
+                        <span class="step-num">3</span>
+                        <div class="step-icon"><i class="bi bi-bag-check"></i></div>
+                        <h4>Enjoy the Savings</h4>
+                        <p>Your discount is applied instantly — sit back and let us deliver.</p>
+                    </div>
+                </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Savings Stats -->
+    <section class="stats-band">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-lg-3" data-animate="fade-up" data-delay="0.05">
+                    <div class="stats-band-item">
+                        <h3><span data-count="4600">0</span>+</h3>
+                        <p>Customers Saved With Us</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-animate="fade-up" data-delay="0.1">
+                    <div class="stats-band-item">
+                        <h3><span data-count="380">0</span>K+</h3>
+                        <p>Dollars Saved This Year</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-animate="fade-up" data-delay="0.15">
+                    <div class="stats-band-item">
+                        <h3><span data-count="120">0</span>+</h3>
+                        <p>Active Offers Right Now</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-animate="fade-up" data-delay="0.2">
+                    <div class="stats-band-item">
+                        <h3><span data-count="30">0</span>%</h3>
+                        <p>Average Discount</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Codes -->
+    <section class="promo-grid section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Grab a Code</span>
+                <h2 class="section-title">Active <span class="text-gradient-orange">Promo Codes</span></h2>
+                <p class="section-subtitle">Tap Copy Code, enter it at checkout and watch the savings stack up.</p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.05">
+                    <div class="promo-card">
+                        <span class="promo-tag">First Order</span>
+                        <div class="promo-code"><i class="bi bi-ticket-perforated"></i><span>FIRST30</span></div>
+                        <h3>Flat 30% Off</h3>
+                        <p>On your first order across medicines and wellness products. No minimum.</p>
+                        <span class="promo-validity"><i class="bi bi-calendar-event"></i>Expires Dec 31, 2026</span>
+                        <button class="btn-copy" data-code="FIRST30"><i class="bi bi-clipboard-check"></i>Copy Code</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.1">
+                    <div class="promo-card promo-card-black">
+                        <span class="promo-tag">Wellness</span>
+                        <div class="promo-code"><i class="bi bi-ticket-perforated"></i><span>VIT15</span></div>
+                        <h3>15% Off Supplements</h3>
+                        <p>On vitamins, minerals and immunity boosters from certified brands.</p>
+                        <span class="promo-validity"><i class="bi bi-calendar-event"></i>Expires Nov 30, 2026</span>
+                        <button class="btn-copy" data-code="VIT15"><i class="bi bi-clipboard-check"></i>Copy Code</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.15">
+                    <div class="promo-card">
+                        <span class="promo-tag">Personal Care</span>
+                        <div class="promo-code"><i class="bi bi-ticket-perforated"></i><span>CARE20</span></div>
+                        <h3>20% Off Personal Care</h3>
+                        <p>Skin, hair, oral and hygiene essentials — pamper yourself for less.</p>
+                        <span class="promo-validity"><i class="bi bi-calendar-event"></i>Expires Oct 15, 2026</span>
+                        <button class="btn-copy" data-code="CARE20"><i class="bi bi-clipboard-check"></i>Copy Code</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.2">
+                    <div class="promo-card promo-card-black">
+                        <span class="promo-tag">Baby Care</span>
+                        <div class="promo-code"><i class="bi bi-ticket-perforated"></i><span>BABY35</span></div>
+                        <h3>Up to 35% Off Combos</h3>
+                        <p>On curated baby care bundles — wipes, lotions, shampoos and more.</p>
+                        <span class="promo-validity"><i class="bi bi-calendar-event"></i>Expires Oct 31, 2026</span>
+                        <button class="btn-copy" data-code="BABY35"><i class="bi bi-clipboard-check"></i>Copy Code</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Countdown -->
+    <section class="flash-section">
+        <div class="container">
+            <div class="flash-inner" data-animate="fade-up">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <span class="section-tag">Flash Sale</span>
+                        <h2>Up to <span class="deal-highlight">50% OFF</span><br>Everyday Essentials</h2>
+                        <p>Medicines, vitamins and personal care picks refreshed daily. Prices drop fast — grab them before they're gone.</p>
+                        <a href="medicines.html" class="btn btn-white-soft btn-lg mt-2">Shop Now <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="flash-clock">
+                            <p class="flash-countdown-title"><i class="bi bi-alarm"></i> Offer ends in</p>
+                            <div class="countdown" id="flashCountdown">
+                                <div class="countdown-box"><span class="cd-num" data-unit="days">00</span><span class="cd-label">Days</span></div>
+                                <div class="countdown-box"><span class="cd-num" data-unit="hours">00</span><span class="cd-label">Hours</span></div>
+                                <div class="countdown-box"><span class="cd-num" data-unit="minutes">00</span><span class="cd-label">Minutes</span></div>
+                                <div class="countdown-box"><span class="cd-num" data-unit="seconds">00</span><span class="cd-label">Seconds</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Partner Offers -->
+    <section class="pay-cards section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Pay Smart</span>
+                <h2 class="section-title">Payment <span class="text-gradient-orange">Partner Offers</span></h2>
+                <p class="section-subtitle">Extra savings when you pay the way you like.</p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.05">
+                    <div class="pay-card">
+                        <div class="pay-icon"><i class="bi bi-credit-card-2-front"></i></div>
+                        <h3>Credit &amp; Debit Cards</h3>
+                        <p>Instant 10% off on your first card payment this month.</p>
+                        <span class="pay-offer">10% Instant Off</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.1">
+                    <div class="pay-card">
+                        <div class="pay-icon"><i class="bi bi-wallet2"></i></div>
+                        <h3>Stackly Wallet</h3>
+                        <p>Top up once and earn 12% cashback on your first three orders.</p>
+                        <span class="pay-offer">12% Cashback</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.15">
+                    <div class="pay-card">
+                        <div class="pay-icon"><i class="bi bi-bank"></i></div>
+                        <h3>Net Banking</h3>
+                        <p>Extra 5% off on all orders above $40. No transaction limits.</p>
+                        <span class="pay-offer">Extra 5% Off</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.2">
+                    <div class="pay-card">
+                        <div class="pay-icon"><i class="bi bi-cash-coin"></i></div>
+                        <h3>Cash on Delivery</h3>
+                        <p>Pay nothing upfront — verify your order before you pay.</p>
+                        <span class="pay-offer">No Extra Fee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Reviews -->
+    <section class="wellness-reviews section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Happy Savers</span>
+                <h2 class="section-title">Our Customers <span class="text-gradient-orange">Love a Deal</span></h2>
+                <p class="section-subtitle">Real stories of real savings with Stackly offers.</p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.05">
+                    <div class="t-card">
+                        <span class="t-quote-mark">“</span>
+                        <div class="t-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="t-quote">The Subscribe &amp; Save codes stack beautifully with my refill schedule. I've saved over $240 this year alone.</p>
+                        <div class="t-author">
+                            <div class="review-avatar">AL</div>
+                            <div>
+                                <strong>Amber Liu</strong>
+                                <span>Saved $240 this year</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.1">
+                    <div class="t-card">
+                        <span class="t-quote-mark">“</span>
+                        <div class="t-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                        <p class="t-quote">FIRST30 knocked 30% off my very first order. The code copied in one tap and applied instantly at checkout.</p>
+                        <div class="t-author">
+                            <div class="review-avatar">DO</div>
+                            <div>
+                                <strong>David Okafor</strong>
+                                <span>First order, saved 30%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0.15">
+                    <div class="t-card">
+                        <span class="t-quote-mark">“</span>
+                        <div class="t-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="t-quote">The BABY35 combo deal saved us way more than I expected. Quality products, and delivery was next-day.</p>
+                        <div class="t-author">
+                            <div class="review-avatar">MG</div>
+                            <div>
+                                <strong>Maria Gomez</strong>
+                                <span>Baby care, saved 35%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Offer FAQ -->
+    <section class="faq-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Quick Answers</span>
+                <h2 class="section-title">Offer <span class="text-gradient-orange">FAQs</span></h2>
+                <p class="section-subtitle">Everything you need to know about coupons, cashback and deal terms.</p>
+            </div>
+            <div class="faq-accordion accordion mt-4" id="offersFaq">
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.05">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#of1" aria-expanded="true" aria-controls="of1">
+                            How do I apply a promo code?
+                        </button>
+                    </h3>
+                    <div id="of1" class="accordion-collapse collapse show" data-bs-parent="#offersFaq">
+                        <div class="accordion-body">Tap the Copy Code button on any card above, paste it into the promo box at checkout, and hit apply. The discount is shown instantly before you pay — no hidden steps.</div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.1">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#of2" aria-expanded="false" aria-controls="of2">
+                            Can I stack multiple offers on one order?
+                        </button>
+                    </h3>
+                    <div id="of2" class="accordion-collapse collapse" data-bs-parent="#offersFaq">
+                        <div class="accordion-body">One promo code applies per order, but it can combine with automatic deals like bank offer cashback and free express delivery. Subscribe &amp; Save members also get automatic discounts on top of regular codes.</div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.15">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#of3" aria-expanded="false" aria-controls="of3">
+                            Why didn't my promo code work?
+                        </button>
+                    </h3>
+                    <div id="of3" class="accordion-collapse collapse" data-bs-parent="#offersFaq">
+                        <div class="accordion-body">Most of the time it's an expired code, a minimum order not met, or the code not applying to the items in your basket. Double-check the validity date on each card — and we'll always show the exact reason at checkout.</div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.2">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#of4" aria-expanded="false" aria-controls="of4">
+                            Do offers apply to prescription medicines?
+                        </button>
+                    </h3>
+                    <div id="of4" class="accordion-collapse collapse" data-bs-parent="#offersFaq">
+                        <div class="accordion-body">Most discounts cover OTC medicines, vitamins, personal and baby care. Savings on prescription items vary by offer and brand — you'll see the exact discount on the product page before checkout.</div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.25">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#of5" aria-expanded="false" aria-controls="of5">
+                            Are there hidden charges on discounted orders?
+                        </button>
+                    </h3>
+                    <div id="of5" class="accordion-collapse collapse" data-bs-parent="#offersFaq">
+                        <div class="accordion-body">None. The final amount shown at checkout is exactly what you pay — cashback lands in your Stackly Wallet after delivery, and there are never any surprise fees.</div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fade-up" data-delay="0.3">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#of6" aria-expanded="false" aria-controls="of6">
+                            Can I use an offer code with cash on delivery?
+                        </button>
+                    </h3>
+                    <div id="of6" class="accordion-collapse collapse" data-bs-parent="#offersFaq">
+                        <div class="accordion-body">Yes. Promo codes work with every payment method, including cash on delivery. The discount is applied to the order total before payment, so you only pay the reduced amount on delivery.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-newsletter">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-5">
+                        <h4><i class="bi bi-envelope-heart"></i> Subscribe to our newsletter</h4>
+                        <p>Health tips, medicine reminders & exclusive offers — no spam.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <div class="newsletter-input-wrap">
+                                    <i class="bi bi-envelope"></i>
+                                    <input type="email" placeholder="Enter your email address" aria-label="Email">
+                                </div>
+                                <button type="submit" class="btn btn-newsletter">Subscribe</button>
+                            </div>
+                            <small>By subscribing you agree to our Privacy Policy.</small>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 footer-main">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about">
+                        <a class="footer-brand d-flex align-items-center mb-3" href="index.html">
+                            <img src="images/logo.png" class="brand-logo footer-logo" alt="Stackly Pharmacy" loading="lazy">
+                        </a>
+                        <p>Your trusted online pharmacy, delivering genuine medicines and wellness products across the country, backed by licensed pharmacists and 24/7 support.</p>
+                        <div class="footer-certifications">
+                            <span><i class="bi bi-patch-check-fill"></i> Licensed Pharmacy</span>
+                            <span><i class="bi bi-shield-check"></i> ISO Certified</span>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="medicines.html">Medicines</a></li>
+                        <li><a href="health-wellness.html">Health & Wellness</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+<h5 class="footer-title">Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Medicines</a></li>
+                        <li><a href="404.html">Vitamins</a></li>
+                        <li><a href="404.html">Personal Care</a></li>
+                        <li><a href="404.html">Baby Care</a></li>
+                        <li><a href="404.html">Medical Devices</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Help Center</a></li>
+                        <li><a href="404.html">Track Order</a></li>
+                        <li><a href="404.html">Returns & Refunds</a></li>
+                        <li><a href="404.html">Contact Us</a></li>
+                        <li><a href="404.html">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms of Service</a></li>
+                        <li><a href="404.html">Cookie Policy</a></li>
+                        <li><a href="404.html">Refund Policy</a></li>
+                        <li><a href="404.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="row gy-3 align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2026 Stackly Pharmacy. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+<div class="social-links">
+                            <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="404.html" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="404.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

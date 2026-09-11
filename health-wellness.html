@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness | Stackly Pharmacy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* ========================================
+           Health & Wellness Page – Modern Styles
+           ======================================== */
+
+        /* ---------- Section Header ---------- */
+        .hw-section-header { text-align: center; margin-bottom: 48px; }
+        .hw-section-header .section-tag {
+            display: inline-block;
+            background: rgba(124,58,237,0.08);
+            color: var(--orange);
+            padding: 6px 18px;
+            border-radius: var(--radius-pill);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 14px;
+        }
+        .hw-section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--ink);
+        }
+        .hw-section-header p {
+            font-size: 1.02rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ---------- Categories ---------- */
+        .hw-categories { padding: 80px 0 60px; }
+        .hw-cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-cat-card {
+            background: var(--white);
+            border: 1px solid var(--orange-soft);
+            border-radius: 18px;
+            padding: 28px 16px;
+            text-align: center;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .hw-cat-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--grad-orange);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            z-index: 0;
+        }
+        .hw-cat-card:hover::before { opacity: 1; }
+        .hw-cat-card:hover { transform: translateY(-4px); border-color: transparent; box-shadow: var(--shadow-accent); }
+        .hw-cat-card:hover .hw-cat-icon,
+        .hw-cat-card:hover .hw-cat-card h3,
+        .hw-cat-card:hover .hw-cat-card p { color: var(--white); -webkit-text-fill-color: initial; }
+        .hw-cat-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 14px;
+            background: rgba(124,58,237,0.08);
+            color: var(--orange);
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+        .hw-cat-card h3 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--ink);
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+        .hw-cat-card p {
+            font-size: 0.74rem;
+            color: var(--text-light);
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        /* ---------- Wellness Tips ---------- */
+        .hw-tips { padding: 60px 0 80px; background: #F7F5FC; }
+        .hw-tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-tip-card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 28px 22px;
+            border: 1px solid var(--orange-soft);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .hw-tip-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--orange);
+        }
+        .hw-tip-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
+            color: var(--orange);
+        }
+        .hw-tip-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+        .hw-tip-card p { font-size: 0.82rem; color: var(--text-light); margin: 0; line-height: 1.65; }
+
+        /* ---------- Featured Products ---------- */
+        .hw-featured { padding: 80px 0; }
+        .hw-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-product-item {
+            display: flex;
+        }
+        .hw-product-item .hw-product-card {
+            flex: 1;
+        }
+        .hw-product-card {
+            background: var(--white);
+            border: 1px solid var(--orange-soft);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+        .hw-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .hw-product-img {
+            position: relative;
+            padding: 20px 20px 0;
+            text-align: center;
+            background: #F7F5FC;
+        }
+        .hw-product-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+        .hw-product-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--orange);
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+        }
+        .hw-product-wishlist {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .hw-product-wishlist:hover { color: #e11d48; background: #fff1f2; }
+        .hw-product-body { padding: 20px; }
+        .hw-product-body .hw-prod-cat {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .hw-product-body h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 4px;
+            line-height: 1.35;
+        }
+        .hw-product-body .hw-prod-desc {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            line-height: 1.55;
+        }
+        .hw-product-body .hw-prod-price {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+        .hw-product-body .hw-prod-price .price-current { font-size: 1.15rem; font-weight: 800; color: var(--orange); }
+        .hw-product-body .hw-prod-price .price-old { font-size: 0.82rem; color: var(--text-light); text-decoration: line-through; }
+        .hw-product-body .hw-prod-price .price-off {
+            font-size: 0.7rem;
+            font-weight: 700;
+            background: #EDE9FE;
+            color: var(--orange);
+            padding: 2px 8px;
+            border-radius: var(--radius-pill);
+        }
+
+        /* ---------- Nutrition & Healthy Living ---------- */
+        .hw-nutrition { padding: 80px 0; background: #F7F5FC; }
+        .hw-nutri-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-nutri-card {
+            background: var(--white);
+            border: 1px solid var(--orange-soft);
+            border-radius: 20px;
+            padding: 32px 26px;
+            transition: var(--transition);
+        }
+        .hw-nutri-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--orange); }
+        .hw-nutri-card .icon-wrap {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
+            color: var(--orange);
+        }
+        .hw-nutri-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+        .hw-nutri-card p { font-size: 0.85rem; color: var(--text-light); margin: 0; line-height: 1.7; }
+        .hw-nutri-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 14px;
+        }
+        .hw-nutri-card ul li {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .hw-nutri-card ul li::before {
+            content: '\f272';
+            font-family: 'bootstrap-icons';
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-size: 0.75rem;
+        }
+
+        /* ---------- Fitness & Exercise ---------- */
+        .hw-fitness { padding: 80px 0; }
+        .hw-fitness-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-fitness-card {
+            background: var(--white);
+            border: 1px solid var(--orange-soft);
+            border-radius: 20px;
+            padding: 30px 24px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+        }
+        .hw-fitness-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--orange); }
+        .hw-fitness-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
+            color: var(--orange);
+        }
+        .hw-fitness-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+        .hw-fitness-card p { font-size: 0.82rem; color: var(--text-light); margin: 0; line-height: 1.65; }
+
+        /* ---------- Mental Wellness ---------- */
+        .hw-mental { padding: 80px 0; background: linear-gradient(135deg, #F5F3FF 0%, #F0ECFF 50%, #F5F0FF 100%); }
+        .hw-mental-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-mental-card {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(124,58,237,0.1);
+            border-radius: 20px;
+            padding: 30px 24px;
+            transition: var(--transition);
+        }
+        .hw-mental-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .hw-mental-card .hw-mental-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+            color: #7c3aed;
+        }
+        .hw-mental-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+        .hw-mental-card p { font-size: 0.82rem; color: var(--text-light); margin: 0; line-height: 1.65; }
+
+        /* ---------- Seasonal Health ---------- */
+        .hw-seasonal { padding: 80px 0; }
+        .hw-seasonal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-seasonal-card {
+            background: var(--white);
+            border: 1px solid var(--orange-soft);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .hw-seasonal-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: transparent; }
+        .hw-seasonal-top {
+            padding: 28px 24px 20px;
+            text-align: center;
+        }
+        .hw-seasonal-top .hw-seasonal-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 14px;
+        }
+        .hw-seasonal-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+        .hw-seasonal-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.65; padding: 0 24px 24px; margin: 0; }
+
+        /* ---------- Blog / Articles ---------- */
+        .hw-blog { padding: 80px 0; background: #F7F5FC; }
+        .hw-blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-blog-card {
+            background: var(--white);
+            border: 1px solid var(--orange-soft);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            text-decoration: none;
+            display: block;
+        }
+        .hw-blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+        .hw-blog-thumb {
+            height: 180px;
+            background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--orange);
+            position: relative;
+        }
+        .hw-blog-thumb .blog-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(255,255,255,0.92);
+            color: var(--orange);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+        }
+        .hw-blog-body { padding: 22px; }
+        .hw-blog-meta {
+            font-size: 0.74rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .hw-blog-body h3 { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; line-height: 1.4; }
+        .hw-blog-body p { font-size: 0.82rem; color: var(--text-light); margin-bottom: 14px; line-height: 1.65; }
+        .hw-blog-link {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--orange);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+        .hw-blog-link:hover { gap: 10px; }
+
+        /* ---------- Wellness Tools ---------- */
+        .hw-tools { padding: 80px 0; }
+        .hw-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-tool-card {
+            background: var(--white);
+            border: 1px solid var(--orange-soft);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .hw-tool-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--orange); }
+        .hw-tool-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
+            color: var(--orange);
+        }
+        .hw-tool-card h3 { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+        .hw-tool-card p { font-size: 0.82rem; color: var(--text-light); margin-bottom: 18px; line-height: 1.65; }
+
+        /* ---------- Why Choose Us ---------- */
+        .hw-why { padding: 80px 0; background: linear-gradient(135deg, #2E1065 0%, #3B0764 100%); color: var(--white); }
+        .hw-why .hw-section-header h2 { color: var(--white); }
+        .hw-why .hw-section-header p { color: rgba(255,255,255,0.7); }
+        .hw-why .hw-section-header .section-tag { background: rgba(167,139,250,0.15); color: var(--orange-light); }
+        .hw-why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            justify-content: center;
+            gap: 24px;
+        }
+        .hw-why-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px 22px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .hw-why-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+        .hw-why-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin: 0 auto 16px;
+            background: rgba(124,58,237,0.15);
+            color: var(--orange-light);
+        }
+        .hw-why-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+        .hw-why-card p { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin: 0; line-height: 1.6; }
+
+        /* ---------- Newsletter ---------- */
+        .hw-newsletter { padding: 60px 0; background: #F5F3FF; }
+        .hw-newsletter-inner {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 48px 40px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .hw-newsletter-inner h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-bottom: 10px; }
+        .hw-newsletter-inner p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 24px; }
+        .hw-newsletter-form {
+            display: flex;
+            gap: 10px;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+        .hw-newsletter-form input {
+            flex: 1;
+            border: 1px solid var(--orange-soft);
+            border-radius: var(--radius-pill);
+            padding: 14px 22px;
+            font-size: 0.9rem;
+            font-family: var(--font);
+            outline: none;
+            transition: var(--transition);
+        }
+        .hw-newsletter-form input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(124,58,237,0.1); }
+        .hw-newsletter-form button {
+            background: var(--grad-orange);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-pill);
+            padding: 14px 28px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .hw-newsletter-form button:hover { box-shadow: var(--shadow-orange); transform: translateY(-2px); }
+        .hw-newsletter-note { font-size: 0.72rem; color: var(--text-light); margin-top: 12px; }
+
+        /* ---------- Final CTA ---------- */
+        .hw-final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hw-final-cta::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hw-final-cta h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+        .hw-final-cta p {
+            font-size: 1.02rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 0 auto 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .hw-final-cta .btn {
+            position: relative;
+            z-index: 1;
+            padding: 16px 40px;
+            font-size: 1rem;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 991.98px) {
+            .hw-nutri-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-fitness-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-mental-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-seasonal-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-blog-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-tools-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-why-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-products-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 767.98px) {
+            .hw-cat-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-tips-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-nutri-grid { grid-template-columns: 1fr; }
+            .hw-mental-grid { grid-template-columns: 1fr; }
+            .hw-blog-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 575.98px) {
+            .hw-section-header h2 { font-size: 1.6rem; }
+            .hw-cat-grid { grid-template-columns: repeat(2, 1fr); }
+            .hw-tips-grid { grid-template-columns: 1fr; }
+            .hw-products-grid { grid-template-columns: 1fr; }
+            .hw-product-body h3 { font-size: 0.88rem; }
+            .hw-newsletter-form { flex-direction: column; }
+            .hw-final-cta h2 { font-size: 1.6rem; }
+            .hw-why-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-xl navbar-light sticky-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
+                    <img src="images/logo.png" class="brand-logo" alt="Stackly Pharmacy" loading="eager">
+                </a>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="cart.html" class="cart-badge-btn text-decoration-none d-xl-none" aria-label="Cart">
+                        <i class="bi bi-cart3"></i>
+                        <span class="badge-count">2</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="medicines.html">Medicines</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="health-wellness.html">Health & Wellness</a></li>
+                        <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-cta d-flex gap-2 align-items-center">
+                        <a href="cart.html" class="cart-badge-btn text-decoration-none d-none d-xl-flex" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge-count">2</span>
+                        </a>
+                        <a href="login.html" class="btn btn-primary-brand btn-sm"><i class="bi bi-person me-1"></i> Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-media page-hero-bg-3">
+        <div class="container">
+            <div class="page-hero-content text-center" data-animate="fade-up">
+                <span class="section-tag"><i class="bi bi-heart-pulse"></i> Health & Wellness</span>
+                <h1>Your Health, <span class="text-gradient-orange">Our Priority</span></h1>
+                <p class="page-hero-sub">Discover premium vitamins, supplements, personal care and wellness essentials — everything you need to live healthier, every single day.</p>
+                <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Health & Wellness</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 2. HEALTH & WELLNESS CATEGORIES ===== -->
+    <section id="categories" class="hw-categories">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Browse Categories</span>
+                <h2>Health & Wellness <span class="text-gradient-orange">Categories</span></h2>
+                <p>Explore our curated wellness categories to find exactly what your body needs.</p>
+            </div>
+            <div class="hw-cat-grid">
+                <div class="hw-cat-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="hw-cat-icon"><i class="bi bi-capsule"></i></div>
+                    <h3>Vitamins & Supplements</h3>
+                    <p>Daily essentials for every age</p>
+                </div>
+                <div class="hw-cat-card hw-cat-card-black" data-animate="fade-up" data-delay="0.1">
+                    <div class="hw-cat-icon"><i class="bi bi-apple"></i></div>
+                    <h3>Nutrition</h3>
+                    <p>Healthy diet & meal plans</p>
+                </div>
+                <div class="hw-cat-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="hw-cat-icon"><i class="bi bi-heart-pulse"></i></div>
+                    <h3>Personal Care</h3>
+                    <p>Skin, hair & hygiene essentials</p>
+                </div>
+                <div class="hw-cat-card hw-cat-card-black" data-animate="fade-up" data-delay="0.2">
+                    <div class="hw-cat-icon"><i class="bi bi-bicycle"></i></div>
+                    <h3>Fitness & Exercise</h3>
+                    <p>Workouts & active living</p>
+                </div>
+                <div class="hw-cat-card" data-animate="fade-up" data-delay="0.25">
+                    <div class="hw-cat-icon"><i class="bi bi-tree"></i></div>
+                    <h3>Healthy Living</h3>
+                    <p>Lifestyle & daily habits</p>
+                </div>
+                <div class="hw-cat-card hw-cat-card-black" data-animate="fade-up" data-delay="0.3">
+                    <div class="hw-cat-icon"><i class="bi bi-shield-plus"></i></div>
+                    <h3>Immunity Support</h3>
+                    <p>Boost your natural defence</p>
+                </div>
+                <div class="hw-cat-card" data-animate="fade-up" data-delay="0.35">
+                    <div class="hw-cat-icon"><i class="bi bi-ear"></i></div>
+                    <h3>Hearing Care</h3>
+                    <p>Hearing tests & ear protection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3. DAILY WELLNESS TIPS ===== -->
+    <section class="hw-tips">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Daily Habits</span>
+                <h2>Daily <span class="text-gradient-orange">Wellness Tips</span></h2>
+                <p>Small habits, big difference — practical guidance from our pharmacists for a healthier you.</p>
+            </div>
+            <div class="hw-tips-grid">
+                <div class="hw-tip-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="hw-tip-icon"><i class="bi bi-droplet"></i></div>
+                    <h4>Stay Hydrated</h4>
+                    <p>Drink at least 8 glasses of water daily. Proper hydration supports energy, digestion and skin health.</p>
+                </div>
+                <div class="hw-tip-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="hw-tip-icon"><i class="bi bi-moon-stars"></i></div>
+                    <h4>Quality Sleep</h4>
+                    <p>Aim for 7-9 hours of restful sleep. A consistent bedtime routine improves recovery and immunity.</p>
+                </div>
+                <div class="hw-tip-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="hw-tip-icon"><i class="bi bi-bicycle"></i></div>
+                    <h4>Move Daily</h4>
+                    <p>Even 30 minutes of walking boosts mood, strengthens the heart and supports overall wellness.</p>
+                </div>
+                <div class="hw-tip-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="hw-tip-icon"><i class="bi bi-cup-hot"></i></div>
+                    <h4>Eat Balanced</h4>
+                    <p>Fill half your plate with fruits and vegetables, choose whole grains and lean proteins.</p>
+                </div>
+                <div class="hw-tip-card" data-animate="fade-up" data-delay="0.25">
+                    <div class="hw-tip-icon"><i class="bi bi-braces-asterisk"></i></div>
+                    <h4>Manage Stress</h4>
+                    <p>Practice deep breathing, meditation or journaling — even 5 minutes a day makes a difference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. FEATURED WELLNESS PRODUCTS ===== -->
+    <section id="featured-products" class="hw-featured">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Top Picks</span>
+                <h2>Featured <span class="text-gradient-orange">Wellness Products</span></h2>
+                <p>Handpicked products to support your daily health and wellness goals.</p>
+            </div>
+            <div class="hw-products-grid">
+                <div class="hw-product-item" data-animate="fade-up" data-delay="0.05">
+                    <div class="hw-product-card">
+                        <div class="hw-product-img">
+                            <span class="hw-product-badge">38% OFF</span>
+                            <button class="hw-product-wishlist" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-vitamin-d3.webp" alt="Vitamin D3 1000IU" loading="lazy">
+                        </div>
+                        <div class="hw-product-body">
+                            <div class="hw-prod-cat">Vitamins</div>
+                            <h3>Vitamin D3 1000IU</h3>
+                            <p class="hw-prod-desc">Bone health & immunity support (Strip of 10)</p>
+                            <div class="hw-prod-price">
+                                <span class="price-current">$1.00</span>
+                                <span class="price-old">$1.50</span>
+                                <span class="price-off">-38%</span>
+                            </div>
+                            <button class="btn btn-primary-brand btn-sm w-100"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-product-item" data-animate="fade-up" data-delay="0.1">
+                    <div class="hw-product-card hw-product-card-black">
+                        <div class="hw-product-img">
+                            <span class="hw-product-badge">33% OFF</span>
+                            <button class="hw-product-wishlist" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-multivitamin.webp" alt="Daily Multivitamin Gummies" loading="lazy">
+                        </div>
+                        <div class="hw-product-body">
+                            <div class="hw-prod-cat">Vitamins</div>
+                            <h3>Daily Multivitamin Gummies</h3>
+                            <p class="hw-prod-desc">Complete daily nutrition in a delicious gummy</p>
+                            <div class="hw-prod-price">
+                                <span class="price-current">$1.50</span>
+                                <span class="price-old">$2.25</span>
+                                <span class="price-off">-33%</span>
+                            </div>
+                            <button class="btn btn-primary-brand btn-sm w-100"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-product-item" data-animate="fade-up" data-delay="0.15">
+                    <div class="hw-product-card">
+                        <div class="hw-product-img">
+                            <span class="hw-product-badge">38% OFF</span>
+                            <button class="hw-product-wishlist" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-vitamin-c-500mg.webp" alt="Vitamin C Effervescent" loading="lazy">
+                        </div>
+                        <div class="hw-product-body">
+                            <div class="hw-prod-cat">Immunity</div>
+                            <h3>Vitamin C 500mg Effervescent</h3>
+                            <p class="hw-prod-desc">Immune boost with refreshing effervescent tablets</p>
+                            <div class="hw-prod-price">
+                                <span class="price-current">$1.19</span>
+                                <span class="price-old">$1.75</span>
+                                <span class="price-off">-38%</span>
+                            </div>
+                            <button class="btn btn-primary-brand btn-sm w-100"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-product-item" data-animate="fade-up" data-delay="0.2">
+                    <div class="hw-product-card hw-product-card-black">
+                        <div class="hw-product-img">
+                            <span class="hw-product-badge">20% OFF</span>
+                            <button class="hw-product-wishlist" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                            <img src="images/product-fitness-powder.webp" alt="Whey Protein Isolate" loading="lazy">
+                        </div>
+                        <div class="hw-product-body">
+                            <div class="hw-prod-cat">Nutrition</div>
+                            <h3>Whey Protein Isolate 1kg</h3>
+                            <p class="hw-prod-desc">Premium protein for muscle recovery & growth</p>
+                            <div class="hw-prod-price">
+                                <span class="price-current">$31.24</span>
+                                <span class="price-old">$39.05</span>
+                                <span class="price-off">-20%</span>
+                            </div>
+                            <button class="btn btn-primary-brand btn-sm w-100"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. NUTRITION & HEALTHY LIVING ===== -->
+    <section id="nutrition" class="hw-nutrition">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Eat Well</span>
+                <h2>Nutrition & <span class="text-gradient-orange">Healthy Living</span></h2>
+                <p>Guidance for building better eating habits and a balanced lifestyle.</p>
+            </div>
+            <div class="hw-nutri-grid">
+                <div class="hw-nutri-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="icon-wrap"><i class="bi bi-egg-fried"></i></div>
+                    <h3>Healthy Diet Guidance</h3>
+                    <p>Learn how to plan balanced meals that fuel your body and keep you energised throughout the day.</p>
+                    <ul>
+                        <li>Portion control strategies</li>
+                        <li>Smart snacking ideas</li>
+                        <li>Meal prep essentials</li>
+                    </ul>
+                </div>
+                <div class="hw-nutri-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="icon-wrap"><i class="bi bi-bar-chart-line"></i></div>
+                    <h3>Balanced Nutrition</h3>
+                    <p>Understanding macronutrients and micronutrients for optimal health and daily performance.</p>
+                    <ul>
+                        <li>Protein, carbs & healthy fats</li>
+                        <li>Essential vitamins & minerals</li>
+                        <li>Supplement recommendations</li>
+                    </ul>
+                </div>
+                <div class="hw-nutri-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="icon-wrap"><i class="bi bi-activity"></i></div>
+                    <h3>Healthy Lifestyle</h3>
+                    <p>Holistic tips for integrating wellness into every aspect of your daily routine.</p>
+                    <ul>
+                        <li>Morning & evening routines</li>
+                        <li>Hydration tracking</li>
+                        <li>Mindful eating habits</li>
+                    </ul>
+                </div>
+                <div class="hw-nutri-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="icon-wrap"><i class="bi bi-droplet-half"></i></div>
+                    <h3>Hydration & Detox</h3>
+                    <p>Stay properly hydrated and support your body's natural cleansing processes with the right fluids and nutrients.</p>
+                    <ul>
+                        <li>Daily water intake goals</li>
+                        <li>Herbal teas & infused water</li>
+                        <li>Signs of dehydration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. FITNESS & EXERCISE ===== -->
+    <section id="fitness" class="hw-fitness">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Stay Active</span>
+                <h2>Fitness & <span class="text-gradient-orange">Exercise</span></h2>
+                <p>Stay fit at home or outdoors — workout tips for every fitness level.</p>
+            </div>
+            <div class="hw-fitness-grid">
+                <div class="hw-fitness-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="hw-fitness-icon"><i class="bi bi-house-heart"></i></div>
+                    <h3>Home Workouts</h3>
+                    <p>Effective bodyweight routines you can do in your living room — no equipment needed.</p>
+                </div>
+                <div class="hw-fitness-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="hw-fitness-icon"><i class="bi bi-signpost-2"></i></div>
+                    <h3>Walking & Cardio</h3>
+                    <p>Regular walking and cardio strengthen your heart, boost mood and improve endurance.</p>
+                </div>
+                <div class="hw-fitness-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="hw-fitness-icon"><i class="bi bi-trophy"></i></div>
+                    <h3>Strength Training</h3>
+                    <p>Build lean muscle, boost metabolism and support joint health with simple strength routines.</p>
+                </div>
+                <div class="hw-fitness-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="hw-fitness-icon"><i class="bi bi-person-arms-up"></i></div>
+                    <h3>Flexibility & Mobility</h3>
+                    <p>Stretching and yoga for better posture, injury prevention and full-body flexibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. MENTAL WELLNESS ===== -->
+    <section id="mental-wellness" class="hw-mental">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Inner Balance</span>
+                <h2>Mental <span class="text-gradient-orange">Wellness</span></h2>
+                <p>Nurture your mind — strategies for stress relief, better sleep and emotional wellbeing.</p>
+            </div>
+            <div class="hw-mental-grid">
+                <div class="hw-mental-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="hw-mental-icon"><i class="bi bi-heart"></i></div>
+                    <h3>Stress Management</h3>
+                    <p>Identify stress triggers and build healthy coping habits with breathing exercises, time management and boundary setting.</p>
+                </div>
+                <div class="hw-mental-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="hw-mental-icon"><i class="bi bi-moon-stars"></i></div>
+                    <h3>Better Sleep</h3>
+                    <p>Create a sleep-friendly environment and wind-down routine for deeper, more restorative rest each night.</p>
+                </div>
+                <div class="hw-mental-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="hw-mental-icon"><i class="bi bi-soundwave"></i></div>
+                    <h3>Relaxation Techniques</h3>
+                    <p>Progressive muscle relaxation, aromatherapy and calming music to ease tension after a long day.</p>
+                </div>
+                <div class="hw-mental-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="hw-mental-icon"><i class="bi bi-lotus"></i></div>
+                    <h3>Mindfulness</h3>
+                    <p>Practise present-moment awareness through guided meditation, mindful breathing and gratitude journaling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 8. SEASONAL HEALTH & WELLNESS ===== -->
+    <section id="seasonal" class="hw-seasonal">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Seasonal Care</span>
+                <h2>Seasonal Health & <span class="text-gradient-orange">Wellness</span></h2>
+                <p>Stay prepared and protected with seasonal wellness tips and product recommendations.</p>
+            </div>
+            <div class="hw-seasonal-grid">
+                <div class="hw-seasonal-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="hw-seasonal-top">
+                        <div class="hw-seasonal-icon" style="background:#fef3c7;color:#d97706;"><i class="bi bi-wind"></i></div>
+                        <h3>Seasonal Allergies</h3>
+                    </div>
+                    <p>Antihistamines, nasal sprays and natural remedies to keep allergies under control all year round.</p>
+                </div>
+                <div class="hw-seasonal-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="hw-seasonal-top">
+                        <div class="hw-seasonal-icon" style="background:#EDE9FE;color:#7C3AED;"><i class="bi bi-shield-plus"></i></div>
+                        <h3>Immunity Care</h3>
+                    </div>
+                    <p>Fortify your immune system with Vitamin C, Zinc, elderberry and proven seasonal supplements.</p>
+                </div>
+                <div class="hw-seasonal-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="hw-seasonal-top">
+                        <div class="hw-seasonal-icon" style="background:#dbeafe;color:#2563eb;"><i class="bi bi-thermometer-half"></i></div>
+                        <h3>Weather-Based Tips</h3>
+                    </div>
+                    <p>Adjust your nutrition, hydration and skincare routine with changing weather conditions.</p>
+                </div>
+                <div class="hw-seasonal-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="hw-seasonal-top">
+                        <div class="hw-seasonal-icon" style="background:#fce7f3;color:#db2777;"><i class="bi bi-flower2"></i></div>
+                        <h3>Seasonal Skincare</h3>
+                    </div>
+                    <p>SPF in summer, moisturisers in winter — keep your skin healthy and protected in every season.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 9. WELLNESS ARTICLES / BLOG ===== -->
+    <section class="hw-blog">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Learn More</span>
+                <h2>Wellness <span class="text-gradient-orange">Articles & Blog</span></h2>
+                <p>Expert-written guides to help you make informed health and wellness decisions.</p>
+            </div>
+            <div class="hw-blog-grid">
+                <a href="404.html" class="hw-blog-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="hw-blog-thumb">
+                        <i class="bi bi-lightbulb"></i>
+                        <span class="blog-tag">Health Tips</span>
+                    </div>
+                    <div class="hw-blog-body">
+                        <div class="hw-blog-meta"><i class="bi bi-calendar3"></i> Sep 5, 2026 &middot; 5 min read</div>
+                        <h3>10 Simple Habits for a Healthier Life</h3>
+                        <p>Small daily changes that compound into lasting health improvements — backed by science.</p>
+                        <span class="hw-blog-link">Read Article <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="404.html" class="hw-blog-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="hw-blog-thumb" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">
+                        <i class="bi bi-cup-straw"></i>
+                        <span class="blog-tag" style="color:#2563eb;">Nutrition</span>
+                    </div>
+                    <div class="hw-blog-body">
+                        <div class="hw-blog-meta"><i class="bi bi-calendar3"></i> Aug 22, 2026 &middot; 7 min read</div>
+                        <h3>Complete Guide to Protein & Muscle Recovery</h3>
+                        <p>How much protein you need, when to take it and which sources work best for active lifestyles.</p>
+                        <span class="hw-blog-link">Read Article <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="404.html" class="hw-blog-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="hw-blog-thumb" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">
+                        <i class="bi bi-bicycle"></i>
+                        <span class="blog-tag" style="color:#db2777;">Fitness</span>
+                    </div>
+                    <div class="hw-blog-body">
+                        <div class="hw-blog-meta"><i class="bi bi-calendar3"></i> Aug 8, 2026 &middot; 6 min read</div>
+                        <h3>Beginner's Guide to Home Workouts</h3>
+                        <p>Start your fitness journey at home with effective routines that require zero equipment.</p>
+                        <span class="hw-blog-link">Read Article <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="404.html" class="hw-blog-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="hw-blog-thumb" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">
+                        <i class="bi bi-journal-richtext"></i>
+                        <span class="blog-tag" style="color:#7c3aed;">Lifestyle</span>
+                    </div>
+                    <div class="hw-blog-body">
+                        <div class="hw-blog-meta"><i class="bi bi-calendar3"></i> Jul 28, 2026 &middot; 4 min read</div>
+                        <h3>Creating a Morning Routine That Works</h3>
+                        <p>Wake up energised with a structured morning routine that supports productivity and wellness.</p>
+                        <span class="hw-blog-link">Read Article <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 10. HEALTH CHECK / WELLNESS TOOLS ===== -->
+    <section id="tools" class="hw-tools">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Free Tools</span>
+                <h2>Health Check & <span class="text-gradient-orange">Wellness Tools</span></h2>
+                <p>Interactive calculators to help you track and optimise your daily health.</p>
+            </div>
+            <div class="hw-tools-grid">
+                <div class="hw-tool-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="hw-tool-icon"><i class="bi bi-speedometer"></i></div>
+                    <h3>BMI Calculator</h3>
+                    <p>Calculate your Body Mass Index to understand your weight category and health range.</p>
+                    <a class="btn btn-primary-brand btn-sm" href="404.html">Calculate BMI</a>
+                </div>
+                <div class="hw-tool-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="hw-tool-icon"><i class="bi bi-droplet-half"></i></div>
+                    <h3>Water Intake Calculator</h3>
+                    <p>Find out exactly how much water your body needs based on weight, activity and climate.</p>
+                    <a class="btn btn-primary-brand btn-sm" href="404.html">Calculate Intake</a>
+                </div>
+                <div class="hw-tool-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="hw-tool-icon"><i class="bi bi-fire"></i></div>
+                    <h3>Calorie Calculator</h3>
+                    <p>Estimate your daily calorie needs for weight loss, maintenance or muscle gain.</p>
+                    <a class="btn btn-primary-brand btn-sm" href="404.html">Calculate Calories</a>
+                </div>
+                <div class="hw-tool-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="hw-tool-icon"><i class="bi bi-check2-square"></i></div>
+                    <h3>Daily Wellness Checklist</h3>
+                    <p>Track hydration, exercise, sleep and nutrition every day to stay on top of your wellness goals.</p>
+                    <a class="btn btn-primary-brand btn-sm" href="404.html">Start Checklist</a>
+                </div>
+                <div class="hw-tool-card" data-animate="fade-up" data-delay="0.25">
+                    <div class="hw-tool-icon"><i class="bi bi-heart-pulse"></i></div>
+                    <h3>Heart Rate Monitor</h3>
+                    <p>Track your resting heart rate and learn what your pulse says about your cardiovascular fitness.</p>
+                    <a class="btn btn-primary-brand btn-sm" href="404.html">Check Heart Rate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 11. WHY CHOOSE US ===== -->
+    <section class="hw-why">
+        <div class="container">
+            <div class="hw-section-header" data-animate="fade-up">
+                <span class="section-tag">Our Promise</span>
+                <h2>Why <span class="text-gradient-orange">Choose Us</span></h2>
+                <p>Trusted by thousands of customers for reliable wellness products and exceptional service.</p>
+            </div>
+            <div class="hw-why-grid">
+                <div class="hw-why-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="hw-why-icon"><i class="bi bi-patch-check-fill"></i></div>
+                    <h4>Trusted Products</h4>
+                    <p>Every product is sourced from certified brands and verified suppliers.</p>
+                </div>
+                <div class="hw-why-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="hw-why-icon"><i class="bi bi-shield-fill-check"></i></div>
+                    <h4>Quality Assurance</h4>
+                    <p>Third-party tested for purity, potency and compliance with global standards.</p>
+                </div>
+                <div class="hw-why-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="hw-why-icon"><i class="bi bi-phone"></i></div>
+                    <h4>Easy Ordering</h4>
+                    <p>Simple, secure checkout with multiple payment options — order in seconds.</p>
+                </div>
+                <div class="hw-why-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="hw-why-icon"><i class="bi bi-truck"></i></div>
+                    <h4>Fast Delivery</h4>
+                    <p>Free next-day delivery on orders over $25 — straight to your doorstep.</p>
+                </div>
+                <div class="hw-why-card" data-animate="fade-up" data-delay="0.25">
+                    <div class="hw-why-icon"><i class="bi bi-headset"></i></div>
+                    <h4>24/7 Support</h4>
+                    <p>Licensed pharmacists and support team available around the clock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 12. FINAL CTA ===== -->
+    <section class="hw-final-cta">
+        <div class="container">
+            <div data-animate="fade-up">
+                <h2>Take the First Step Towards Better Wellness</h2>
+                <p>Explore our complete health and wellness range — premium products, expert guidance, delivered to your door.</p>
+                <a href="404.html" class="btn btn-primary-brand"><i class="bi bi-arrow-up-circle me-2"></i>Explore Health & Wellness</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-newsletter">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-5">
+                        <h4><i class="bi bi-envelope-heart"></i> Subscribe to our newsletter</h4>
+                        <p>Health tips, medicine reminders & exclusive offers — no spam.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <div class="newsletter-input-wrap">
+                                    <i class="bi bi-envelope"></i>
+                                    <input type="email" placeholder="Enter your email address" aria-label="Email">
+                                </div>
+                                <button type="submit" class="btn btn-newsletter">Subscribe</button>
+                            </div>
+                            <small>By subscribing you agree to our Privacy Policy.</small>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 footer-main">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about">
+                        <a class="footer-brand d-flex align-items-center mb-3" href="index.html">
+                            <img src="images/logo.png" class="brand-logo footer-logo" alt="Stackly Pharmacy" loading="lazy">
+                        </a>
+                        <p>Your trusted online pharmacy, delivering genuine medicines and wellness products across the country, backed by licensed pharmacists and 24/7 support.</p>
+                        <div class="footer-certifications">
+                            <span><i class="bi bi-patch-check-fill"></i> Licensed Pharmacy</span>
+                            <span><i class="bi bi-shield-check"></i> ISO Certified</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="medicines.html">Medicines</a></li>
+                        <li><a href="health-wellness.html">Health & Wellness</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Medicines</a></li>
+                        <li><a href="404.html">Vitamins</a></li>
+                        <li><a href="404.html">Personal Care</a></li>
+                        <li><a href="404.html">Baby Care</a></li>
+                        <li><a href="404.html">Medical Devices</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Help Center</a></li>
+                        <li><a href="404.html">Track Order</a></li>
+                        <li><a href="404.html">Returns & Refunds</a></li>
+                        <li><a href="404.html">Contact Us</a></li>
+                        <li><a href="404.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms of Service</a></li>
+                        <li><a href="404.html">Cookie Policy</a></li>
+                        <li><a href="404.html">Refund Policy</a></li>
+                        <li><a href="404.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row gy-3 align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2026 Stackly Pharmacy. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="social-links">
+                            <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="404.html" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="404.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
