@@ -95,6 +95,29 @@
     attachPasswordValidation(document.getElementById('loginPassword'));
     attachPasswordValidation(document.getElementById('suPassword'));
 
+    /* ---- Role cards: no card selected by default; click again to deselect ---- */
+    document.querySelectorAll('.role-option').forEach(function (label) {
+        label.addEventListener('click', function (e) {
+            var radio = document.getElementById(label.getAttribute('for'));
+            var sel = label.closest('.role-selector');
+            if (sel) { sel.classList.remove('invalid'); }
+            if (radio && radio.checked) {
+                e.preventDefault();
+                radio.checked = false;
+            }
+        });
+    });
+    document.querySelectorAll('.role-radio').forEach(function (radio) {
+        radio.addEventListener('keydown', function (e) {
+            if ((e.key === ' ' || e.key === 'Enter') && radio.checked) {
+                e.preventDefault();
+                radio.checked = false;
+                var sel = radio.closest('.role-selector');
+                if (sel) { sel.classList.remove('invalid'); }
+            }
+        });
+    });
+
     /* ---- Demo form submit with role selection ---- */
     function selectedRole(form) {
         var radio = form.querySelector('input[name="authRole"]:checked');

@@ -132,6 +132,9 @@
             window.StacklyCart.updateBadge();
         }
 
+        // Rotating hero headlines
+        initHeroRotator();
+
         // Scroll progress bar
         const progressBar = document.getElementById('scrollProgress');
         if (progressBar) {
@@ -841,6 +844,41 @@
         if (typeof ScrollTrigger !== 'undefined' && ScrollTrigger.refresh) {
             ScrollTrigger.refresh();
         }
+    }
+
+    // ========================================
+    // Rotating hero headlines (home page)
+    // ========================================
+    function initHeroRotator() {
+        const lines = document.querySelectorAll('.hero-title-line[data-rotate]');
+        if (!lines.length) { return; }
+
+        function prefersReduced() {
+            return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        }
+
+        let current = 0;
+
+        function syncAria() {
+            for (let i = 0; i < lines.length; i++) {
+                lines[i].setAttribute('aria-hidden', i === current ? 'false' : 'true');
+            }
+        }
+
+        syncAria();
+        if (prefersReduced() || lines.length < 2) { return; }
+
+        setInterval(function () {
+            const prev = current;
+            const old = lines[prev];
+            current = (prev + 1) % lines.length;
+            old.classList.add('is-leaving');
+            setTimeout(function () {
+                old.classList.remove('active', 'is-leaving');
+                lines[current].classList.add('active');
+                syncAria();
+            }, 420);
+        }, 4200);
     }
 
     // ========================================

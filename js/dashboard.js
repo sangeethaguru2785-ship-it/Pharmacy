@@ -87,13 +87,17 @@
         links.forEach(function (link) {
             link.addEventListener('click', function () {
                 var target = link.getAttribute('data-panel');
+                var activePanel = null;
                 links.forEach(function (l) {
                     l.classList.toggle('active', l === link);
                 });
                 panels.forEach(function (p) {
-                    p.classList.toggle('active', p.id === 'panel-' + target);
+                    var on = p.id === 'panel-' + target;
+                    p.classList.toggle('active', on);
+                    if (on) { activePanel = p; }
                 });
                 closeSidebar();
+                resizeChartsInPanel(activePanel);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
@@ -135,12 +139,16 @@
                 l.classList.toggle('active', ok);
                 if (ok) { match = l; }
             });
+            var activePanel = null;
             panels.forEach(function (p) {
-                p.classList.toggle('active', p.id === 'panel-' + name);
+                var on = p.id === 'panel-' + name;
+                p.classList.toggle('active', on);
+                if (on) { activePanel = p; }
             });
             if (match) {
                 match.scrollIntoView({ block: 'nearest' });
             }
+            resizeChartsInPanel(activePanel);
         }
 
         var hash = window.location.hash.replace('#', '');
@@ -151,13 +159,17 @@
             el.addEventListener('click', function () {
                 var target = el.getAttribute('data-panel');
                 if (!target) { return; }
+                var activePanel = null;
                 links.forEach(function (l) {
                     l.classList.toggle('active', l.getAttribute('data-panel') === target);
                 });
                 panels.forEach(function (p) {
-                    p.classList.toggle('active', p.id === 'panel-' + target);
+                    var on = p.id === 'panel-' + target;
+                    p.classList.toggle('active', on);
+                    if (on) { activePanel = p; }
                 });
                 closeSidebar();
+                resizeChartsInPanel(activePanel);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
@@ -173,18 +185,54 @@
             });
         });
 
+        /* ---------- Stat counters: animate on page open ---------- */
+        (function () {
+            var els = document.querySelectorAll('.stat-card .st-val');
+            if (!els.length) { return; }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            els.forEach(function (el) {
+                var original = el.textContent;
+                var hasPrefix = /^\$/.test(original);
+                var target = parseFloat(original.replace(/[$,%\s]/g, ''));
+                if (isNaN(target) || target <= 0 || reduce) { return; }
+                var decimals = original.indexOf('.') > -1 ? 2 : 0;
+                var duration = 1100;
+                var start = null;
+                function fmt(v) {
+                    var s = decimals ? v.toFixed(2) : Math.round(v).toLocaleString('en-US');
+                    return (hasPrefix ? '$' : '') + s;
+                }
+                function tick(ts) {
+                    if (start === null) { start = ts; }
+                    var p = Math.min((ts - start) / duration, 1);
+                    el.textContent = fmt(target * (1 - Math.pow(1 - p, 3)));
+                    if (p < 1) { requestAnimationFrame(tick); } else { el.textContent = original; }
+                }
+                requestAnimationFrame(tick);
+            });
+        })();
+
         /* ---------- Dashboard charts (Chart.js) ---------- */
-        if (window.Chart) {
+        var ALL_CHARTS = [];
+
+        function resizeChartsInPanel(panelEl) {
+            if (!panelEl) { return; }
+            ALL_CHARTS.forEach(function (c) {
+                if (panelEl.contains(c.canvas)) { c.resize(); }
+            });
+        }
+
+        function initCharts() {
             var GREEN = '#7C3AED';
             var GREEN_LIGHT = '#A78BFA';
             var GREEN_MID = '#C4B5FD';
             var GREEN_DARK = '#3B0764';
             var GREEN_DEEP = '#2E1065';
-            var AMBER = '#F59E0B';
-            var BLUE = '#2563EB';
-            var RED = '#EF4444';
-            var GRAY = '#6B7280';
-            var GRID_COLOR = 'rgba(107, 114, 128, 0.12)';
+            var AMBER = '#A78BFA';
+            var BLUE = '#7C3AED';
+            var RED = '#6D28D9';
+            var GRAY = '#6E6E80';
+            var GRID_COLOR = 'rgba(110, 110, 128, 0.14)';
 
             Chart.defaults.font.family = '"Plus Jakarta Sans", "Poppins", sans-serif';
             Chart.defaults.color = GRAY;
@@ -211,6 +259,7 @@
                         responsive: true,
                         maintainAspectRatio: false,
                         cutout: '64%',
+                        animation: { duration: 850, easing: 'easeOutQuart' },
                         plugins: {
                             legend: {
                                 position: 'bottom',
@@ -232,7 +281,12 @@
 
             function makeChart(id, config) {
                 var el = document.getElementById(id);
-                if (el) { new Chart(el, config); }
+                if (el) {
+                    if (!config.options) { config.options = {}; }
+                    config.options.animation = { duration: 850, easing: 'easeOutQuart' };
+                    var chart = new Chart(el, config);
+                    if (chart) { ALL_CHARTS.push(chart); }
+                }
             }
 
             /* Admin: Sales / Revenue Overview (line) */
@@ -430,5 +484,23 @@
                 [GREEN, GREEN_LIGHT, GREEN_DARK, GREEN_MID, AMBER, BLUE]
             ));
         }
+
+        /* ---------- Chart bootstrap: render as soon as Chart.js is ready ---------- */
+        function bootstrapCharts() {
+            var tries = 0;
+            var timer = null;
+            function start() {
+                if (window.Chart) { initCharts(); return true; }
+                return false;
+            }
+            if (start()) { return; }
+            timer = window.setInterval(function () {
+                tries += 1;
+                if (start()) { window.clearInterval(timer); }
+                else if (tries > 30) { window.clearInterval(timer); }
+            }, 200);
+            window.addEventListener('load', function () { if (start() && timer) { window.clearInterval(timer); } });
+        }
+        bootstrapCharts();
     });
 })();
