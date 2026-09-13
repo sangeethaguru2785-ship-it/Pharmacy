@@ -17,8 +17,8 @@
     <div id="scrollProgress"></div>
 
     <!-- Header -->
-    <header class="main-header">
-        <nav class="navbar navbar-expand-xl navbar-light sticky-top" id="mainNav">
+    <header class="main-header nav-over-hero">
+        <nav class="navbar navbar-expand-xl navbar-dark sticky-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
                     <img src="images/logo.webp" class="brand-logo" alt="Stackly Pharmacy" loading="eager">
@@ -68,6 +68,111 @@
                     <i class="bi bi-chevron-right"></i>
                     <span>Medicines</span>
                 </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Category -->
+    <section id="categories" class="categories-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <span class="section-tag">Browse Store</span>
+                <h2 class="section-title">Shop by <span class="text-gradient-orange">Category</span></h2>
+                <p class="section-subtitle">Everything your family needs for health and wellness, all in one place.</p>
+            </div>
+
+            <div class="row g-3 g-md-4 justify-content-center mt-4">
+                <div class="col-6 col-md-4 col-lg-3 col-xl" data-animate="fade-up" data-delay="0.05">
+                    <a href="medicines.html?cat=all" class="category-card">
+                        <div class="category-media">
+                            <img src="images/cat-medicines.webp" alt="Medicines & Prescription Drugs Category">
+                            <span class="category-media-overlay"></span>
+                            <span class="category-chip"><i class="bi bi-capsule"></i></span>
+                        </div>
+                        <div class="category-info">
+                            <h3>Medicines</h3>
+                            <span>2,400+ products</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl" data-animate="fade-up" data-delay="0.1">
+                    <a href="medicines.html?cat=care" class="category-card">
+                        <div class="category-media">
+                            <img src="images/cat-personal-care.webp" alt="Personal Care & Hygiene Category">
+                            <span class="category-media-overlay"></span>
+                            <span class="category-chip"><i class="bi bi-emoji-smile"></i></span>
+                        </div>
+                        <div class="category-info">
+                            <h3>Personal Care</h3>
+                            <span>800+ products</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl" data-animate="fade-up" data-delay="0.15">
+                    <a href="medicines.html?cat=care" class="category-card">
+                        <div class="category-media">
+                            <img src="images/cat-skin-care.webp" alt="Dermatology & Skin Care Category">
+                            <span class="category-media-overlay"></span>
+                            <span class="category-chip"><i class="bi bi-flower1"></i></span>
+                        </div>
+                        <div class="category-info">
+                            <h3>Skin Care</h3>
+                            <span>950+ products</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl" data-animate="fade-up" data-delay="0.2">
+                    <a href="medicines.html?cat=care" class="category-card">
+                        <div class="category-media">
+                            <img src="images/cat-baby-care.webp" alt="Baby Care & Infant Essentials Category">
+                            <span class="category-media-overlay"></span>
+                            <span class="category-chip"><i class="bi bi-balloon"></i></span>
+                        </div>
+                        <div class="category-info">
+                            <h3>Baby Care</h3>
+                            <span>420+ products</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl" data-animate="fade-up" data-delay="0.25">
+                    <a href="medicines.html?cat=vitamins" class="category-card">
+                        <div class="category-media">
+                            <img src="images/cat-vitamins.webp" alt="Vitamins & Health Supplements Category">
+                            <span class="category-media-overlay"></span>
+                            <span class="category-chip"><i class="bi bi-heart-pulse"></i></span>
+                        </div>
+                        <div class="category-info">
+                            <h3>Vitamins</h3>
+                            <span>680+ products</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl" data-animate="fade-up" data-delay="0.3">
+                    <a href="health-wellness.html" class="category-card">
+                        <div class="category-media">
+                            <img src="images/cat-wellness.webp" alt="Fitness & Wellness Essentials Category">
+                            <span class="category-media-overlay"></span>
+                            <span class="category-chip"><i class="bi bi-moon-stars"></i></span>
+                        </div>
+                        <div class="category-info">
+                            <h3>Wellness</h3>
+                            <span>530+ products</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl" data-animate="fade-up" data-delay="0.35">
+                    <a href="medicines.html?cat=devices" class="category-card">
+                        <div class="category-media">
+                            <img src="images/cat-devices.webp" alt="Home Medical Devices Category">
+                            <span class="category-media-overlay"></span>
+                            <span class="category-chip"><i class="bi bi-clipboard2-pulse"></i></span>
+                        </div>
+                        <div class="category-info">
+                            <h3>Medical Devices</h3>
+                            <span>310+ products</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -176,7 +281,7 @@
                         <div class="product-media">
                             <span class="product-badge badge-off">34% OFF</span>
                             <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                            <img src="images/product-face-cream.webp" alt="Moisturizing Face Cream" loading="lazy">
+                            <img src="images/cat-skin-care.webp" alt="Moisturizing Face Cream" loading="lazy">
                         </div>
                         <div class="product-body">
                             <span class="product-category">Skin Care</span>
@@ -425,56 +530,56 @@
             <div class="row g-3 g-md-4 mt-2">
                 <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.05">
                     <a href="404.html" class="condition-card text-decoration-none">
-                        <span class="condition-icon"><i class="bi bi-droplet-half"></i></span>
+                        <span class="condition-icon"><img src="images/condition-diabetes.webp" alt="Diabetes Care" class="condition-img" loading="lazy"></span>
                         <h3>Diabetes Care</h3>
                         <span>Glucose & insulin support</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.1">
                     <a href="404.html" class="condition-card text-decoration-none">
-                        <span class="condition-icon"><i class="bi bi-activity"></i></span>
+                        <span class="condition-icon"><img src="images/condition-blood-pressure.webp" alt="Blood Pressure" class="condition-img" loading="lazy"></span>
                         <h3>Blood Pressure</h3>
                         <span>Monitors & medication</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.15">
                     <a href="404.html" class="condition-card text-decoration-none">
-                        <span class="condition-icon"><i class="bi bi-thermometer-half"></i></span>
+                        <span class="condition-icon"><img src="images/condition-fever-pain.webp" alt="Fever & Pain" class="condition-img" loading="lazy"></span>
                         <h3>Fever & Pain</h3>
                         <span>Relief & inflammation care</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.2">
                     <a href="404.html" class="condition-card text-decoration-none">
-                        <span class="condition-icon"><i class="bi bi-virus2"></i></span>
+                        <span class="condition-icon"><img src="images/condition-cold-flu.webp" alt="Cold & Flu" class="condition-img" loading="lazy"></span>
                         <h3>Cold & Flu</h3>
                         <span>Cough, sinus & throat care</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.25">
                     <a href="404.html" class="condition-card text-decoration-none">
-                        <span class="condition-icon"><i class="bi bi-flower1"></i></span>
+                        <span class="condition-icon"><img src="images/condition-allergy-relief.webp" alt="Allergy Relief" class="condition-img" loading="lazy"></span>
                         <h3>Allergy Relief</h3>
                         <span>Antihistamines & nasal care</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.3">
                     <a href="404.html" class="condition-card text-decoration-none">
-                        <span class="condition-icon"><i class="bi bi-heart-pulse"></i></span>
+                        <span class="condition-icon"><img src="images/condition-heart-care.webp" alt="Heart Care" class="condition-img" loading="lazy"></span>
                         <h3>Heart Care</h3>
                         <span>Cholesterol & cardiac support</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.35">
                     <a href="404.html" class="condition-card text-decoration-none">
-                        <span class="condition-icon"><i class="bi bi-shield-plus"></i></span>
+                        <span class="condition-icon"><img src="images/condition-immunity-boost.webp" alt="Immunity Boost" class="condition-img" loading="lazy"></span>
                         <h3>Immunity Boost</h3>
                         <span>Vitamins & daily defense</span>
                     </a>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3" data-animate="fade-up" data-delay="0.4">
                     <a href="404.html" class="condition-card text-decoration-none">
-                        <span class="condition-icon"><i class="bi bi-flower2"></i></span>
+                        <span class="condition-icon"><img src="images/condition-womens-health.webp" alt="Women's Health" class="condition-img" loading="lazy"></span>
                         <h3>Women's Health</h3>
                         <span>Monthly & wellness care</span>
                     </a>
@@ -523,7 +628,7 @@
             <div class="section-header text-center" data-animate="fade-up">
                 <span class="section-tag">The Stackly Promise</span>
                 <h2 class="section-title">Quality & <span class="text-gradient-orange">Safety Guarantee</span></h2>
-                <p class="section-subtitle">Every single order is protected by rigorous checks â€” from warehouse to your doorstep.</p>
+                <p class="section-subtitle">Every single order is protected by rigorous checks — from warehouse to your doorstep.</p>
             </div>
             <div class="row g-4 mt-3">
                 <div class="col-md-6 col-lg-3" data-animate="fade-up" data-delay="0.05">
@@ -596,7 +701,7 @@
                         <span class="how-step">4</span>
                         <div class="how-icon"><i class="bi bi-truck"></i></div>
                         <h3>Delivered Fast</h3>
-                        <p>Track your order live â€” delivered in 30 minutes in metro areas.</p>
+                        <p>Track your order live — delivered in 30 minutes in metro areas.</p>
                     </div>
                 </div>
             </div>
@@ -643,7 +748,7 @@
                 <div class="row align-items-center g-3">
                     <div class="col-lg-5">
                         <h4><i class="bi bi-envelope-heart"></i> Subscribe to our newsletter</h4>
-                        <p>Health tips, medicine reminders & exclusive offers â€” no spam.</p>
+                        <p>Health tips, medicine reminders & exclusive offers — no spam.</p>
                     </div>
                     <div class="col-lg-7">
                         <form class="newsletter-form">
@@ -750,5 +855,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    <!-- Category card deep-linking: applies the matching product filter when landed via ?cat= -->
+    <script>
+        (function () {
+            var cat = new URLSearchParams(window.location.search).get('cat');
+            if (!cat) return;
+            var btn = Array.prototype.slice.call(document.querySelectorAll('.filter-btn'))
+                .filter(function (b) { return b.getAttribute('data-filter') === cat; })[0];
+            if (btn) btn.click();
+            var section = document.getElementById('medicine-products');
+            if (section) setTimeout(function () { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
+        })();
+    </script>
 </body>
 </html>
