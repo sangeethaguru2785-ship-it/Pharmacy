@@ -108,7 +108,7 @@
         }
 
         /* ---------- Wellness Tips ---------- */
-        .hw-tips { padding: 60px 0 80px; background: #F7F5FC; }
+        .hw-tips { padding: 60px 0 80px; background: #F5F3FF; }
         .hw-tips-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -144,115 +144,8 @@
         .hw-tip-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
         .hw-tip-card p { font-size: 0.82rem; color: var(--text-light); margin: 0; line-height: 1.65; }
 
-        /* ---------- Featured Products ---------- */
-        .hw-featured { padding: 80px 0; }
-        .hw-products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            justify-content: center;
-            gap: 24px;
-        }
-        .hw-product-item {
-            display: flex;
-        }
-        .hw-product-item .hw-product-card {
-            flex: 1;
-        }
-        .hw-product-card {
-            background: var(--white);
-            border: 1px solid var(--orange-soft);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: var(--transition);
-            position: relative;
-        }
-        .hw-product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: transparent;
-        }
-        .hw-product-img {
-            position: relative;
-            padding: 20px 20px 0;
-            text-align: center;
-            background: #F7F5FC;
-        }
-        .hw-product-img img {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            border-radius: 12px;
-        }
-        .hw-product-badge {
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            background: var(--orange);
-            color: var(--white);
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: var(--radius-pill);
-        }
-        .hw-product-wishlist {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-        .hw-product-wishlist:hover { color: #e11d48; background: #fff1f2; }
-        .hw-product-body { padding: 20px; }
-        .hw-product-body .hw-prod-cat {
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--orange);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
-        }
-        .hw-product-body h3 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--ink);
-            margin-bottom: 4px;
-            line-height: 1.35;
-        }
-        .hw-product-body .hw-prod-desc {
-            font-size: 0.78rem;
-            color: var(--text-light);
-            margin-bottom: 12px;
-            line-height: 1.55;
-        }
-        .hw-product-body .hw-prod-price {
-            display: flex;
-            align-items: baseline;
-            gap: 8px;
-            margin-bottom: 14px;
-        }
-        .hw-product-body .hw-prod-price .price-current { font-size: 1.15rem; font-weight: 800; color: var(--orange); }
-        .hw-product-body .hw-prod-price .price-old { font-size: 0.82rem; color: var(--text-light); text-decoration: line-through; }
-        .hw-product-body .hw-prod-price .price-off {
-            font-size: 0.7rem;
-            font-weight: 700;
-            background: #EDE9FE;
-            color: var(--orange);
-            padding: 2px 8px;
-            border-radius: var(--radius-pill);
-        }
-
-        /* ---------- Nutrition & Healthy Living ---------- */
-        .hw-nutrition { padding: 80px 0; background: #F7F5FC; }
+/* ---------- Nutrition & Healthy Living ---------- */
+        .hw-nutrition { padding: 80px 0; background: #F5F3FF; }
         .hw-nutri-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -401,7 +294,7 @@
         .hw-seasonal-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.65; padding: 0 24px 24px; margin: 0; }
 
         /* ---------- Blog / Articles ---------- */
-        .hw-blog { padding: 80px 0; background: #F7F5FC; }
+        .hw-blog { padding: 80px 0; background: #F5F3FF; }
         .hw-blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -419,7 +312,7 @@
         }
         .hw-blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
         .hw-blog-thumb {
-            height: 180px;
+            height: 190px;
             background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
             display: flex;
             align-items: center;
@@ -427,6 +320,19 @@
             font-size: 3rem;
             color: var(--orange);
             position: relative;
+            overflow: hidden;
+        }
+        .hw-blog-thumb img,
+        .hw-blog-thumb .blog-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.55s ease;
+        }
+        .hw-blog-card:hover .hw-blog-thumb img,
+        .hw-blog-card:hover .hw-blog-thumb .blog-img {
+            transform: scale(1.08);
         }
         .hw-blog-thumb .blog-tag {
             position: absolute;
@@ -438,6 +344,8 @@
             font-weight: 700;
             padding: 4px 12px;
             border-radius: var(--radius-pill);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            z-index: 2;
         }
         .hw-blog-body { padding: 22px; }
         .hw-blog-meta {
@@ -475,6 +383,9 @@
             border-radius: 20px;
             padding: 32px 24px;
             text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
             transition: var(--transition);
         }
         .hw-tool-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--orange); }
@@ -492,6 +403,11 @@
         }
         .hw-tool-card h3 { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
         .hw-tool-card p { font-size: 0.82rem; color: var(--text-light); margin-bottom: 18px; line-height: 1.65; }
+        .hw-tool-card .btn {
+            align-self: center;
+            margin-top: auto;
+            min-width: 150px;
+        }
 
         /* ---------- Why Choose Us ---------- */
         .hw-why { padding: 80px 0; background: linear-gradient(135deg, #2E1065 0%, #3B0764 100%); color: var(--white); }
@@ -626,7 +542,6 @@
             .hw-blog-grid { grid-template-columns: repeat(2, 1fr); }
             .hw-tools-grid { grid-template-columns: repeat(2, 1fr); }
             .hw-why-grid { grid-template-columns: repeat(2, 1fr); }
-            .hw-products-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 767.98px) {
             .hw-cat-grid { grid-template-columns: repeat(2, 1fr); }
@@ -639,8 +554,6 @@
             .hw-section-header h2 { font-size: 1.6rem; }
             .hw-cat-grid { grid-template-columns: repeat(2, 1fr); }
             .hw-tips-grid { grid-template-columns: 1fr; }
-            .hw-products-grid { grid-template-columns: 1fr; }
-            .hw-product-body h3 { font-size: 0.88rem; }
             .hw-newsletter-form { flex-direction: column; }
             .hw-final-cta h2 { font-size: 1.6rem; }
             .hw-why-grid { grid-template-columns: repeat(2, 1fr); }
@@ -653,8 +566,8 @@
     <div id="scrollProgress"></div>
 
     <!-- Header -->
-    <header class="main-header">
-        <nav class="navbar navbar-expand-xl navbar-light sticky-top" id="mainNav">
+    <header class="main-header nav-over-hero">
+        <nav class="navbar navbar-expand-xl navbar-dark sticky-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
                     <img src="images/logo.webp" class="brand-logo" alt="Stackly Pharmacy" loading="eager">
@@ -791,100 +704,7 @@
         </div>
     </section>
 
-    <!-- ===== 4. FEATURED WELLNESS PRODUCTS ===== -->
-    <section id="featured-products" class="hw-featured">
-        <div class="container">
-            <div class="hw-section-header" data-animate="fade-up">
-                <span class="section-tag">Top Picks</span>
-                <h2>Featured <span class="text-gradient-orange">Wellness Products</span></h2>
-                <p>Handpicked products to support your daily health and wellness goals.</p>
-            </div>
-            <div class="hw-products-grid">
-                <div class="hw-product-item" data-animate="fade-up" data-delay="0.05">
-                    <div class="hw-product-card">
-                        <div class="hw-product-img">
-                            <span class="hw-product-badge">38% OFF</span>
-                            <button class="hw-product-wishlist" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                            <img src="images/product-vitamin-d3.webp" alt="Vitamin D3 1000IU" loading="lazy">
-                        </div>
-                        <div class="hw-product-body">
-                            <div class="hw-prod-cat">Vitamins</div>
-                            <h3>Vitamin D3 1000IU</h3>
-                            <p class="hw-prod-desc">Bone health & immunity support (Strip of 10)</p>
-                            <div class="hw-prod-price">
-                                <span class="price-current">$1.00</span>
-                                <span class="price-old">$1.50</span>
-                                <span class="price-off">-38%</span>
-                            </div>
-                            <button class="btn btn-primary-brand btn-sm w-100"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="hw-product-item" data-animate="fade-up" data-delay="0.1">
-                    <div class="hw-product-card hw-product-card-black">
-                        <div class="hw-product-img">
-                            <span class="hw-product-badge">33% OFF</span>
-                            <button class="hw-product-wishlist" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                            <img src="images/product-multivitamin.webp" alt="Daily Multivitamin Gummies" loading="lazy">
-                        </div>
-                        <div class="hw-product-body">
-                            <div class="hw-prod-cat">Vitamins</div>
-                            <h3>Daily Multivitamin Gummies</h3>
-                            <p class="hw-prod-desc">Complete daily nutrition in a delicious gummy</p>
-                            <div class="hw-prod-price">
-                                <span class="price-current">$1.50</span>
-                                <span class="price-old">$2.25</span>
-                                <span class="price-off">-33%</span>
-                            </div>
-                            <button class="btn btn-primary-brand btn-sm w-100"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="hw-product-item" data-animate="fade-up" data-delay="0.15">
-                    <div class="hw-product-card">
-                        <div class="hw-product-img">
-                            <span class="hw-product-badge">38% OFF</span>
-                            <button class="hw-product-wishlist" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                            <img src="images/product-vitamin-c-500mg.webp" alt="Vitamin C Effervescent" loading="lazy">
-                        </div>
-                        <div class="hw-product-body">
-                            <div class="hw-prod-cat">Immunity</div>
-                            <h3>Vitamin C 500mg Effervescent</h3>
-                            <p class="hw-prod-desc">Immune boost with refreshing effervescent tablets</p>
-                            <div class="hw-prod-price">
-                                <span class="price-current">$1.19</span>
-                                <span class="price-old">$1.75</span>
-                                <span class="price-off">-38%</span>
-                            </div>
-                            <button class="btn btn-primary-brand btn-sm w-100"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="hw-product-item" data-animate="fade-up" data-delay="0.2">
-                    <div class="hw-product-card hw-product-card-black">
-                        <div class="hw-product-img">
-                            <span class="hw-product-badge">20% OFF</span>
-                            <button class="hw-product-wishlist" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                            <img src="images/product-fitness-powder.webp" alt="Whey Protein Isolate" loading="lazy">
-                        </div>
-                        <div class="hw-product-body">
-                            <div class="hw-prod-cat">Nutrition</div>
-                            <h3>Whey Protein Isolate 1kg</h3>
-                            <p class="hw-prod-desc">Premium protein for muscle recovery & growth</p>
-                            <div class="hw-prod-price">
-                                <span class="price-current">$31.24</span>
-                                <span class="price-old">$39.05</span>
-                                <span class="price-off">-20%</span>
-                            </div>
-                            <button class="btn btn-primary-brand btn-sm w-100"><i class="bi bi-cart-plus me-1"></i>Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== 5. NUTRITION & HEALTHY LIVING ===== -->
+    <!-- ===== 4. NUTRITION & HEALTHY LIVING ===== -->
     <section id="nutrition" class="hw-nutrition">
         <div class="container">
             <div class="hw-section-header" data-animate="fade-up">
@@ -995,7 +815,7 @@
                     <p>Progressive muscle relaxation, aromatherapy and calming music to ease tension after a long day.</p>
                 </div>
                 <div class="hw-mental-card" data-animate="fade-up" data-delay="0.2">
-                    <div class="hw-mental-icon"><i class="bi bi-lotus"></i></div>
+                    <div class="hw-mental-icon"><i class="bi bi-flower2"></i></div>
                     <h3>Mindfulness</h3>
                     <p>Practise present-moment awareness through guided meditation, mindful breathing and gratitude journaling.</p>
                 </div>
@@ -1014,7 +834,7 @@
             <div class="hw-seasonal-grid">
                 <div class="hw-seasonal-card" data-animate="fade-up" data-delay="0.05">
                     <div class="hw-seasonal-top">
-                        <div class="hw-seasonal-icon" style="background:#fef3c7;color:#d97706;"><i class="bi bi-wind"></i></div>
+                        <div class="hw-seasonal-icon" style="background:#EDE9FE;color:#7C3AED;"><i class="bi bi-wind"></i></div>
                         <h3>Seasonal Allergies</h3>
                     </div>
                     <p>Antihistamines, nasal sprays and natural remedies to keep allergies under control all year round.</p>
@@ -1028,14 +848,14 @@
                 </div>
                 <div class="hw-seasonal-card" data-animate="fade-up" data-delay="0.15">
                     <div class="hw-seasonal-top">
-                        <div class="hw-seasonal-icon" style="background:#dbeafe;color:#2563eb;"><i class="bi bi-thermometer-half"></i></div>
+                        <div class="hw-seasonal-icon" style="background:#EDE9FE;color:#7C3AED;"><i class="bi bi-thermometer-half"></i></div>
                         <h3>Weather-Based Tips</h3>
                     </div>
                     <p>Adjust your nutrition, hydration and skincare routine with changing weather conditions.</p>
                 </div>
                 <div class="hw-seasonal-card" data-animate="fade-up" data-delay="0.2">
                     <div class="hw-seasonal-top">
-                        <div class="hw-seasonal-icon" style="background:#fce7f3;color:#db2777;"><i class="bi bi-flower2"></i></div>
+                        <div class="hw-seasonal-icon" style="background:#EDE9FE;color:#7C3AED;"><i class="bi bi-flower2"></i></div>
                         <h3>Seasonal Skincare</h3>
                     </div>
                     <p>SPF in summer, moisturisers in winter — keep your skin healthy and protected in every season.</p>
@@ -1055,7 +875,7 @@
             <div class="hw-blog-grid">
                 <a href="404.html" class="hw-blog-card" data-animate="fade-up" data-delay="0.05">
                     <div class="hw-blog-thumb">
-                        <i class="bi bi-lightbulb"></i>
+                        <img src="images/blog-healthy-habits.webp" alt="10 Simple Habits for a Healthier Life" class="blog-img" loading="lazy">
                         <span class="blog-tag">Health Tips</span>
                     </div>
                     <div class="hw-blog-body">
@@ -1066,9 +886,9 @@
                     </div>
                 </a>
                 <a href="404.html" class="hw-blog-card" data-animate="fade-up" data-delay="0.1">
-                    <div class="hw-blog-thumb" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">
-                        <i class="bi bi-cup-straw"></i>
-                        <span class="blog-tag" style="color:#2563eb;">Nutrition</span>
+                    <div class="hw-blog-thumb">
+                        <img src="images/cat-vitamins.webp" alt="Complete Guide to Protein & Muscle Recovery" class="blog-img" loading="lazy">
+                        <span class="blog-tag">Nutrition</span>
                     </div>
                     <div class="hw-blog-body">
                         <div class="hw-blog-meta"><i class="bi bi-calendar3"></i> Aug 22, 2026 &middot; 7 min read</div>
@@ -1078,9 +898,9 @@
                     </div>
                 </a>
                 <a href="404.html" class="hw-blog-card" data-animate="fade-up" data-delay="0.15">
-                    <div class="hw-blog-thumb" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">
-                        <i class="bi bi-bicycle"></i>
-                        <span class="blog-tag" style="color:#db2777;">Fitness</span>
+                    <div class="hw-blog-thumb">
+                        <img src="images/blog-home-workouts.webp" alt="Beginner's Guide to Home Workouts" class="blog-img" loading="lazy">
+                        <span class="blog-tag">Fitness</span>
                     </div>
                     <div class="hw-blog-body">
                         <div class="hw-blog-meta"><i class="bi bi-calendar3"></i> Aug 8, 2026 &middot; 6 min read</div>
@@ -1090,9 +910,9 @@
                     </div>
                 </a>
                 <a href="404.html" class="hw-blog-card" data-animate="fade-up" data-delay="0.2">
-                    <div class="hw-blog-thumb" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">
-                        <i class="bi bi-journal-richtext"></i>
-                        <span class="blog-tag" style="color:#7c3aed;">Lifestyle</span>
+                    <div class="hw-blog-thumb">
+                        <img src="images/blog-morning-routine.webp" alt="Creating a Morning Routine That Works" class="blog-img" loading="lazy">
+                        <span class="blog-tag">Lifestyle</span>
                     </div>
                     <div class="hw-blog-body">
                         <div class="hw-blog-meta"><i class="bi bi-calendar3"></i> Jul 28, 2026 &middot; 4 min read</div>

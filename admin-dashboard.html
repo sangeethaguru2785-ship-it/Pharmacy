@@ -57,6 +57,10 @@
     <div class="dash-main">
         <header class="dash-topbar">
             <button class="dash-burger" aria-label="Toggle sidebar"><i class="bi bi-list"></i></button>
+            <div class="dash-welcome">
+                <small>Welcome back, <span data-user-name></span></small>
+                <strong>Here's your pharmacy overview for today</strong>
+            </div>
             <div class="dash-topbar-actions">
                 <div class="dash-user-chip">
                     <span class="dash-avatar" data-user-avatar></span>
@@ -71,7 +75,7 @@
             <section class="dash-panel active" id="panel-overview">
                 <div class="dash-title-bar">
                     <div>
-                        <h2>Good morning, <span data-user-greet></span></h2>
+                        <h2>Hi, <span data-user-greet></span></h2>
                         <p>Here's what's happening at your pharmacy today.</p>
                     </div>
                     <a href="#reports" class="btn btn-primary-brand btn-sm js-switch-panel" data-panel="reports"><i class="bi bi-calendar3 me-1"></i> View Reports</a>
@@ -521,25 +525,25 @@
                 </div>
 
                 <div class="dash-grid-4 mb-4">
-                    <div class="promo-card" style="margin-top:-70px">
+                    <div class="promo-card promo-overlap">
                         <span class="promo-icon"><i class="bi bi-percent"></i></span>
                         <h4>FIRST30</h4>
                         <p class="promo-code">30% OFF &bull; First order</p>
                         <div class="promo-actions"><button class="btn-copy" type="button"><i class="bi bi-clipboard me-1"></i> Copy</button></div>
                     </div>
-                    <div class="promo-card" style="margin-top:-70px">
+                    <div class="promo-card promo-overlap">
                         <span class="promo-icon"><i class="bi bi-percent"></i></span>
                         <h4>VIT15</h4>
                         <p class="promo-code">15% OFF &bull; Vitamins</p>
                         <div class="promo-actions"><button class="btn-copy" type="button"><i class="bi bi-clipboard me-1"></i> Copy</button></div>
                     </div>
-                    <div class="promo-card" style="margin-top:-70px">
+                    <div class="promo-card promo-overlap">
                         <span class="promo-icon"><i class="bi bi-percent"></i></span>
                         <h4>CARE20</h4>
                         <p class="promo-code">20% OFF &bull; Skin care</p>
                         <div class="promo-actions"><button class="btn-copy" type="button"><i class="bi bi-clipboard me-1"></i> Copy</button></div>
                     </div>
-                    <div class="promo-card" style="margin-top:-70px">
+                    <div class="promo-card promo-overlap">
                         <span class="promo-icon"><i class="bi bi-percent"></i></span>
                         <h4>BABY35</h4>
                         <p class="promo-code">$5 OFF &bull; Baby care</p>
@@ -617,7 +621,7 @@
                             </div>
                         </div>
                         <div class="card-dash-body">
-                            <div class="msg-item" style="border:1px solid var(--gray-200); border-radius:var(--radius-md); background:#FAFBFC">
+                            <div class="msg-item" style="border:1px solid var(--gray-200); border-radius:var(--radius-md); background:#FFFFFF">
                                 <div class="msg-body">
                                     <div class="msg-sub mb-1"><strong style="color:var(--text)">Prescription refill question</strong></div>
                                     <span>Hi, can I refill my paracetamol prescription online? My doctor sent the prescription to your pharmacy via the portal but I'm not sure how to place the refill. Thanks!</span>
@@ -681,7 +685,7 @@
                                     <tr><td><div class="t-prod"><span class="t-thumb"><i class="bi bi-capsule"></i></span> Medicines</div></td><td>$18,420</td><td class="muted-txt">+9%</td><td><span class="status-badge success">Growing</span></td></tr>
                                     <tr><td><div class="t-prod"><span class="t-thumb"><i class="bi bi-flower1"></i></span> Vitamins</div></td><td>$11,750</td><td class="muted-txt">+18%</td><td><span class="status-badge success">Growing</span></td></tr>
                                     <tr><td><div class="t-prod"><span class="t-thumb"><i class="bi bi-bandaid"></i></span> Devices</div></td><td>$7,860</td><td class="muted-txt">+4%</td><td><span class="status-badge neutral">Steady</span></td></tr>
-                                    <tr><td><div class="t-prod"><span class="t-thumb"><i class="bi bi-ballon"></i></span> Baby Care</div></td><td>$4,105</td><td class="muted-txt">-2%</td><td><span class="status-badge danger">Declining</span></td></tr>
+                                    <tr><td><div class="t-prod"><span class="t-thumb"><i class="bi bi-balloon"></i></span> Baby Care</div></td><td>$4,105</td><td class="muted-txt">-2%</td><td><span class="status-badge danger">Declining</span></td></tr>
                                 </tbody>
                             </table>
                         </div>

@@ -21,8 +21,8 @@
     <div id="scrollProgress"></div>
 
     <!-- Header -->
-    <header class="main-header">
-        <nav class="navbar navbar-expand-xl navbar-light sticky-top" id="mainNav">
+    <header class="main-header nav-over-hero">
+        <nav class="navbar navbar-expand-xl navbar-dark sticky-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
                     <img src="images/logo.webp" class="brand-logo" alt="Stackly Pharmacy" loading="eager">
@@ -76,9 +76,25 @@
                 <div class="col-lg-8">
                     <div class="hero-content">
                         <span class="hero-badge"><i class="bi bi-patch-check-fill"></i> Trusted &amp; Licensed Online Pharmacy</span>
-                        <h1 class="hero-title">
-                            Your Pathway to<br>
-                            <span class="text-gradient-orange">Health &amp; Wellness</span>
+                        <h1 class="hero-title hero-title--rotator">
+                            <span class="hero-title-lines">
+                                <span class="hero-title-line active" data-rotate>
+                                    <span class="hero-title-part">Your Health,</span>
+                                    <span class="hero-title-grad text-gradient-orange">Our Priority</span>
+                                </span>
+                                <span class="hero-title-line" data-rotate>
+                                    <span class="hero-title-part">Genuine Medicines,</span>
+                                    <span class="hero-title-grad text-gradient-orange">Delivered Fast</span>
+                                </span>
+                                <span class="hero-title-line" data-rotate>
+                                    <span class="hero-title-part">Better Care,</span>
+                                    <span class="hero-title-grad text-gradient-orange">Right at Your Door</span>
+                                </span>
+                                <span class="hero-title-line" data-rotate>
+                                    <span class="hero-title-part">Trusted Pharmacy,</span>
+                                    <span class="hero-title-grad text-gradient-orange">Anytime</span>
+                                </span>
+                            </span>
                         </h1>
                         <p class="hero-subtitle">
                             Order genuine medicines, vitamins and wellness essentials — verified by licensed pharmacists and delivered fast, right to your door.
@@ -223,7 +239,7 @@
                         <div class="category-media">
                             <img src="images/cat-baby-care.webp" alt="Baby Care & Infant Essentials Category">
                             <span class="category-media-overlay"></span>
-                            <span class="category-chip"><i class="bi bi-baby"></i></span>
+                            <span class="category-chip"><i class="bi bi-balloon"></i></span>
                         </div>
                         <div class="category-info">
                             <h3>Baby Care</h3>
@@ -288,14 +304,20 @@
                 <div class="col-lg-5 col-xl-4" data-animate="fade-up" data-delay="0.05">
                     <div class="conditions-feature-container">
                         <div class="conditions-feature-media">
-                            <img src="images/shop-health-need.webp" alt="Shop by Health Need - Personalized Pharmacy Care" loading="lazy">
-                            <div class="conditions-media-overlay"></div>
-                            <div class="conditions-feature-badge">
-                                <div class="badge-icon"><i class="bi bi-heart-pulse-fill"></i></div>
-                                <div class="badge-text">
-                                    <strong>Targeted Health Needs</strong>
-                                    <span>Personalized care for your family</span>
+                            <div class="conditions-feature-img">
+                                <img src="images/shop-health-need.webp" alt="Shop by Health Need - Personalized Pharmacy Care" loading="lazy">
+                                <div class="conditions-media-overlay"></div>
+                                <div class="conditions-feature-badge">
+                                    <div class="badge-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                                    <div class="badge-text">
+                                        <strong>Targeted Health Needs</strong>
+                                        <span>Personalized care for your family</span>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="conditions-feature-caption">
+                                <h3>Care for Every Health Need</h3>
+                                <p>Diabetes care, heart health, immunity, pain relief and daily wellness — trusted guidance in one place.</p>
                             </div>
                         </div>
                     </div>
@@ -306,42 +328,42 @@
                     <div class="row g-3 g-md-4">
                         <div class="col-6 col-sm-4" data-animate="fade-up" data-delay="0.1">
                             <a href="404.html" class="condition-card">
-                                <span class="condition-icon"><i class="bi bi-thermometer-half"></i></span>
+                                <span class="condition-icon"><img src="images/condition-cold-flu.webp" alt="Cold &amp; Flu Care Medicine" class="condition-img" loading="lazy"></span>
                                 <h3>Cold &amp; Flu</h3>
                                 <span>320+ products</span>
                             </a>
                         </div>
                         <div class="col-6 col-sm-4" data-animate="fade-up" data-delay="0.15">
                             <a href="404.html" class="condition-card">
-                                <span class="condition-icon"><i class="bi bi-droplet-half"></i></span>
+                                <span class="condition-icon"><img src="images/condition-diabetes.webp" alt="Diabetes Care Medication" class="condition-img" loading="lazy"></span>
                                 <h3>Diabetes Care</h3>
                                 <span>260+ products</span>
                             </a>
                         </div>
                         <div class="col-6 col-sm-4" data-animate="fade-up" data-delay="0.2">
                             <a href="404.html" class="condition-card">
-                                <span class="condition-icon"><i class="bi bi-heart-pulse"></i></span>
+                                <span class="condition-icon"><img src="images/condition-heart-care.webp" alt="Heart Health Medication" class="condition-img" loading="lazy"></span>
                                 <h3>Heart Health</h3>
                                 <span>180+ products</span>
                             </a>
                         </div>
                         <div class="col-6 col-sm-4" data-animate="fade-up" data-delay="0.25">
                             <a href="404.html" class="condition-card">
-                                <span class="condition-icon"><i class="bi bi-shield-plus"></i></span>
+                                <span class="condition-icon"><img src="images/condition-immunity-boost.webp" alt="Immunity Boost Supplements" class="condition-img" loading="lazy"></span>
                                 <h3>Immunity Boost</h3>
                                 <span>410+ products</span>
                             </a>
                         </div>
                         <div class="col-6 col-sm-4" data-animate="fade-up" data-delay="0.3">
                             <a href="404.html" class="condition-card">
-                                <span class="condition-icon"><i class="bi bi-activity"></i></span>
+                                <span class="condition-icon"><img src="images/condition-fever-pain.webp" alt="Pain Relief Medication" class="condition-img" loading="lazy"></span>
                                 <h3>Pain Relief</h3>
                                 <span>300+ products</span>
                             </a>
                         </div>
                         <div class="col-6 col-sm-4" data-animate="fade-up" data-delay="0.35">
                             <a href="404.html" class="condition-card">
-                                <span class="condition-icon"><i class="bi bi-egg-fried"></i></span>
+                                <span class="condition-icon"><img src="images/product-multivitamin.webp" alt="Digestive Care Antacid" class="condition-img" loading="lazy"></span>
                                 <h3>Digestive Care</h3>
                                 <span>140+ products</span>
                             </a>
@@ -630,7 +652,7 @@
                         <div class="product-media">
                             <span class="product-badge badge-off">34% OFF</span>
                             <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                            <img src="images/product-face-cream.webp" alt="Moisturizing Face Cream" loading="lazy">
+                            <img src="images/cat-hair-care.webp" alt="Moisturizing Face Cream" loading="lazy">
                             <span class="product-shine"></span>
                             <div class="product-actions">
                                 <a class="action-btn" href="404.html"><i class="bi bi-eye"></i> Quick View</a>
@@ -789,7 +811,7 @@
                         <div class="product-media">
                             <span class="product-badge badge-hot">Hot</span>
                             <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                            <img src="images/product-baby-lotion.webp" alt="Gentle Baby Lotion" loading="lazy">
+                            <img src="images/cat-skin-care.webp" alt="Gentle Baby Lotion" loading="lazy">
                             <span class="product-shine"></span>
                             <div class="product-actions">
                                 <a class="action-btn" href="404.html"><i class="bi bi-eye"></i> Quick View</a>
