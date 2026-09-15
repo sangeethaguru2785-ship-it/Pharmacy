@@ -5635,11 +5635,16 @@ input.field-invalid, .form-control.field-invalid { border-color: #6D28D9; }
 .page-hero-bg-5 { background-image: url('../images/b5.webp'); }
 .page-hero-bg-cart { background-image: url('../images/p5.webp'); }
 
+/* About page: match the height of page heroes that include a subtitle */
+.page-hero-about { padding: 96px 0 128px; }
+
 @media (max-width: 991.98px) {
     .page-hero-media { padding: 76px 0 68px; }
+    .page-hero-about { padding: 76px 0 108px; }
 }
 @media (max-width: 575.98px) {
     .page-hero-media { padding: 60px 0 50px; }
+    .page-hero-about { padding: 60px 0 90px; }
 }
 
 /* ================================================================
