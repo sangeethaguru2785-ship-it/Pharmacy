@@ -15,18 +15,13 @@
     // browsers isolate localStorage per file).
     // ========================================
     var CartStore = {
-        DEFAULTS: [
-            { id: 'vitamin-d3-2000-iu-60-capsules', name: 'Vitamin D3 2000 IU (60 Capsules)', price: 12.50, image: 'images/product-vitamin-d3.webp', qty: 1 },
-            { id: 'paracetamol-500mg-20-tablets', name: 'Paracetamol 500mg (20 Tablets)', price: 4.99, image: 'images/product-paracetamol.webp', qty: 2 },
-            { id: 'cetirizine-10mg-30-tablets', name: 'Cetirizine 10mg (30 Tablets)', price: 6.25, image: 'images/product-cetirizine.webp', qty: 1 },
-            { id: 'gentle-baby-lotion-250ml', name: 'Gentle Baby Lotion 250ml', price: 8.40, image: 'images/product-baby-lotion.webp', qty: 1 }
-        ],
+        DEFAULTS: [],
         get: function () {
             var cart;
             var raw = this.rawGet();
             if (raw === null) {
-                this.save(this.DEFAULTS);
-                return this.DEFAULTS.slice();
+                this.save([]);
+                return [];
             }
             try { cart = JSON.parse(raw); } catch (e) { cart = []; }
             return Array.isArray(cart) ? cart : [];

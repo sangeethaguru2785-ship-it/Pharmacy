@@ -27,7 +27,7 @@
                 <div class="d-flex align-items-center gap-2">
                     <a href="cart.html" class="cart-badge-btn text-decoration-none d-xl-none" aria-label="Cart">
                         <i class="bi bi-cart3"></i>
-                        <span class="badge-count">4</span>
+                        <span class="badge-count">0</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
                     <div class="nav-cta d-flex gap-2 align-items-center">
                         <a href="cart.html" class="cart-badge-btn text-decoration-none d-none d-xl-flex active" aria-label="Cart">
                             <i class="bi bi-cart3"></i>
-                            <span class="badge-count">4</span>
+                            <span class="badge-count">0</span>
                         </a>
                         <a href="login.html" class="btn btn-primary-brand btn-sm"><i class="bi bi-person me-1"></i> Login</a>
                     </div>
@@ -79,75 +79,14 @@
         <div class="container">
 
             <!-- Filled cart -->
-            <div id="cartFilledSection">
+            <div id="cartFilledSection" class="d-none">
                 <div class="cart-layout">
                     <div class="card-dash">
                         <div class="card-dash-head">
-                            <h5>Cart items <span class="sub" id="cartCountLabel">4 products</span></h5>
+                            <h5>Cart items <span class="sub" id="cartCountLabel">0 products</span></h5>
                             <button type="button" class="btn btn-danger-dash btn-sm" id="clearCartBtn"><i class="bi bi-trash me-1"></i> Clear Cart</button>
                         </div>
                         <div class="card-dash-body" id="cartItemsContainer">
-
-                            <div class="cart-item-dash" data-id="vitd3" data-price="12.50">
-                                <span class="t-thumb"><img src="images/product-vitamin-d3.webp" alt="Vitamin D3 2000 IU"></span>
-                                <div class="cart-main">
-                                    <h5>Vitamin D3 2000 IU (60 Capsules)</h5>
-                                    <p>$12.50 each</p>
-                                </div>
-                                <div class="qty-control">
-                                    <button type="button" data-qty="minus" aria-label="Decrease quantity"><i class="bi bi-dash"></i></button>
-                                    <span class="qty-val">1</span>
-                                    <button type="button" data-qty="plus" aria-label="Increase quantity"><i class="bi bi-plus"></i></button>
-                                </div>
-                                <span class="cart-price">$12.50</span>
-                                <button type="button" class="btn-row danger cart-remove" aria-label="Remove item"><i class="bi bi-trash"></i></button>
-                            </div>
-
-                            <div class="cart-item-dash" data-id="paracetamol" data-price="4.99">
-                                <span class="t-thumb"><img src="images/product-paracetamol.webp" alt="Paracetamol 500mg"></span>
-                                <div class="cart-main">
-                                    <h5>Paracetamol 500mg (20 Tablets)</h5>
-                                    <p>$4.99 each</p>
-                                </div>
-                                <div class="qty-control">
-                                    <button type="button" data-qty="minus" aria-label="Decrease quantity"><i class="bi bi-dash"></i></button>
-                                    <span class="qty-val">2</span>
-                                    <button type="button" data-qty="plus" aria-label="Increase quantity"><i class="bi bi-plus"></i></button>
-                                </div>
-                                <span class="cart-price">$9.98</span>
-                                <button type="button" class="btn-row danger cart-remove" aria-label="Remove item"><i class="bi bi-trash"></i></button>
-                            </div>
-
-                            <div class="cart-item-dash" data-id="cetirizine" data-price="6.25">
-                                <span class="t-thumb"><img src="images/product-cetirizine.webp" alt="Cetirizine 10mg"></span>
-                                <div class="cart-main">
-                                    <h5>Cetirizine 10mg (30 Tablets)</h5>
-                                    <p>$6.25 each</p>
-                                </div>
-                                <div class="qty-control">
-                                    <button type="button" data-qty="minus" aria-label="Decrease quantity"><i class="bi bi-dash"></i></button>
-                                    <span class="qty-val">1</span>
-                                    <button type="button" data-qty="plus" aria-label="Increase quantity"><i class="bi bi-plus"></i></button>
-                                </div>
-                                <span class="cart-price">$6.25</span>
-                                <button type="button" class="btn-row danger cart-remove" aria-label="Remove item"><i class="bi bi-trash"></i></button>
-                            </div>
-
-                            <div class="cart-item-dash" data-id="baby-lotion" data-price="8.40">
-                                <span class="t-thumb"><img src="images/product-baby-lotion.webp" alt="Gentle Baby Lotion"></span>
-                                <div class="cart-main">
-                                    <h5>Gentle Baby Lotion 250ml</h5>
-                                    <p>$8.40 each</p>
-                                </div>
-                                <div class="qty-control">
-                                    <button type="button" data-qty="minus" aria-label="Decrease quantity"><i class="bi bi-dash"></i></button>
-                                    <span class="qty-val">1</span>
-                                    <button type="button" data-qty="plus" aria-label="Increase quantity"><i class="bi bi-plus"></i></button>
-                                </div>
-                                <span class="cart-price">$8.40</span>
-                                <button type="button" class="btn-row danger cart-remove" aria-label="Remove item"><i class="bi bi-trash"></i></button>
-                            </div>
-
                             <div class="cart-tools mt-3 pt-3" style="border-top:1px solid var(--gray-200)">
                                 <span class="muted-txt" style="font-size:.85rem"><i class="bi bi-truck me-1" style="color:var(--orange-dark)"></i>Free delivery on orders over $49</span>
                             </div>
@@ -157,10 +96,10 @@
                     <div class="card-dash">
                         <div class="card-dash-head"><h5>Order summary</h5></div>
                         <div class="card-dash-body">
-                            <div class="summary-line"><span>Subtotal (<span id="cartCount">4</span> items)</span><strong id="cartSubtotal">$37.13</strong></div>
+                            <div class="summary-line"><span>Subtotal (<span id="cartCount">0</span> items)</span><strong id="cartSubtotal">$0.00</strong></div>
                             <div class="summary-line"><span>Delivery</span><strong>Free</strong></div>
-                            <div class="summary-line"><span>Discount (FIRST30)</span><strong id="cartDiscount" style="color:var(--orange-dark)">-$11.14</strong></div>
-                            <div class="summary-line total"><span>Total</span><span id="cartTotal">$25.99</span></div>
+                            <div class="summary-line"><span>Discount (FIRST30)</span><strong id="cartDiscount" style="color:var(--orange-dark)">-$0.00</strong></div>
+                            <div class="summary-line total"><span>Total</span><span id="cartTotal">$0.00</span></div>
 
                             <div class="cart-actions">
                                 <a href="404.html" class="btn btn-primary-brand btn-lg w-100"><i class="bi bi-lock-fill me-1"></i> Proceed to Checkout</a>
@@ -178,7 +117,7 @@
             </div>
 
             <!-- Empty cart -->
-            <div class="card-dash cart-empty d-none" id="cartEmptySection">
+            <div class="card-dash cart-empty" id="cartEmptySection">
                 <div class="empty-ic"><i class="bi bi-cart-x"></i></div>
                 <h3 class="mb-2">Your cart is empty</h3>
                 <p class="mb-4">Looks like you haven't added anything yet. Explore our genuine medicines and wellness essentials — or check out today's offers!</p>
